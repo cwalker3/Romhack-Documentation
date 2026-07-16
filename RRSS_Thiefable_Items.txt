@@ -1,0 +1,173 @@
+THIEFABLE ITEMS DOC
+
+Thief becomes obtainable as a TM upon reaching Slateport, the following doc lists the earliest instance of all available items. No repeats are listed. However, certain
+Pokemon can learn Thief/Covet prior to obtaining the TM. Here's a list of these pokemon with the level they learn their respective move:
+
+Zigzagoon/Linoone - Covet @ Lv. 15
+Fennekin - Can have Magician as an ability if you're brave enough to go for the Horde encounter
+Lillipup - Covet @ Lv. 12
+Purrloin - Thief @ Lv. 1
+Solosis - Trick @ Lv. 5
+Slakoth - Covet @ Lv. 18
+Pumpkaboo - Trick @ Lv. 1
+Tepig - Covet @ Lv. 13
+
+Note that most of these items only have a 5% chance to be held unless stated otherwise.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Before Roxanne:
+
+Wurmple - Bright Powder/Pecha berry
+Lotad, Sewaddle, Pancham - Mental Herb
+Seedot - Power Herb
+Surskit, Combee - Honey
+Slowpoke - Lagging Tail
+Wingull - Pretty Wing
+Venipede, Budew - Poison Barb
+Scraggy - Shed Shell
+Shroomish, Paras - Tiny/Big Mushroom (50%/5%)
+Pumpkaboo - Miracle Seed
+Kricketot - Metronome
+Doduo - Sharp Beak
+Machop - Focus Band
+Nincada - Soft Sand
+
+Before Brawly:
+Goldeen - Mystic Water (only available if you're not delaying Petalburg)
+Luvdisc - Heart Scale (100%)
+Staryu - Star Piece/Stardust
+Corsola - Prism Scale (50%)/Luminous Moss (5%)
+Shellder, Clamperl - Pearl/Big Pearl (50%/5%)
+Abra - Twisted Spoon
+Geodude - Everstone
+Cubone - Thick Club
+Makuhita - Black Belt
+Aron - Hard Stone
+
+Farmable items from Contests (after completing a Contest, there will usually be 2-3 NPCs close to the entrance that can give any of the following items depending on
+the chosen Contest rank):
+Normal Rank - Fresh Water, Sweet Heart, Cheri/Chesto/Pecha/Rawst/Aspear/Leppa/Oran/Persim berries
+Super Rank - Honey, Soda Pop, Stardust, Sitrus/Razz/Bluk/Nanab/Wepear/Pinap/All confusion pinch berries (Figy, etc)
+Hyper Rank - Heart Scale, Star Piece, Lemonade, Cornn/Magost/Rabuta/Nomel/Spelon/Pamtre/Watmel/Durin/Belue/All EV reducing berries
+Master Rank - Destiny Knot, Comet Shard, Moomoo Milk, All type resist berries (Yache, etc)
+Any Rank - Rage Candy Bar, Shalour Sable, Lumiose Galette, Old Gateau
+
+Before Wattson:
+Chinchou - Deep Sea Scale
+Horsea, Dratini - Dragon Scale
+Oddish - Absorb Bulb
+Magnemite, Steelix - Metal Coat
+Gulpin - Oran/Sitrus berries (Sitrus is 5%, Oran is 50%)
+Trubbish - Black Sludge (5%)
+Farfetch'd - Stick
+Happiny - Lucky Egg/Oval Stone
+Chansey - Lucky Egg/Lucky Punch
+Plusle, Minun - Cell Battery
+Sableye - Wide Lens
+Mawile - Iron Ball
+Roggenrola, Boldore - Hard Stone/Everstone
+Hariyama - King's Rock
+Lairon - Hard Stone
+
+Rock Smash items: Big Pearl, Ether, Hard Stone, Heart Scale, Max Ether, Max Revive, Normal Gem, Pearl, Revive, Soft Sand, Star Piece
+
+Before Team Magma/Aqua @ Meteor Falls:
+Meowth, Zangoose - Quick Claw
+Miltank - Moomoo Milk
+Diglett - Soft Sand
+Koffing - Smoke Ball
+Torkoal, Vulpix - Charcoal
+Shuppet, Duskull - Spell Tag
+Elekid - Electirizer
+Magby - Magmarizer
+Sandshrew - Grip Claw
+Munchlax - Leftovers (100%!)
+Golett - Light Clay
+
+Before Flannery:
+Cleffa, Clefairy - Moon Stone
+Solrock - Sun Stone/Stardust
+Lunatone - Moon Stone/Stardust
+Bagon, Druddigon - Dragon Fang
+Ferroseed - Sticky Barb
+Gligar - Razor Fang (50%)
+
+Before Norman:
+Sandslash - Dome Fossil/Grip Claw
+Trapinch - Jaw Fossil/Soft Sand
+Cacnea - Root Fossil/Sticky Barb
+Baltoy - Helix Fossil/Light Clay
+Gible - Skull Fossil
+Hippopotas - Armor Fossil
+Sandile - Claw Fossil
+Darumaka - Cover Fossil
+Maractus - Plume Fossil/Miracle Seed
+Sigilyph - Old Amber
+Helioptile - Sail Fossil
+
+Note that the fossil held rates are 50%!
+
+Before Weather Institute:
+Goldeen - Mystic Water (5%, now available if you were delaying Petalburg for Marill)
+Lapras - Mystic Water (only available if you're not delaying Sea Mauville, but is 100% guaranteed)
+Cryogonal - Never-Melt Ice (only available if you're not delaying Sea Mauville)
+Ditto - Quick Powder/Metal Powder
+Pikachu - Light Ball
+Garbodor - Nugget/Black Sludge (Black Sludge is 50% chance)
+Linoone - Max Revive/Potion
+Carvanha, Sharpedo - Deep Sea Tooth
+*All type resist berries can be obtained from the Berry Master's garden on Route 123 and are farmable from this point onwards*
+
+Before Winona:
+Absol - Life Orb
+Volcarona - Silver Powder (100%)
+*Gift Castform from Weather Institute always holds a Mystic Water*
+
+Before Magma/Aqua Hideout:
+Chingling - Cleanse Tag
+Shuckle - Berry Juice
+
+Before Tate and Liza:
+Snorunt - Snowball
+Snover, Cryogonal - Never-Melt Ice
+Sneasel - Razor Claw (50%)
+
+Before Maxie/Archie @ Seafloor Cavern:
+Lileep, Cradily - Big Root
+Aerodactyl - Flying Gem (100%, only gem available in-game besides Normal Gem)
+
+Before Wallace: nothing new
+
+Before E4:
+Shelgon, Salamence - Salamencite (50%)
+Mew, Celebi, Shaymin - Lum Berry (100%)
+Ho-Oh - Sacred Ash (100%)
+Latios, Latias - Soul Dew (100%)
+Hoopa - Prison Bottle (100%, but Prison Bottle is a key item in ORAS so not sure how that works)
+Diancie - Diancite (100%)
+
+-In PKHex, click the box to make Shaymin/Hoopa fateful encounters and you can also get the Gracidea/Prison Bottle key items to transform them!
+-Genesect drives are obtained from a Street Thug NPC on second floor of Mauville City if you show him a Genesect
+-Arceus Plates are found scattered underwater. I recommend looking up a guide if you really want them, or at least to get the Pixie Plate to boost Fairy moves
+-Reveal Mirror for the genies and Keldeo/Meloetta move tutor are both found on first floor of Mauville City
+
+The following Mega Stones become available after Groudon/Kyogre storyline is completed, and can't be bought in shops. All other Mega Stones should be available through shops or found on the ground as you progress in the story:
+*Sceptilite/Blazikenite/Swampertite - Steven gives you the Mega Stone for your starter shortly before Winona. The remaining two can be bought off an NPC that appears
+on Route 114 outside Fallarbor Town after beating Primal Groudon/Kyogre
+*Venusaurite - Route 119 in front of the house at beginning of route
+*Charizardite - X is in Fiery Path, requires Strength to access. Y is in Scorched Slab in Heatran room
+*Alakazite - SW corner of Slateport Market. Available as early as post Brawly, but very easy to miss so listing it here!
+*Kangaskhanite - Pacifidlog Town, behind town sign. Requires Surf
+*Aerodactylite - Meteor Falls, requires Surf + Waterfall
+*Mewtwonite - X is in Littleroot Town, Y is in front of Pokemon League
+*Scizorite - Petalburg Woods, south of Moss Rock
+*Houndoominite - Lavaridge Town next to sand baths, don't forget to pick up the Togepi egg/Kecleon encounter in the springs while you're here!
+*Tyranitarite - Jagged Pass, northeast of southern entrance
+*Gardevoirite - Gift from Wanda for smashing rocks in Rusturf Tunnel
+*Altarianite - Lisia fan club, need Altaria in party - available as soon as arriving in Lilycove, but also easy to miss!
+*Salamencite - held by wild Shelgon/Salamence (found in Meteor Falls, need Surf + Waterfall)
+*Diancite - held by wild Diancie (100% chance), found in Mirage Caves
+*Latiasite (RR)/Latiosite (SS) - post Delta Episode unfortunately, though wild Latios/Latias in Mirage Island spots can hold Soul Dew!
+*Abomasite - northeast area of Berry Master's garden
+
+Thanks for reading and using this guide, good luck on your runs!

@@ -1,0 +1,11 @@
+Quick Features
+1. Indicate in the pokemon list which pokemon are changed. Indicate whether they have stat changed, ability changes, and/or type changes.
+2. Show images in the gifts, evolution, and items tabs.
+3. Be able to mark trainers as complete. Gray out an area when the encounter is caught and trainers are completed
+4. Be able to mark an area as missed encounter.
+5. Add a tab for your box with pokemon you've caught. Be able to click them to show info.
+6. Make the stat numbers line up correctly on pokemon with changed stats.
+
+
+Bigger changes
+1. When a move is clicked on, on a trainer or in a pokemon's info, I want that moves info to be displayed.
