@@ -449,7 +449,7 @@ function renderAreas(c){
   items.forEach(a=>{
     const idx=AREAS.indexOf(a);
     const b=el('button','litem');b.classList.toggle('active',idx===state.areaSel);
-    const tc=a.rosters.reduce((n,r)=>n+r.trainers.length,0);
+    const tc=a.rosters.reduce((n,r)=>n+(r.kind==='rematch'?0:r.trainers.length),0);
     const st=areaStatus(a);
     b.classList.toggle('done',st.complete);
     const marker=st.complete?`<span class="areacheck done" title="Route complete">✓</span>`
@@ -533,6 +533,7 @@ function areaDetail(a){
   // rosters (rival Brendan/May battles filtered by the chosen gender + starter)
   const rn=rivalName(), rs=rivalStarter();
   a.rosters.forEach(r=>{
+    if(r.kind==='rematch')return;
     const trainers=r.trainers.filter(t=>{
       if(!isRivalTrainer(t))return true;
       if(rn&&rivalGenderOf(t.name)!==rn)return false;
