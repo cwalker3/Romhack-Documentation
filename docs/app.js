@@ -379,6 +379,22 @@ const wildOpen={};
 const AREA2IDX={};
 AREAS.forEach((a,i)=>{const n=normName(a.name);if(AREA2IDX[n]==null)AREA2IDX[n]=i;});
 function areaCaughtCount(a){return a.wild.reduce((n,w)=>n+w.species.filter(s=>isCaught(s.name)).length,0);}
+// in-game "met location": areas sharing one count as a single nuzlocke encounter (e.g. Route 104 South/North -> Route 104)
+function metLoc(name){
+  let s=name.replace(/\s*\(.*\)\s*$/,'');
+  s=s.replace(/-\d+$/,'').trim();
+  s=s.replace(/\s+(North|South|East|West|South-West|North-West|South-East|North-East)$/,'');
+  s=s.replace(/\s+B?\d+F(\s*[\/,]\s*B?\d+F)*$/,'');
+  s=s.replace(/\s+Summit(\s+\d+)?$/,'');
+  s=s.replace(/\s+(Basement|Ice Room|Outside|Inside|Out|Interior|Entrance|Other|Front Rooms|Water Rooms|Back Rooms|Rooms)$/,'');
+  return s.trim();
+}
+const MET_GROUP={};
+AREAS.forEach(a=>{const m=metLoc(a.name);(MET_GROUP[m]=MET_GROUP[m]||[]).push(a);});
+function areaGroup(a){return MET_GROUP[metLoc(a.name)]||[a];}
+function groupSiblings(a){return areaGroup(a).filter(x=>x!==a);}
+function groupCaughtArea(a){return areaGroup(a).find(x=>areaCaughtCount(x)>0);}
+function groupMissedArea(a){return areaGroup(a).find(x=>AREA_MISSED.has(x.name));}
 // roster (non-rematch) trainers you'd actually face, rival variants filtered by profile
 function areaRosterTrainers(a){
   const rn=rivalName(), rs=rivalStarter(), out=[];
@@ -389,11 +405,15 @@ function areaRosterTrainers(a){
 }
 function areaStatus(a){
   const caught=areaCaughtCount(a)>0, missed=AREA_MISSED.has(a.name), hasEnc=a.wild.length>0;
+  const grp=areaGroup(a);
+  const grpCaught=grp.some(x=>areaCaughtCount(x)>0), grpMissed=grp.some(x=>AREA_MISSED.has(x.name));
+  const grpHasEnc=grp.some(x=>x.wild.length>0);
   const trs=areaRosterTrainers(a), hasTr=trs.length>0;
   const trainersDone=hasTr?trs.every(t=>TRAINERS_DONE.has(t.id)):true;
-  const encResolved=!hasEnc||caught||missed;
+  const encResolved=!grpHasEnc||grpCaught||grpMissed;
   const complete=(hasEnc||hasTr)&&encResolved&&trainersDone;
-  return {caught,missed,hasEnc,hasTr,trainersDone,complete,trs};
+  const resolvedElsewhere=hasEnc&&!caught&&!missed&&(grpCaught||grpMissed);
+  return {caught,missed,hasEnc,hasTr,trainersDone,complete,trs,resolvedElsewhere};
 }
 
 function profileBar(){
@@ -434,7 +454,8 @@ function renderAreas(c){
     b.classList.toggle('done',st.complete);
     const marker=st.complete?`<span class="areacheck done" title="Route complete">✓</span>`
       :st.caught?`<span class="areacheck" title="Pokémon caught here">✓</span>`
-      :st.missed?`<span class="areamiss" title="Encounter missed here">✕</span>`:'';
+      :st.missed?`<span class="areamiss" title="Encounter missed here">✕</span>`
+      :st.resolvedElsewhere?`<span class="arealinked" title="Encounter used elsewhere at this met location">↔</span>`:'';
     b.innerHTML=`<span class="lname">${esc(a.name)}</span><span class="lmeta">${a.wild.length?a.wild.length+' wild':''}${a.wild.length&&tc?' · ':''}${tc?tc+' trn':''}</span>${marker}`;
     b.onclick=()=>{state.areaSel=idx;reRenderKeepScroll();};
     frag.appendChild(b);
@@ -474,22 +495,32 @@ function areaDetail(a){
     const caughtList=[];a.wild.forEach(w=>w.species.forEach(s=>{if(isCaught(s.name))caughtList.push(s);}));
     const caughtHere=caughtList.length;
     const missed=AREA_MISSED.has(a.name);
-    const resolved=caughtHere>0||missed;
+    // shared met-location: this route's encounter may be used at a sibling area
+    const sibs=groupSiblings(a);
+    const elseCaught=sibs.find(x=>areaCaughtCount(x)>0);
+    const elseMissed=sibs.find(x=>AREA_MISSED.has(x.name));
+    const resolvedElse=(caughtHere===0&&!missed)&&(elseCaught||elseMissed);
+    const resolved=caughtHere>0||missed||!!resolvedElse;
     const open=(a.name in wildOpen)?wildOpen[a.name]:!resolved;
+    const areaLink=x=>`<span class="loclink arealink" data-area="${esc(x.name)}" role="button" tabindex="0">${esc(x.name)}</span>`;
     const p=el('div','panel');
     let sub;
     if(missed)sub=`<span class="submiss">✕ Encounter missed</span>${open?'':' · collapsed'}`;
     else if(caughtHere>0)sub=`<span class="subcaught">✓ ${caughtHere} caught here</span>${open?'':' · collapsed for your nuzlocke'}`;
+    else if(resolvedElse)sub=`<span class="submiss">↔ Encounter used at ${(elseCaught||elseMissed).name}</span>`;
     else sub='Wild encounters · tick a box to mark caught';
     p.innerHTML=`<div class="phead"><h3>${esc(a.name)}</h3><span class="sub">${sub}</span><div class="pheadbtns">`+
       `<button class="missbtn${missed?' on':''}" data-miss="${esc(a.name)}" title="No usable encounter here (fainted or fled)">${missed?'Un-miss':'Mark missed'}</button>`+
       `<button class="collapsebtn" data-wild="${esc(a.name)}" data-open="${open}">${open?'Hide':'Show'} wild</button></div></div>`;
     const body=el('div','pbody');
+    const groupNote=sibs.length?`<div class="wcap grpnote">↔ Counts as <b>one nuzlocke encounter</b> (same met location) with: ${sibs.map(areaLink).join(', ')}</div>`:'';
     if(open){
-      body.innerHTML=`<div class="tblwrap"><table class="data"><thead><tr><th>Method</th><th>Level</th><th>Species</th></tr></thead><tbody>`+
+      body.innerHTML=groupNote+`<div class="tblwrap"><table class="data"><thead><tr><th>Method</th><th>Level</th><th>Species</th></tr></thead><tbody>`+
         a.wild.map(w=>wildRow(w)).join('')+
         `</tbody></table></div>`+
         `<div class="wcap">% = each species' odds of being your encounter under the nuzlocke <b>dupes clause</b> — caught species are skipped and the remaining odds rescale to 100%. Shown for grass/walking methods, which have defined 10% / 5% rates.</div>`;
+    } else if(resolvedElse){
+      body.innerHTML=`<div class="collapsednote">↔ Your <b>${esc(metLoc(a.name))}</b> encounter was already ${elseCaught?'caught':'missed'} at ${areaLink(elseCaught||elseMissed)} — same met location.</div>`;
     } else if(missed && caughtHere===0){
       body.innerHTML=`<div class="collapsednote">✕ Encounter <b>missed</b> here — nothing obtained (fainted or fled).</div>`;
     } else {

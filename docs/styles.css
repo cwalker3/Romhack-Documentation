@@ -245,6 +245,9 @@ tr.rivalrow{background:color-mix(in srgb,var(--accent) 6%,transparent)}
 .cmark.a{background:var(--star-soft);color:var(--star)}
 .litem.done{opacity:.5}
 .areamiss{margin-left:auto;color:var(--down);font-weight:800;font-size:13px;flex:none}
+.arealinked{margin-left:auto;color:var(--faint);font-weight:800;font-size:13px;flex:none}
+.wcap.grpnote{margin:0 0 12px;color:var(--accent-2);background:var(--accent-soft);border:1px solid var(--accent-line);border-radius:9px;padding:8px 11px}
+.wcap.grpnote b{color:var(--accent-2)}
 .areacheck.done{color:var(--muted)}
 .tcheck{margin-right:8px;vertical-align:-2px}
 tr.tdone td{opacity:.55}
