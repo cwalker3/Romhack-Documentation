@@ -293,10 +293,8 @@ function pokemonDetail(p){
     }
     body.appendChild(el('div','divider'));
   }
-  const cols=el('div','grid2');
-
-  // left: attributes + changes
-  const left=el('div');
+  // single left column: abilities, other changes, moves, TMs, notes (stats stay full-width above)
+  const left=el('div','detailcol');
   // abilities: vanilla slots filled in. The docs' "Ability 2"/"Hidden Ability" = the hidden slot.
   const findChg=re=>p.changes.find(c=>re.test(c.label));
   const findAttr=re=>attrsNoLoc.find(a=>re.test(a.label));
@@ -312,7 +310,7 @@ function pokemonDetail(p){
     if(ab2&&ab2!==ab1)dl+=`<dt>Ability 2</dt><dd>${esc(ab2)}</dd>`;
     if(hid&&hid!==ab1&&hid!==ab2)dl+=`<dt>Hidden Ability</dt><dd>${esc(hid)}${starBadge(hids)}</dd>`;
     otherAttrs.forEach(a=>{const n=starOf(a.value);dl+=`<dt>${esc(a.label)}</dt><dd>${esc(stripStar(a.value))}${starBadge(n)}</dd>`;});
-    if(dl!=='<dl class="dl">')left.appendChild(sub('Attributes',dl));
+    if(dl!=='<dl class="dl">')left.appendChild(sub('Abilities',dl));
   }
   // changes grouped by forme (primary-forme stat changes live in the base-stats panel)
   if(p.changes.length){
@@ -336,10 +334,9 @@ function pokemonDetail(p){
     if(chWrap.innerHTML.trim())left.appendChild(sub('Other changes',chWrap.innerHTML));
   }
 
-  // right: moves (tag moves you'd keep by delaying evolution)
+  // level-up moves (tag moves you'd keep by delaying evolution)
   const dmap=moveDelayMap(p);
   const nextName=(EVO_NEXT[normName(p.name)]||[]).map(q=>q.name).join(' / ');
-  const right=el('div');
   if(p.moves.length){
     const mv='<div class="moves">'+p.moves.map((m,i)=>{
       const d=dmap[i];
@@ -348,20 +345,19 @@ function pokemonDetail(p){
         :`<span class="badge early" title="${esc(nextName)} learns this ${d.n} levels later">${d.n} lv early</span>`):'';
       return `<div class="move movelink${d?' mv-'+d.type:''}" data-move="${esc(m.name)}" role="button" tabindex="0"><span class="lv">${m.level}</span><span class="mv">${esc(m.name)}${starBadge(m.rarity)}</span>${dBadge}</div>`;
     }).join('')+'</div>';
-    right.appendChild(sub('Level-up moves',mv));
+    left.appendChild(sub('Level-up moves',mv));
   }
-  cols.append(right,left);
-  body.appendChild(cols);
   // TM / HM compatibility (ORAS base + hack additions), collapsed by default
   if(p.tms.length || p.tmsExtra.length){
     const chips=p.tms.map(k=>{const nu=p.tmsNew.has(k),mn=TM_MOVES[k]||'';return `<span class="tmchip movelink${nu?' tmnew':''}" data-move="${esc(mn)}" role="button" tabindex="0"${nu?' title="Added by the hack — not learnable in base ORAS"':''}><span class="tmn">${esc(k)}</span>${esc(mn)}</span>`;}).join('')
       + p.tmsExtra.map(mv=>`<span class="tmchip tmnew movelink" data-move="${esc(mv)}" role="button" tabindex="0" title="Hack-added move taught by TM"><span class="tmn">TM</span>${esc(mv)}</span>`).join('');
     const nNew=p.tmsNew.size+p.tmsExtra.length;
-    body.appendChild(el('div','',`<details class="tmwrap"><summary>TM / HM compatibility · ${p.tms.length+p.tmsExtra.length}${nNew?` <span class="tmnewcount">+${nNew} added</span>`:''}</summary><div class="tmgrid">${chips}</div>${nNew?`<div class="tmcap"><span class="tmswatch"></span> Green = added by this hack (not learnable in base ORAS).</div>`:''}</details>`));
+    left.appendChild(el('div','',`<details class="tmwrap"><summary>TM / HM compatibility · ${p.tms.length+p.tmsExtra.length}${nNew?` <span class="tmnewcount">+${nNew} added</span>`:''}</summary><div class="tmgrid">${chips}</div>${nNew?`<div class="tmcap"><span class="tmswatch"></span> Green = added by this hack (not learnable in base ORAS).</div>`:''}</details>`));
   }
   if(p.notes.length){
-    body.appendChild(el('div','',`<div class="note plain" style="margin-top:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v5M12 16h.01"/><circle cx="12" cy="12" r="9"/></svg><div>${p.notes.map(esc).join('<br>')}</div></div>`));
+    left.appendChild(el('div','',`<div class="note plain" style="margin-top:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v5M12 16h.01"/><circle cx="12" cy="12" r="9"/></svg><div>${p.notes.map(esc).join('<br>')}</div></div>`));
   }
+  body.appendChild(left);
   wrap.appendChild(body);
   return wrap;
 }
