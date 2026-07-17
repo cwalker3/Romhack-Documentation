@@ -45,6 +45,21 @@ Get-Content "$dir\pokemon_abilities.csv" | Select-Object -Skip 1 | ForEach-Objec
 }
 "vanilla abilities loaded: slot1=$($a1.Keys.Count) slot2=$($a2.Keys.Count) hidden=$($ah.Keys.Count)"
 
+# --- official Mega/Primal forme stats (gen-6 forms, PokeAPI id 10033..10090) ---
+$allStat=@{}
+Get-Content "$dir\pokemon_stats.csv" | Select-Object -Skip 1 | ForEach-Object { $p=$_ -split ','; $pid2=[int]$p[0]; if(-not $allStat.ContainsKey($pid2)){$allStat[$pid2]=@(0,0,0,0,0,0)}; $allStat[$pid2][[int]$p[1]-1]=[int]$p[2] }
+$megaByDex=@{}
+Get-Content "$dir\pokemon.csv" | Select-Object -Skip 1 | ForEach-Object {
+  $p=$_ -split ','; $fid=[int]$p[0]; if($fid -lt 10033 -or $fid -gt 10090){return}
+  $ident=$p[1]; if($ident -notmatch '-mega|-primal'){return}
+  $spec=[int]$p[2]; $st=$allStat[$fid]; if(-not $st){return}
+  $forme = if($ident -match '-mega-x$'){'Mega X'}elseif($ident -match '-mega-y$'){'Mega Y'}elseif($ident -match '-primal$'){'Primal'}else{'Mega'}
+  $so=[ordered]@{hp=$st[0];atk=$st[1];def=$st[2];spa=$st[3];spd=$st[4];spe=$st[5]}
+  if(-not $megaByDex.ContainsKey($spec)){$megaByDex[$spec]=New-Object System.Collections.ArrayList}
+  [void]$megaByDex[$spec].Add([ordered]@{forme=$forme;stats=$so})
+}
+"mega/primal forms: " + ((@($megaByDex.Values | ForEach-Object {$_.Count})|Measure-Object -Sum).Sum)
+
 # --- TM/HM compatibility: ORAS base (from oras_tms.csv) + hack "New TM/HMs" additions ---
 $mn2move=@{}
 Get-Content "$dir\machines.csv" | Where-Object { $_ -match '^\d+,16,' } | ForEach-Object {
@@ -70,6 +85,19 @@ foreach($e in $d.pokemon.entries){
   Add-Member -InputObject $e -NotePropertyName a1 -NotePropertyValue ($(if($a1.ContainsKey($id)){$a1[$id]}else{''})) -Force
   Add-Member -InputObject $e -NotePropertyName a2 -NotePropertyValue ($(if($a2.ContainsKey($id) -and $a2[$id] -ne $a1[$id]){$a2[$id]}else{''})) -Force
   Add-Member -InputObject $e -NotePropertyName ah -NotePropertyValue ($(if($ah.ContainsKey($id)){$ah[$id]}else{''})) -Force
+  # mega stats (vanilla + any documented "Mega Forme" hack changes)
+  if($megaByDex.ContainsKey($id)){
+    $mchg=@{}
+    foreach($c in @($e.changes)){ if($c.forme -eq 'Mega Forme'){ $mk=StatKey $c.label; if($mk -ne ''){ $mt=0; if([int]::TryParse(($c.to -replace '[^\d]',''),[ref]$mt)){$mchg[$mk]=$mt} } } }
+    $mlist=New-Object System.Collections.ArrayList
+    foreach($mg in $megaByDex[$id]){
+      $ms=[ordered]@{}; $mtot=0
+      foreach($k in $order){ $mv=$(if($mchg.ContainsKey($k)){$mchg[$k]}else{$mg.stats[$k]}); $ms[$k]=$mv; $mtot+=$mv }
+      $ms['total']=$mtot
+      [void]$mlist.Add([ordered]@{forme=$mg.forme;stats=$ms})
+    }
+    Add-Member -InputObject $e -NotePropertyName megas -NotePropertyValue @($mlist) -Force
+  }
   # TM/HM compatibility
   $vanSet=New-Object System.Collections.Generic.HashSet[string]
   if($vanTm.ContainsKey($id)){ foreach($k in ($vanTm[$id] -split ' ')){ if($k){[void]$vanSet.Add($k)} } }

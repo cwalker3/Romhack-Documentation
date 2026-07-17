@@ -167,7 +167,7 @@ function collapsibleAbout(id,meta,extra){
 /* ================= POKÉMON ================= */
 const PK=arr(RAW.pokemon.entries).map(e=>({
   dex:e.dex,name:e.name,attrs:arr(e.attrs),changes:arr(e.changes),moves:arr(e.moves),notes:arr(e.notes),
-  stats:e.stats||{},statChg:e.statChg||{},a1:e.a1||'',a2:e.a2||'',ah:e.ah||'',
+  stats:e.stats||{},statChg:e.statChg||{},a1:e.a1||'',a2:e.a2||'',ah:e.ah||'',megas:arr(e.megas),
   tms:(e.tms||'').split(' ').filter(Boolean),tmsNew:new Set((e.tmsNew||'').split(' ').filter(Boolean)),tmsExtra:arr(e.tmsExtra),
   loc:(arr(e.attrs).find(a=>a.label==='Location')||{}).value||'',
   _s:(e.dex+' '+e.name+' '+arr(e.attrs).map(a=>a.value).join(' ')+' '+arr(e.moves).map(m=>m.name).join(' ')).toLowerCase()
@@ -279,7 +279,18 @@ function pokemonDetail(p){
   const body=el('div','pbody');
   // base stats (always shown)
   if(p.stats && p.stats.total){
-    body.appendChild(el('div','',`<div class="eyebrow" style="margin-bottom:10px">Base stats</div>${statsPanel(p)}`));
+    if(p.megas.length){
+      const col=(lbl,s,c)=>`<div class="statcol"><div class="eyebrow" style="margin-bottom:9px">${esc(lbl)}</div>${statsPanelOf(s,c)}</div>`;
+      let cols=col('Base stats',p.stats,p.statChg);
+      p.megas.forEach(mg=>{
+        const diff={};STATMETA.forEach(([k])=>{if((+mg.stats[k]||0)!==(+p.stats[k]||0))diff[k]={from:+p.stats[k]||0,to:+mg.stats[k]||0};});
+        if((+mg.stats.total||0)!==(+p.stats.total||0))diff.total={from:+p.stats.total||0,to:+mg.stats.total||0};
+        cols+=col(`${mg.forme} ${p.name}`,mg.stats,diff);
+      });
+      body.appendChild(el('div','',`<div class="statcols">${cols}</div>`));
+    } else {
+      body.appendChild(el('div','',`<div class="eyebrow" style="margin-bottom:10px">Base stats</div>${statsPanel(p)}`));
+    }
     body.appendChild(el('div','divider'));
   }
   const cols=el('div','grid2');
@@ -355,24 +366,21 @@ function pokemonDetail(p){
 }
 function sub(title,html){return el('div','',`<div class="eyebrow" style="margin-bottom:9px">${esc(title)}</div>${html}`);}
 const STATMETA=[['hp','HP'],['atk','Attack'],['def','Defense'],['spa','Sp. Atk'],['spd','Sp. Def'],['spe','Speed']];
-function statsPanel(p){
-  const s=p.stats||{},chg=p.statChg||{},MAX=200;
-  let rows=STATMETA.map(([k,lbl])=>{
-    const v=+s[k]||0,c=chg[k];
-    const w=Math.min(100,Math.round(v/MAX*100));
-    let cls='',ghost='',ann='<span class="sann"></span>';
-    if(c){
-      const d=(+c.to)-(+c.from);
-      cls=d>0?'up':'down';
-      ghost=`<i class="ghost" style="width:${Math.min(100,Math.round((+c.from)/MAX*100))}%"></i>`;
-      ann=`<span class="sann"><span class="was">${esc(c.from)}</span><span class="delta ${d>0?'up':'down'}">${d>0?'+':''}${d}</span></span>`;
-    }
-    return `<div class="strow ${cls}"><span class="sl">${lbl}</span><span class="sbar">${ghost}<i style="width:${w}%"></i></span>${ann}<span class="sv"><b>${v}</b></span></div>`;
-  }).join('');
-  const t=+s.total||0;
-  rows+=`<div class="strow total"><span class="sl">Total</span><span class="sbar"><i style="width:${Math.min(100,Math.round(t/720*100))}%"></i></span><span class="sann"></span><span class="sv"><b>${t}</b></span></div>`;
+function statRow(lbl,v,c,scale){
+  const w=Math.min(100,Math.round(v/scale*100));
+  let cls='',ghost='',ann='<span class="sann"></span>';
+  if(c){const d=(+c.to)-(+c.from);cls=d>0?'up':'down';
+    ghost=`<i class="ghost" style="width:${Math.min(100,Math.round((+c.from)/scale*100))}%"></i>`;
+    ann=`<span class="sann"><span class="was">${esc(c.from)}</span><span class="delta ${d>0?'up':'down'}">${d>0?'+':''}${d}</span></span>`;}
+  return `<div class="strow ${cls}${lbl==='Total'?' total':''}"><span class="sl">${lbl}</span><span class="sbar">${ghost}<i style="width:${w}%"></i></span>${ann}<span class="sv"><b>${v}</b></span></div>`;
+}
+function statsPanelOf(s,chg){
+  s=s||{};chg=chg||{};
+  let rows=STATMETA.map(([k,lbl])=>statRow(lbl,+s[k]||0,chg[k],200)).join('');
+  rows+=statRow('Total',+s.total||0,chg.total,720);
   return `<div class="stats">${rows}</div>`;
 }
+function statsPanel(p){return statsPanelOf(p.stats,p.statChg);}
 function statBlock(stats){
   const order=['HP','Attack','Defense','Sp. Attack','Sp. Atk','Sp. Defense','Sp. Def','Speed','Total'];
   stats.sort((a,b)=>order.indexOf(a.label)-order.indexOf(b.label));
