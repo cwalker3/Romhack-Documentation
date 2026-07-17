@@ -174,6 +174,30 @@ const PK=arr(RAW.pokemon.entries).map(e=>({
 }));
 PK.forEach(p=>{const n=normName(p.name);if(!NAME2DEX[n])NAME2DEX[n]=p.dex;});
 const TM_MOVES=RAW.pokemon.tmMoves||{};
+const MOVE_INFO=RAW.moveInfo||{};
+function moveData(name){return MOVE_INFO[normName(name)];}
+const TYPE_COLORS={Normal:'#9099a1',Fire:'#ff9d55',Water:'#4d90d5',Electric:'#f4d23c',Grass:'#63bc5a',Ice:'#73cec0',Fighting:'#ce4069',Poison:'#ab6ac8',Ground:'#d97845',Flying:'#8fa8dd',Psychic:'#f97176',Bug:'#90c12c',Rock:'#c5b78c',Ghost:'#5269ad',Dragon:'#0b6dc3',Dark:'#5a5366',Steel:'#5a8ea1',Fairy:'#ec8fe6'};
+/* ---- move info modal ---- */
+const moveModal=el('div','movemodal-backdrop');moveModal.innerHTML='<div class="movemodal" role="dialog" aria-modal="true"></div>';document.body.appendChild(moveModal);
+moveModal.addEventListener('click',e=>{if(e.target===moveModal||e.target.closest('.mm-close'))closeMove();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMove();});
+function closeMove(){moveModal.classList.remove('show');}
+function openMove(name){
+  const mi=moveData(name), box=moveModal.firstElementChild;
+  if(!mi){box.innerHTML=`<div class="mm-head"><h3>${esc(name)}</h3><button class="mm-close" aria-label="Close">✕</button></div><div class="mm-body"><p class="mm-desc">No data available for this move.</p></div>`;}
+  else{
+    const tcol=TYPE_COLORS[mi.t]||'var(--surface-3)';
+    box.innerHTML=`<div class="mm-head"><h3>${esc(mi.n||name)}</h3><button class="mm-close" aria-label="Close">✕</button></div>`+
+      `<div class="mm-body">`+
+      `<div class="mm-tags"><span class="mm-type" style="background:${tcol}">${esc(mi.t||'—')}</span><span class="mm-cat mm-cat-${(mi.c||'').toLowerCase()}">${esc(mi.c||'—')}</span>${mi.chg?'<span class="mm-chg" title="Modified in this hack">★ Changed in hack</span>':''}</div>`+
+      `<div class="mm-stats"><div><b>${mi.pow==null?'—':mi.pow}</b><span>Power</span></div><div><b>${mi.acc==null?'—':mi.acc}</b><span>Accuracy</span></div><div><b>${mi.pp==null?'—':mi.pp}</b><span>PP</span></div></div>`+
+      (mi.fx?`<div class="mm-fx"><b>Effect:</b> ${esc(mi.fx)}</div>`:'')+
+      (mi.d?`<p class="mm-desc">${esc(mi.d)}</p>`:'')+
+      `</div>`;
+  }
+  moveModal.classList.add('show');
+}
+function moveChip(name,extra){return `<span class="movelink ${extra||''}" data-move="${esc(name)}" role="button" tabindex="0">${esc(name)}</span>`;}
 // forward evolution map, derived from each species' "Evolve <Pre> (…)" obtain location
 const PK_BY_DEX={};PK.forEach(p=>PK_BY_DEX[p.dex]=p);
 const EVO_NEXT={};
@@ -310,7 +334,7 @@ function pokemonDetail(p){
       const dBadge=d?(d.type==='excl'
         ?`<span class="badge excl" title="${esc(nextName)} never learns this by level-up">exclusive</span>`
         :`<span class="badge early" title="${esc(nextName)} learns this ${d.n} levels later">${d.n} lv early</span>`):'';
-      return `<div class="move${d?' mv-'+d.type:''}"><span class="lv">${m.level}</span><span class="mv">${esc(m.name)}${starBadge(m.rarity)}</span>${dBadge}</div>`;
+      return `<div class="move movelink${d?' mv-'+d.type:''}" data-move="${esc(m.name)}" role="button" tabindex="0"><span class="lv">${m.level}</span><span class="mv">${esc(m.name)}${starBadge(m.rarity)}</span>${dBadge}</div>`;
     }).join('')+'</div>';
     right.appendChild(sub('Level-up moves',mv));
   }
@@ -318,8 +342,8 @@ function pokemonDetail(p){
   body.appendChild(cols);
   // TM / HM compatibility (ORAS base + hack additions), collapsed by default
   if(p.tms.length || p.tmsExtra.length){
-    const chips=p.tms.map(k=>{const nu=p.tmsNew.has(k);return `<span class="tmchip${nu?' tmnew':''}"${nu?' title="Added by the hack — not learnable in base ORAS"':''}><span class="tmn">${esc(k)}</span>${esc(TM_MOVES[k]||'')}</span>`;}).join('')
-      + p.tmsExtra.map(mv=>`<span class="tmchip tmnew" title="Hack-added move taught by TM"><span class="tmn">TM</span>${esc(mv)}</span>`).join('');
+    const chips=p.tms.map(k=>{const nu=p.tmsNew.has(k),mn=TM_MOVES[k]||'';return `<span class="tmchip movelink${nu?' tmnew':''}" data-move="${esc(mn)}" role="button" tabindex="0"${nu?' title="Added by the hack — not learnable in base ORAS"':''}><span class="tmn">${esc(k)}</span>${esc(mn)}</span>`;}).join('')
+      + p.tmsExtra.map(mv=>`<span class="tmchip tmnew movelink" data-move="${esc(mv)}" role="button" tabindex="0" title="Hack-added move taught by TM"><span class="tmn">TM</span>${esc(mv)}</span>`).join('');
     const nNew=p.tmsNew.size+p.tmsExtra.length;
     body.appendChild(el('div','',`<details class="tmwrap"><summary>TM / HM compatibility · ${p.tms.length+p.tmsExtra.length}${nNew?` <span class="tmnewcount">+${nNew} added</span>`:''}</summary><div class="tmgrid">${chips}</div>${nNew?`<div class="tmcap"><span class="tmswatch"></span> Green = added by this hack (not learnable in base ORAS).</div>`:''}</details>`));
   }
@@ -568,7 +592,7 @@ function areaDetail(a){
     p.innerHTML=`<div class="phead"><h3>${esc(s.title)}</h3><span class="sub">Detailed team</span></div>`;
     const body=el('div','pbody');
     body.innerHTML=`<div class="tblwrap"><table class="data"><thead><tr><th>Pokémon</th><th>Lv</th><th>Item</th><th>Ability</th><th>Moves</th></tr></thead><tbody>`+
-      s.team.map(m=>`<tr><td><span class="monname${isMon(m.name)?' monlink':''}"${monAttr(m.name)}>${spriteByName(m.name,26,'cspr')}<b>${esc(m.name)}</b></span></td><td class="mono">${esc(m.level)}</td><td>${esc(m.item)}</td><td>${esc(m.ability)}</td><td>${arr(m.moves).map(mv=>`<span class="chip">${esc(mv)}</span>`).join(' ')}</td></tr>`).join('')+
+      s.team.map(m=>`<tr><td><span class="monname${isMon(m.name)?' monlink':''}"${monAttr(m.name)}>${spriteByName(m.name,26,'cspr')}<b>${esc(m.name)}</b></span></td><td class="mono">${esc(m.level)}</td><td>${esc(m.item)}</td><td>${esc(m.ability)}</td><td>${arr(m.moves).map(mv=>`<span class="chip movelink" data-move="${esc(mv)}" role="button" tabindex="0">${esc(mv)}</span>`).join(' ')}</td></tr>`).join('')+
       `</tbody></table></div>`;
     p.appendChild(body);wrap.appendChild(p);
   });
@@ -596,7 +620,7 @@ function renderMoves(c){
         rows+=`<div class="chgrow"><span class="cl">${esc(r.label||'Effect')}</span><span class="now">${esc(r.value)}</span></div>`;
       }
     });
-    p.innerHTML=`<div class="phead"><h3>${esc(e.name)}</h3></div><div class="pbody">${rows}</div>`;
+    p.innerHTML=`<div class="phead"><h3><span class="movelink" data-move="${esc(e.name)}" role="button" tabindex="0">${esc(e.name)}</span></h3></div><div class="pbody">${rows}</div>`;
     grid.appendChild(p);
   });
   c.appendChild(grid);
@@ -776,6 +800,8 @@ contentEl.addEventListener('click',e=>{
   if(mb){e.preventDefault();toggleMissed(mb.dataset.miss);reRenderKeepScroll();return;}
   const wb=e.target.closest('.collapsebtn');
   if(wb){e.preventDefault();wildOpen[wb.dataset.wild]=!(wb.dataset.open==='true');reRenderKeepScroll();return;}
+  const mv=e.target.closest('.movelink');
+  if(mv&&mv.dataset.move){e.preventDefault();openMove(mv.dataset.move);return;}
   const al=e.target.closest('.arealink');
   if(al&&al.dataset.area){e.preventDefault();gotoArea(al.dataset.area);return;}
   const t=e.target.closest('.monlink');
@@ -784,6 +810,8 @@ contentEl.addEventListener('click',e=>{
 contentEl.addEventListener('keydown',e=>{
   if(e.key!=='Enter'&&e.key!==' ')return;
   if(e.target.closest('.catch'))return; // native button click handles it
+  const mv=e.target.closest('.movelink');
+  if(mv&&mv.dataset.move){e.preventDefault();openMove(mv.dataset.move);return;}
   const al=e.target.closest('.arealink');
   if(al&&al.dataset.area){e.preventDefault();gotoArea(al.dataset.area);return;}
   const t=e.target.closest('.monlink');

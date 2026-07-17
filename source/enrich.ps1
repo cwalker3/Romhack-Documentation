@@ -114,6 +114,42 @@ foreach($e in $d.pokemon.entries){
 if($noBase.Count){ "NO BASE STATS ($($noBase.Count)): " + ($noBase -join ', ') } else { "all entries have base stats" }
 
 Add-Member -InputObject $d.pokemon -NotePropertyName tmMoves -NotePropertyValue $tmMoves -Force
+
+# --- move info: type / category / power / accuracy / PP / description (+ hack AttackChanges overlay) ---
+$typeNm=@{}
+Get-Content "$dir\type_names.csv" | ForEach-Object { $p=$_ -split ','; if($p.Count -ge 3 -and $p[1] -eq '9'){ $typeNm[[int]$p[0]]=$p[2].Trim() } }
+$mvName=@{}
+Get-Content "$dir\move_names.csv" | Select-Object -Skip 1 | ForEach-Object { $p=$_ -split ','; if($p.Count -ge 3 -and $p[1] -eq '9'){ $mvName[[int]$p[0]]=$p[2].Trim() } }
+$mvDesc=@{}
+Get-Content "$dir\move_desc.tsv" | ForEach-Object { $p=$_ -split "`t",2; if($p.Count -eq 2){ $mvDesc[[int]$p[0]]=$p[1] } }
+$catName=@{'1'='Status';'2'='Physical';'3'='Special'}
+$moveInfo=@{}
+Get-Content "$dir\moves.csv" | Select-Object -Skip 1 | ForEach-Object {
+  $p=$_ -split ','
+  $mid=[int]$p[0]; $nm=$mvName[$mid]; if(-not $nm){ return }
+  $moveInfo[(Norm $nm)]=[ordered]@{
+    n=$nm; t=$(if($p[3]){$typeNm[[int]$p[3]]}else{''}); c=$(if($p[9]){$catName[$p[9]]}else{''})
+    pow=$(if($p[4] -ne ''){[int]$p[4]}else{$null}); acc=$(if($p[6] -ne ''){[int]$p[6]}else{$null}); pp=$(if($p[5] -ne ''){[int]$p[5]}else{$null})
+    d=$(if($mvDesc.ContainsKey($mid)){$mvDesc[$mid]}else{''})
+  }
+}
+foreach($atk in @($d.attacks.entries)){
+  $key=Norm $atk.name
+  if(-not $moveInfo.ContainsKey($key)){ $moveInfo[$key]=[ordered]@{ n=$atk.name;t='';c='';pow=$null;acc=$null;pp=$null;d='' } }
+  $mi=$moveInfo[$key]; $t2=0
+  foreach($r in @($atk.rows)){
+    if($r.kind -eq 'change'){ switch($r.label){
+      'Power'{ if([int]::TryParse($r.to,[ref]$t2)){$mi.pow=$t2} }
+      'Accuracy'{ if([int]::TryParse($r.to,[ref]$t2)){$mi.acc=$t2} }
+      'PP'{ if([int]::TryParse($r.to,[ref]$t2)){$mi.pp=$t2} }
+      'Type'{ $mi.t=$r.to } } }
+    elseif($r.kind -eq 'note' -and $r.label -eq 'Effect'){ $mi['fx']=$r.value }
+  }
+  $mi['chg']=$true
+}
+"move info: $($moveInfo.Count)"
+Add-Member -InputObject $d -NotePropertyName moveInfo -NotePropertyValue $moveInfo -Force
+
 $json=$d | ConvertTo-Json -Depth 40 -Compress
 [System.IO.File]::WriteAllText("$dir\data.json",$json,(New-Object System.Text.UTF8Encoding($false)))
 "data.json rewritten: {0:N0} bytes" -f $json.Length
