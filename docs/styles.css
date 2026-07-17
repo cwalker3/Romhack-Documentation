@@ -177,6 +177,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .ast.a2{color:var(--star2)}
 /* clickable moves + move-info modal */
 .movelink{cursor:pointer}
+.chgmark{color:var(--star);font-size:10px;font-weight:800;margin-left:3px;vertical-align:1px;cursor:help}
 .move.movelink:hover{border-color:var(--accent)}
 .tmchip.movelink:hover{border-color:var(--accent)}
 .chip.movelink:hover{border-color:var(--accent);color:var(--accent-2)}

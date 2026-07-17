@@ -198,6 +198,7 @@ function openMove(name){
   moveModal.classList.add('show');
 }
 function moveChip(name,extra){return `<span class="movelink ${extra||''}" data-move="${esc(name)}" role="button" tabindex="0">${esc(name)}</span>`;}
+function moveChgMark(name){const m=moveData(name);return (m&&m.chg)?'<span class="chgmark" title="Move changed in this hack — click for details">★</span>':'';}
 // forward evolution map, derived from each species' "Evolve <Pre> (…)" obtain location
 const PK_BY_DEX={};PK.forEach(p=>PK_BY_DEX[p.dex]=p);
 const EVO_NEXT={};
@@ -343,13 +344,13 @@ function pokemonDetail(p){
       const dBadge=d?(d.type==='excl'
         ?`<span class="badge excl" title="${esc(nextName)} never learns this by level-up">exclusive</span>`
         :`<span class="badge early" title="${esc(nextName)} learns this ${d.n} levels later">${d.n} lv early</span>`):'';
-      return `<div class="move movelink${d?' mv-'+d.type:''}" data-move="${esc(m.name)}" role="button" tabindex="0"><span class="lv">${m.level}</span><span class="mv">${esc(m.name)}${starBadge(m.rarity)}</span>${dBadge}</div>`;
+      return `<div class="move movelink${d?' mv-'+d.type:''}" data-move="${esc(m.name)}" role="button" tabindex="0"><span class="lv">${m.level}</span><span class="mv">${esc(m.name)}${starBadge(m.rarity)}${moveChgMark(m.name)}</span>${dBadge}</div>`;
     }).join('')+'</div>';
     left.appendChild(sub('Level-up moves',mv));
   }
   // TM / HM compatibility (ORAS base + hack additions), collapsed by default
   if(p.tms.length || p.tmsExtra.length){
-    const chips=p.tms.map(k=>{const nu=p.tmsNew.has(k),mn=TM_MOVES[k]||'';return `<span class="tmchip movelink${nu?' tmnew':''}" data-move="${esc(mn)}" role="button" tabindex="0"${nu?' title="Added by the hack — not learnable in base ORAS"':''}><span class="tmn">${esc(k)}</span>${esc(mn)}</span>`;}).join('')
+    const chips=p.tms.map(k=>{const nu=p.tmsNew.has(k),mn=TM_MOVES[k]||'';return `<span class="tmchip movelink${nu?' tmnew':''}" data-move="${esc(mn)}" role="button" tabindex="0"${nu?' title="Added by the hack — not learnable in base ORAS"':''}><span class="tmn">${esc(k)}</span>${esc(mn)}${moveChgMark(mn)}</span>`;}).join('')
       + p.tmsExtra.map(mv=>`<span class="tmchip tmnew movelink" data-move="${esc(mv)}" role="button" tabindex="0" title="Hack-added move taught by TM"><span class="tmn">TM</span>${esc(mv)}</span>`).join('');
     const nNew=p.tmsNew.size+p.tmsExtra.length;
     left.appendChild(el('div','',`<details class="tmwrap"><summary>TM / HM compatibility · ${p.tms.length+p.tmsExtra.length}${nNew?` <span class="tmnewcount">+${nNew} added</span>`:''}</summary><div class="tmgrid">${chips}</div>${nNew?`<div class="tmcap"><span class="tmswatch"></span> Green = added by this hack (not learnable in base ORAS).</div>`:''}</details>`));
@@ -597,7 +598,7 @@ function areaDetail(a){
     p.innerHTML=`<div class="phead"><h3>${esc(s.title)}</h3><span class="sub">Detailed team</span></div>`;
     const body=el('div','pbody');
     body.innerHTML=`<div class="tblwrap"><table class="data"><thead><tr><th>Pokémon</th><th>Lv</th><th>Item</th><th>Ability</th><th>Moves</th></tr></thead><tbody>`+
-      s.team.map(m=>`<tr><td><span class="monname${isMon(m.name)?' monlink':''}"${monAttr(m.name)}>${spriteByName(m.name,26,'cspr')}<b>${esc(m.name)}</b></span></td><td class="mono">${esc(m.level)}</td><td>${esc(m.item)}</td><td>${esc(m.ability)}</td><td>${arr(m.moves).map(mv=>`<span class="chip movelink" data-move="${esc(mv)}" role="button" tabindex="0">${esc(mv)}</span>`).join(' ')}</td></tr>`).join('')+
+      s.team.map(m=>`<tr><td><span class="monname${isMon(m.name)?' monlink':''}"${monAttr(m.name)}>${spriteByName(m.name,26,'cspr')}<b>${esc(m.name)}</b></span></td><td class="mono">${esc(m.level)}</td><td>${esc(m.item)}</td><td>${esc(m.ability)}</td><td>${arr(m.moves).map(mv=>`<span class="chip movelink" data-move="${esc(mv)}" role="button" tabindex="0">${esc(mv)}${moveChgMark(mv)}</span>`).join(' ')}</td></tr>`).join('')+
       `</tbody></table></div>`;
     p.appendChild(body);wrap.appendChild(p);
   });

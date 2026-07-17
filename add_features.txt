@@ -13,6 +13,7 @@ Quick Features
 12. [DONE] Remove rematch trainers.
 13. [DONE] I noticed that pokemon with 2 ability slots only have one. Golduck and persian for example.
 14. [DONE] Show the megas Stats adjacent to the normal stats.
+15. [DONE] Mark moves that are changed in the romhack (the move itself is changed).
 
 
 Bigger changes
