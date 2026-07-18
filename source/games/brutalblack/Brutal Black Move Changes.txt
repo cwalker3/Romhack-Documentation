@@ -184,7 +184,7 @@ Drill Peck: BP: 80 > 90, no effect > high crit ratio
 Sky Attack: BP: 140 > 120, Acc: 90 > 100, 2 turn high crit ratio > drops user’s def and spdef by 1 stage (now has same ai as brave bird)
 Aeroblast: Acc: 95 > 100
 Air Cutter: Acc: 95 > 100
-Aerial Ace: PP: 60 > 80
+Aerial Ace: BP: 60 > 80
 Bounce: Acc: 85 > 100
 Roost: PP: 10 > 5
 Air Slash: Acc: 95 > 100
