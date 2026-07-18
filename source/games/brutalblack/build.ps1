@@ -295,6 +295,104 @@ foreach ($line in [System.IO.File]::ReadAllLines($tiPath, [System.Text.Encoding]
 $thiefStages = @($thiefStages | Where-Object { $_.rows.Count -gt 0 })
 foreach ($s in $thiefStages) { $s.rows = @($s.rows) }
 
+# ---------- Areas (wild encounters + trainers) + Gifts, from the Mastersheet ----------
+$msPath = Join-Path $GameDir 'Brutal Black Mastersheet.txt'
+$ml = [System.IO.File]::ReadAllLines($msPath, [System.Text.Encoding]::UTF8)
+$reTeam = [regex]'^(?<sp>.+?)\s*\((?<lv>\d+)\)\s*\[(?<nat>[^\]]+)\]\s*(?:@\s*(?<item>.+?)\s*/\s*)?(?<ab>[^:@]+?)\s*:\s*(?<mv>.*)$'
+$reWild = [regex]'^(?<method>[A-Za-z][A-Za-z /]*?)\s*\((?<lvl>\d+)\)\s*:\s*(?<list>.+)$'
+$reGift = [regex]'^Gift(?:\s*\(\d+\))?\s*:\s*(?<g>.+)$'
+$reHdr  = [regex]'^(?<h>.+?):\s*$'
+$reSp   = [regex]'(?<name>[^,()]+?)\s*\((?<pct>\d+)%\)'   # global: tolerant of missing commas
+
+$areas = New-Object System.Collections.ArrayList
+$giftRows = New-Object System.Collections.ArrayList
+$area = $null; $trainer = $null; $baseTName = ''; $choice = ''
+
+function New-BBArea($name){
+  foreach ($a in $script:areas) { if ($a.name -eq $name) { return $a } }   # merge repeat visits
+  $a = [ordered]@{ name=$name; wild=(New-Object System.Collections.ArrayList); trainers=(New-Object System.Collections.ArrayList) }
+  [void]$script:areas.Add($a); return $a
+}
+function End-BBTrainer(){
+  if ($script:trainer -and $script:trainer.team.Count -gt 0 -and $script:area) { [void]$script:area.trainers.Add($script:trainer) }
+  $script:trainer = $null
+}
+function New-BBTrainer($name){ return [ordered]@{ id=''; name=$name; badge=$(if($name -match 'Gym Leader'){'Leader'}else{''}); team=(New-Object System.Collections.ArrayList) } }
+function NextIsTeam($idx){
+  for ($j=$idx+1; $j -lt $ml.Count; $j++) {
+    $s = $ml[$j].Trim()
+    if (-not $s -or $s.StartsWith('*') -or $s -match '^If you chose' -or $s -match '\(Level Cap:') { continue }
+    return $reTeam.IsMatch($s)
+  }
+  return $false
+}
+
+for ($i=0; $i -lt $ml.Count; $i++) {
+  $t = $ml[$i].Trim()
+  if (-not $t -or $t -match '\(Level Cap:' -or $t.StartsWith('*')) { continue }
+
+  $mg = $reGift.Match($t)
+  if ($mg.Success) { [void]$giftRows.Add(@($(if($area){$area.name}else{''}), $mg.Groups['g'].Value.Trim())); continue }
+
+  $mw = $reWild.Match($t)
+  if ($mw.Success -and $mw.Groups['list'].Value -match '\(\d+%\)') {
+    if ($area) {
+      $sp = New-Object System.Collections.ArrayList
+      foreach ($sm in $reSp.Matches($mw.Groups['list'].Value)) {
+        $nm = $sm.Groups['name'].Value.Trim()
+        if ($nm) { [void]$sp.Add([ordered]@{ name=$nm; rare=([int]$sm.Groups['pct'].Value -le 5) }) }
+      }
+      if ($sp.Count) { [void]$area.wild.Add([ordered]@{ method=$mw.Groups['method'].Value.Trim(); level=$mw.Groups['lvl'].Value; species=@($sp) }) }
+    }
+    continue
+  }
+
+  if ($t -match '^If you chose\s+(\w+)') {
+    $choice = "chose $($Matches[1])"
+    if (NextIsTeam $i) {                                  # variant teams follow directly (pattern 1)
+      if ($trainer -and $trainer.team.Count -gt 0) { End-BBTrainer; $trainer = New-BBTrainer "$baseTName ($choice)" }
+      elseif ($trainer) { $trainer.name = "$baseTName ($choice)" }
+    } else { End-BBTrainer }                              # a header follows (pattern 2): keep $choice for it
+    continue
+  }
+
+  $mt = $reTeam.Match($t)
+  if ($mt.Success) {
+    if (-not $trainer) { $baseTName = 'Trainer'; $trainer = New-BBTrainer $baseTName }
+    $moves = @()
+    if ($mt.Groups['mv'].Value.Trim()) { $moves = @(($mt.Groups['mv'].Value -split ',') | ForEach-Object { $_.Trim() } | Where-Object { $_ }) }
+    [void]$trainer.team.Add([ordered]@{
+      species=$mt.Groups['sp'].Value.Trim(); level=$mt.Groups['lv'].Value
+      item=$(if($mt.Groups['item'].Success){$mt.Groups['item'].Value.Trim()}else{''})
+      ability=$mt.Groups['ab'].Value.Trim(); moves=$moves
+    })
+    continue
+  }
+
+  $mh = $reHdr.Match($t)
+  if ($mh.Success) {
+    $h = $mh.Groups['h'].Value.Trim()
+    End-BBTrainer
+    if (NextIsTeam $i) {                                  # trainer header
+      $baseTName = $h
+      $trainer = New-BBTrainer $(if ($choice) { "$h ($choice)" } else { $h })
+    } else { $area = New-BBArea $h }                      # location header
+    $choice = ''
+    continue
+  }
+}
+End-BBTrainer
+
+# assign stable trainer ids; wrap into RR/SS's area/roster shape (skip empty locations)
+$areaData = New-Object System.Collections.ArrayList
+foreach ($a in $areas) {
+  $ti = 0; foreach ($tr in $a.trainers) { $tr.id = (Norm $a.name) + '-' + (Norm $tr.name) + "-$ti"; foreach ($m in $tr.team) { $m.moves = @($m.moves) }; $tr.team = @($tr.team); $ti++ }
+  $wild = @($a.wild); $trs = @($a.trainers)
+  if ($wild.Count -eq 0 -and $trs.Count -eq 0) { continue }
+  $rosters = @(); if ($trs.Count) { $rosters = @([ordered]@{ title='Trainers'; kind=''; trainers=$trs }) }
+  [void]$areaData.Add([ordered]@{ name=$a.name; wild=$wild; rosters=$rosters; special=@() })
+}
+
 $data = [ordered]@{
   pokemon = [ordered]@{
     meta = [ordered]@{
@@ -316,6 +414,22 @@ $data = [ordered]@{
     intro = 'Important items you can steal with Thief / Covet from wild Pokemon, by location. Grouped by gym split in story order.'
     stages = @($thiefStages)
   }
+  areas = [ordered]@{
+    meta = [ordered]@{
+      subtitle = ''
+      blurb = @('Wild encounters and trainer teams for every location, in story order, from the Brutal Black mastersheet. Tick wild Pokemon as caught and mark trainers beaten to track your run.')
+    }
+    areas = @($areaData)
+  }
+  gifts = [ordered]@{
+    meta = [ordered]@{
+      subtitle = ''
+      blurb = @('Gift and starter Pokemon by location, from the mastersheet.')
+    }
+    blocks = @(
+      [ordered]@{ type='table'; columns=@('Location','Gift'); rows=@($giftRows) }
+    )
+  }
 }
 
 $json = $data | ConvertTo-Json -Depth 12 -Compress
@@ -326,6 +440,10 @@ $reg = 'window.RRSS_GAMES=window.RRSS_GAMES||{};window.RRSS_GAMES["brutalblack"]
 "Moves: {0} total, {1} changed" -f $moveInfo.Count, $attackEntries.Count
 if ($mcNoMatch.Count) { "Move changes with no base-info match: {0} -> {1}" -f $mcNoMatch.Count, ($mcNoMatch -join ', ') }
 "Thief: {0} location cards, {1} items" -f $thiefStages.Count, (($thiefStages | ForEach-Object { $_.rows.Count } | Measure-Object -Sum).Sum)
+$trCount = ($areaData | ForEach-Object { ($_.rosters | ForEach-Object { $_.trainers.Count } | Measure-Object -Sum).Sum } | Measure-Object -Sum).Sum
+$wildCount = ($areaData | ForEach-Object { $_.wild.Count } | Measure-Object -Sum).Sum
+"Areas: {0} locations, {1} wild tables, {2} trainers" -f $areaData.Count, $wildCount, $trCount
+"Gifts: {0} rows" -f $giftRows.Count
 "Wrote {0} ({1:N0} bytes)" -f $out, ((Get-Item $out).Length)
 "Species: {0}" -f $sorted.Count
 if ($dupes.Count) { "Duplicates dropped: {0} -> {1}" -f $dupes.Count, ($dupes -join ', ') }
