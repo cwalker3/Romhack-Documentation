@@ -405,14 +405,28 @@ if (Test-Path $tmcPath) {
   }
 }
 
+# group documented item-ball swaps by location for the per-area item checklist
+$itemsByLoc = @{}
+foreach ($ir in $itemRows) {
+  $loc = $ir[0]; if (-not $loc) { continue }
+  if (-not $itemsByLoc.ContainsKey($loc)) { $itemsByLoc[$loc] = New-Object System.Collections.ArrayList }
+  [void]$itemsByLoc[$loc].Add(@($ir[1], $ir[2]))
+}
+
 # assign stable trainer ids; wrap into RR/SS's area/roster shape (skip empty locations)
 $areaData = New-Object System.Collections.ArrayList
 foreach ($a in $areas) {
   $ti = 0; foreach ($tr in $a.trainers) { $tr.id = (Norm $a.name) + '-' + (Norm $tr.name) + "-$ti"; foreach ($m in $tr.team) { $m.moves = @($m.moves) }; $tr.team = @($tr.team); $ti++ }
   $wild = @($a.wild); $trs = @($a.trainers)
-  if ($wild.Count -eq 0 -and $trs.Count -eq 0) { continue }
+  $items = @()
+  if ($itemsByLoc.ContainsKey($a.name)) {
+    $il = New-Object System.Collections.ArrayList; $ic = 0
+    foreach ($pair in $itemsByLoc[$a.name]) { [void]$il.Add([ordered]@{ id=(Norm $a.name) + "-item-$ic"; name=$pair[1]; was=$pair[0] }); $ic++ }
+    $items = @($il)
+  }
+  if ($wild.Count -eq 0 -and $trs.Count -eq 0 -and $items.Count -eq 0) { continue }
   $rosters = @(); if ($trs.Count) { $rosters = @([ordered]@{ title='Trainers'; kind=''; trainers=$trs }) }
-  [void]$areaData.Add([ordered]@{ name=$a.name; wild=$wild; rosters=$rosters; special=@() })
+  [void]$areaData.Add([ordered]@{ name=$a.name; wild=$wild; rosters=$rosters; special=@(); items=$items })
 }
 
 # ---------- Evolutions: family adjacency (from CSV bands) + level (from "Evolves at level X" notes) ----------
@@ -436,6 +450,19 @@ foreach ($pair in $evoPairs) {
 # sort the objects (not the arrays — piping arrays through Sort-Object corrupts them), then emit rows
 $evoRows = New-Object System.Collections.ArrayList
 foreach ($o in ($evoObjs | Sort-Object dex, from)) { [void]$evoRows.Add(@($o.from, $o.to, $o.lvl)) }
+
+# ---------- keep only moves actually in Brutal Black ----------
+# a learnset move, a trainer's move, a move a TM teaches, or a move the hack changed.
+$usedMoves = @{}
+function Mark-Used($nm){ $k = Norm $nm; if ($k) { $script:usedMoves[$k] = $true } }
+foreach ($e in $sorted) { foreach ($m in $e.moves) { Mark-Used $m.name } }
+foreach ($a in $areaData) { foreach ($r in $a.rosters) { foreach ($tr in $r.trainers) { foreach ($tm in $tr.team) { foreach ($mv in $tm.moves) { Mark-Used $mv } } } } }
+foreach ($en in $attackEntries) { Mark-Used $en.name }
+foreach ($row in $tmChangeRows) { Mark-Used $row[2] }                         # move each TM now teaches
+foreach ($ir in $itemRows) { if ($ir[2] -match '^TM\d+\s+(.+)$') { Mark-Used $Matches[1] } }  # TM found in a ball
+$moveInfoFiltered = [ordered]@{}
+foreach ($k in $moveInfo.Keys) { if ($usedMoves.ContainsKey($k)) { $moveInfoFiltered[$k] = $moveInfo[$k] } }
+$moveInfo = $moveInfoFiltered
 
 $data = [ordered]@{
   pokemon = [ordered]@{
@@ -462,6 +489,7 @@ $data = [ordered]@{
     meta = [ordered]@{
       subtitle = ''
       blurb = @('Wild encounters and trainer teams for every location, in story order, from the Brutal Black mastersheet. Tick wild Pokemon as caught and mark trainers beaten to track your run.')
+      hideOdds = $true
     }
     areas = @($areaData)
   }
@@ -502,7 +530,7 @@ $reg = 'window.RRSS_GAMES=window.RRSS_GAMES||{};window.RRSS_GAMES["brutalblack"]
 [System.IO.File]::WriteAllText($out, $reg, (New-Object System.Text.UTF8Encoding($false)))
 
 "Parsed {0} region sheets: {1}" -f $csvFiles.Count, (($csvFiles | ForEach-Object { $_.Name -replace '^.*- (.+)\.csv$','$1' }) -join ', ')
-"Moves: {0} total, {1} changed" -f $moveInfo.Count, $attackEntries.Count
+"Moves: {0} in-game (filtered to used/changed), {1} changed" -f $moveInfo.Count, $attackEntries.Count
 if ($mcNoMatch.Count) { "Move changes with no base-info match: {0} -> {1}" -f $mcNoMatch.Count, ($mcNoMatch -join ', ') }
 "Thief: {0} location cards, {1} items" -f $thiefStages.Count, (($thiefStages | ForEach-Object { $_.rows.Count } | Measure-Object -Sum).Sum)
 $trCount = ($areaData | ForEach-Object { ($_.rosters | ForEach-Object { $_.trainers.Count } | Measure-Object -Sum).Sum } | Measure-Object -Sum).Sum

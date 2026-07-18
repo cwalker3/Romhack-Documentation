@@ -32,11 +32,15 @@ function toggleTrainer(id){if(TRAINERS_DONE.has(id))TRAINERS_DONE.delete(id);els
 let AREA_MISSED=new Set();try{AREA_MISSED=new Set(JSON.parse(localStorage.getItem(gkey('missed'))||'[]'));}catch(e){}
 function saveMissed(){try{localStorage.setItem(gkey('missed'),JSON.stringify([...AREA_MISSED]));}catch(e){}}
 function toggleMissed(name){if(AREA_MISSED.has(name))AREA_MISSED.delete(name);else AREA_MISSED.add(name);saveMissed();}
-function trackTotal(){return CAUGHT.size+TRAINERS_DONE.size+AREA_MISSED.size;}
+// items picked up (by per-area item id)
+let ITEMS_DONE=new Set();try{ITEMS_DONE=new Set(JSON.parse(localStorage.getItem(gkey('items'))||'[]'));}catch(e){}
+function saveItems(){try{localStorage.setItem(gkey('items'),JSON.stringify([...ITEMS_DONE]));}catch(e){}}
+function toggleItem(id){if(ITEMS_DONE.has(id))ITEMS_DONE.delete(id);else ITEMS_DONE.add(id);saveItems();}
+function trackTotal(){return CAUGHT.size+TRAINERS_DONE.size+AREA_MISSED.size+ITEMS_DONE.size;}
 function resetCaught(){
   if(!trackTotal())return;
-  if(!confirm('Reset all run progress? This clears every caught Pokémon, missed encounter, and completed trainer.'))return;
-  CAUGHT.clear();TRAINERS_DONE.clear();AREA_MISSED.clear();saveCaught();saveTrainers();saveMissed();
+  if(!confirm('Reset all run progress? This clears every caught Pokémon, missed encounter, completed trainer, and picked-up item.'))return;
+  CAUGHT.clear();TRAINERS_DONE.clear();AREA_MISSED.clear();ITEMS_DONE.clear();saveCaught();saveTrainers();saveMissed();saveItems();
   Object.keys(wildOpen).forEach(k=>delete wildOpen[k]);
   reRenderKeepScroll();
 }
@@ -460,9 +464,10 @@ const AREAS=arr(RAW.areas&&RAW.areas.areas).map(a=>{
   const wild=arr(a.wild).map(w=>({method:w.method,level:w.level,species:arr(w.species)}));
   const rosters=arr(a.rosters).map(r=>({title:r.title,kind:r.kind,trainers:arr(r.trainers).map(t=>({id:t.id,name:t.name,badge:t.badge,team:arr(t.team)}))}));
   const special=arr(a.special).map(s=>({title:s.title,team:arr(s.team).map(m=>({...m,moves:arr(m.moves)}))}));
+  const items=arr(a.items).map(it=>({id:it.id,name:it.name,was:it.was}));
   const mons=new Set();wild.forEach(w=>w.species.forEach(s=>mons.add(s.name.toLowerCase())));
   rosters.forEach(r=>r.trainers.forEach(t=>t.team.forEach(m=>mons.add((m.species||'').toLowerCase()))));
-  return {name:a.name,wild,rosters,special,_s:(a.name+' '+[...mons].join(' ')).toLowerCase()};
+  return {name:a.name,wild,rosters,special,items,_s:(a.name+' '+[...mons].join(' ')+' '+items.map(it=>it.name).join(' ')).toLowerCase()};
 });
 const wildOpen={};
 const AREA2IDX={};
@@ -607,7 +612,7 @@ function areaDetail(a){
       body.innerHTML=groupNote+`<div class="tblwrap"><table class="data"><thead><tr><th>Method</th><th>Level</th><th>Species</th></tr></thead><tbody>`+
         a.wild.map(w=>wildRow(w)).join('')+
         `</tbody></table></div>`+
-        `<div class="wcap">% = each species' odds of being your encounter under the nuzlocke <b>dupes clause</b> — caught species are skipped and the remaining odds rescale to 100%. Shown for grass/walking methods, which have defined 10% / 5% rates.</div>`;
+        ((RAW.areas.meta&&RAW.areas.meta.hideOdds)?'':`<div class="wcap">% = each species' odds of being your encounter under the nuzlocke <b>dupes clause</b> — caught species are skipped and the remaining odds rescale to 100%. Shown for grass/walking methods, which have defined 10% / 5% rates.</div>`);
     } else if(resolvedElse){
       body.innerHTML=`<div class="collapsednote">↔ Your <b>${esc(metLoc(a.name))}</b> encounter was already ${elseCaught?'caught':'missed'} at ${areaLink(elseCaught||elseMissed)} — same met location.</div>`;
     } else if(missed && caughtHere===0){
@@ -657,6 +662,19 @@ function areaDetail(a){
       `</tbody></table></div>`;
     p.appendChild(body);wrap.appendChild(p);
   });
+  // items obtainable here (documented item-ball swaps) — tick as picked up
+  if(arr(a.items).length){
+    const items=a.items, doneN=items.filter(it=>ITEMS_DONE.has(it.id)).length;
+    const p=el('div','panel');
+    p.innerHTML=`<div class="phead"><h3>Items</h3><span class="sub">${doneN?`<span class="subcaught">✓ ${doneN}/${items.length} picked up</span>`:`${items.length} item${items.length===1?'':'s'}`}</span></div>`;
+    const body=el('div','pbody');
+    body.innerHTML=`<div class="tblwrap"><table class="data"><tbody>`+
+      items.map(it=>{const done=ITEMS_DONE.has(it.id);
+        return `<tr class="${done?'tdone':''}"><td style="width:1%"><button class="tcheck catch" data-item="${esc(it.id)}" aria-pressed="${done}" title="${done?'Picked up — click to unmark':'Mark as picked up'}"></button></td><td><b>${esc(it.name)}</b>${it.was?` <span style="color:var(--muted);font-size:12px">· was ${esc(it.was)}</span>`:''}</td></tr>`;
+      }).join('')+
+      `</tbody></table></div>`;
+    p.appendChild(body);wrap.appendChild(p);
+  }
   return wrap;
 }
 function teamInline(team){
@@ -863,7 +881,7 @@ const contentEl=$('content');
 function reRenderKeepScroll(){const ml=document.querySelector('.mlist');const sc=ml?ml.scrollTop:0;render();const ml2=document.querySelector('.mlist');if(ml2)ml2.scrollTop=sc;}
 contentEl.addEventListener('click',e=>{
   const tc=e.target.closest('.tcheck');
-  if(tc){e.preventDefault();e.stopPropagation();toggleTrainer(tc.dataset.trainer);reRenderKeepScroll();return;}
+  if(tc){e.preventDefault();e.stopPropagation();if(tc.dataset.item!=null)toggleItem(tc.dataset.item);else toggleTrainer(tc.dataset.trainer);reRenderKeepScroll();return;}
   const cb=e.target.closest('.catch');
   if(cb){e.preventDefault();e.stopPropagation();toggleCaught(cb.dataset.catch);reRenderKeepScroll();return;}
   const mb=e.target.closest('.missbtn');
