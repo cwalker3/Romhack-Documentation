@@ -465,9 +465,10 @@ const AREAS=arr(RAW.areas&&RAW.areas.areas).map(a=>{
   const rosters=arr(a.rosters).map(r=>({title:r.title,kind:r.kind,trainers:arr(r.trainers).map(t=>({id:t.id,name:t.name,badge:t.badge,choice:t.choice||'',team:arr(t.team)}))}));
   const special=arr(a.special).map(s=>({title:s.title,team:arr(s.team).map(m=>({...m,moves:arr(m.moves)}))}));
   const items=arr(a.items).map(it=>({id:it.id,name:it.name,was:it.was}));
+  const notes=arr(a.notes);
   const mons=new Set();wild.forEach(w=>w.species.forEach(s=>mons.add(s.name.toLowerCase())));
   rosters.forEach(r=>r.trainers.forEach(t=>t.team.forEach(m=>mons.add((m.species||'').toLowerCase()))));
-  return {name:a.name,wild,rosters,special,items,_s:(a.name+' '+[...mons].join(' ')+' '+items.map(it=>it.name).join(' ')).toLowerCase()};
+  return {name:a.name,wild,rosters,special,items,notes,_s:(a.name+' '+[...mons].join(' ')+' '+items.map(it=>it.name).join(' ')+' '+notes.join(' ')).toLowerCase()};
 });
 const wildOpen={};
 const AREA2IDX={};
@@ -638,6 +639,14 @@ function areaDetail(a){
     p.appendChild(body);wrap.appendChild(p);
   } else {
     const p=el('div','panel');p.innerHTML=`<div class="phead"><h3>${esc(a.name)}</h3></div><div class="pbody" style="color:var(--muted);font-size:13px">No wild encounter data for this location.</div>`;wrap.appendChild(p);
+  }
+  // notes from the mastersheet (rival hints, item gifts, etc.)
+  if(arr(a.notes).length){
+    const p=el('div','panel');
+    p.innerHTML=`<div class="phead"><h3>Notes</h3></div>`;
+    const body=el('div','pbody');
+    body.innerHTML=a.notes.map(n=>`<div class="note plain" style="margin-bottom:8px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg><div>${esc(n).replace(/\n/g,'<br>')}</div></div>`).join('');
+    p.appendChild(body);wrap.appendChild(p);
   }
   // rosters (rival Brendan/May battles filtered by the chosen gender + starter)
   const rn=rivalName(), rs=rivalStarter();

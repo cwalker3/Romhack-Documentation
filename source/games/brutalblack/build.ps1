@@ -316,11 +316,11 @@ $reSp   = [regex]'(?<name>[^,()]+?)\s*\((?<pct>\d+)%\)'   # global: tolerant of 
 $areas = New-Object System.Collections.ArrayList
 $giftRows = New-Object System.Collections.ArrayList
 $itemRows = New-Object System.Collections.ArrayList
-$area = $null; $trainer = $null; $baseTName = ''; $choice = ''
+$area = $null; $trainer = $null; $baseTName = ''; $choice = ''; $noteBuf = $null
 
 function New-BBArea($name){
   foreach ($a in $script:areas) { if ($a.name -eq $name) { return $a } }   # merge repeat visits
-  $a = [ordered]@{ name=$name; wild=(New-Object System.Collections.ArrayList); trainers=(New-Object System.Collections.ArrayList) }
+  $a = [ordered]@{ name=$name; wild=(New-Object System.Collections.ArrayList); trainers=(New-Object System.Collections.ArrayList); notes=(New-Object System.Collections.ArrayList) }
   [void]$script:areas.Add($a); return $a
 }
 function End-BBTrainer(){
@@ -339,10 +339,16 @@ function NextIsTeam($idx){
 
 for ($i=0; $i -lt $ml.Count; $i++) {
   $t = $ml[$i].Trim()
-  if (-not $t -or $t -match '\(Level Cap:') { continue }
-  if ($t.StartsWith('*')) {                              # prose note; keep the "was > now" item-ball swaps
+  if (-not $t) { continue }
+  # bullet continuation of a note (e.g. the "now gives: -1 Exp Share …" gift list); handles - and en/em dashes / bullet
+  if ($noteBuf -ne $null -and $t.Length -gt 0 -and (@('-',[char]0x2013,[char]0x2014,[char]0x2022) -contains $t.Substring(0,1))) { $noteBuf += [char]10 + $t; continue }
+  # any other line ends a pending note
+  if ($noteBuf -ne $null) { if ($area) { [void]$area.notes.Add($noteBuf) }; $noteBuf = $null }
+  if ($t -match '\(Level Cap:') { continue }
+  if ($t.StartsWith('*')) {
     $n = $t.TrimStart('*').Trim()
-    if ($n -match '^(.+?)\s*>\s*(.+)$') { [void]$itemRows.Add(@($(if($area){$area.name}else{''}), $Matches[1].Trim(), $Matches[2].Trim())) }
+    if ($n -match '^(.+?)\s*>\s*(.+)$') { [void]$itemRows.Add(@($(if($area){$area.name}else{''}), $Matches[1].Trim(), $Matches[2].Trim())) }  # item-ball swap
+    else { $noteBuf = $n }                                # prose note (may gather bullet lines)
     continue
   }
 
@@ -397,6 +403,7 @@ for ($i=0; $i -lt $ml.Count; $i++) {
     continue
   }
 }
+if ($noteBuf -ne $null -and $area) { [void]$area.notes.Add($noteBuf) }
 End-BBTrainer
 
 # TM slot changes (which move each TM now teaches)
@@ -428,9 +435,10 @@ foreach ($a in $areas) {
     foreach ($pair in $itemsByLoc[$a.name]) { [void]$il.Add([ordered]@{ id=(Norm $a.name) + "-item-$ic"; name=$pair[1]; was=$pair[0] }); $ic++ }
     $items = @($il)
   }
-  if ($wild.Count -eq 0 -and $trs.Count -eq 0 -and $items.Count -eq 0) { continue }
+  $notes = @($a.notes)
+  if ($wild.Count -eq 0 -and $trs.Count -eq 0 -and $items.Count -eq 0 -and $notes.Count -eq 0) { continue }
   $rosters = @(); if ($trs.Count) { $rosters = @([ordered]@{ title='Trainers'; kind=''; trainers=$trs }) }
-  [void]$areaData.Add([ordered]@{ name=$a.name; wild=$wild; rosters=$rosters; special=@(); items=$items })
+  [void]$areaData.Add([ordered]@{ name=$a.name; wild=$wild; rosters=$rosters; special=@(); items=$items; notes=$notes })
 }
 
 # ---------- Evolutions: family adjacency (from CSV bands) + level (from "Evolves at level X" notes) ----------
