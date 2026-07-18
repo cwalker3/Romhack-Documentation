@@ -307,8 +307,8 @@ foreach ($s in $thiefStages) { $s.rows = @($s.rows) }
 # ---------- Areas (wild encounters + trainers) + Gifts, from the Mastersheet ----------
 $msPath = Join-Path $GameDir 'Brutal Black Mastersheet.txt'
 $ml = [System.IO.File]::ReadAllLines($msPath, [System.Text.Encoding]::UTF8)
-$reTeam = [regex]'^(?<sp>.+?)\s*\((?<lv>\d+)\)\s*\[(?<nat>[^\]]+)\]\s*(?:@\s*(?<item>.+?)\s*/\s*)?(?<ab>[^:@]+?)\s*:\s*(?<mv>.*)$'
-$reWild = [regex]'^(?<method>[A-Za-z][A-Za-z /]*?)\s*\((?<lvl>\d+)\)\s*:\s*(?<list>.+)$'
+$reTeam = [regex]'^(?<sp>.+?)\s*\((?<lv>\d+)\)\s*(?:\[(?<nat>[^\]]+)\]\s*)?(?:@\s*(?<item>.+?)\s*/\s*)?(?<ab>[^:@]+?)\s*:\s*(?<mv>.*)$'
+$reWild = [regex]'^(?<method>[A-Za-z][A-Za-z /]*?)\s*\((?<lvl>\d+)\)[^:]*:\s*(?<list>.+)$'
 $reGift = [regex]'^Gift(?:\s*\(\d+\))?\s*:\s*(?<g>.+)$'
 $reHdr  = [regex]'^(?<h>.+?):\s*$'
 $reSp   = [regex]'(?<name>[^,()]+?)\s*\((?<pct>\d+)%\)'   # global: tolerant of missing commas
@@ -332,7 +332,7 @@ function NextIsTeam($idx){
   for ($j=$idx+1; $j -lt $ml.Count; $j++) {
     $s = $ml[$j].Trim()
     if (-not $s -or $s.StartsWith('*') -or $s -match '^If you chose' -or $s -match '\(Level Cap:') { continue }
-    return $reTeam.IsMatch($s)
+    return ($reTeam.IsMatch($s) -and $s -notmatch '\(\d+%\)')   # a wild-encounter line is not a team
   }
   return $false
 }
@@ -398,7 +398,13 @@ for ($i=0; $i -lt $ml.Count; $i++) {
       $baseTName = $h
       $trainer = New-BBTrainer $h
       if ($choice) { $trainer.choice = $choice }
-    } else { $area = New-BBArea $h }                      # location header
+    }
+    # a ':' line that reads like a sentence (lowercase function words) is a note that
+    # introduces a fight, not a location — keep the following trainers in the current area
+    elseif ($h -cmatch '\b(you|your|have|has|to|and|get|got|back|this|that|until|before|after|when|while|if|can|will|would|should|must|one|two|three|do|does|doing|done|fight|fights|wait|instead|only|available|between|make|sure|switch|teams|first|down|far|least|but|so|then|give|gives)\b') {
+      if ($area) { [void]$area.notes.Add($h) }
+    }
+    elseif ($h -ne 'Notes') { $area = New-BBArea $h }     # location header ('Notes' = doc intro, skip)
     $choice = ''
     continue
   }
