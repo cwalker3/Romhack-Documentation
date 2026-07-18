@@ -483,6 +483,20 @@ foreach ($pair in $evoPairs) {
 $evoRows = New-Object System.Collections.ArrayList
 foreach ($o in ($evoObjs | Sort-Object dex, from)) { [void]$evoRows.Add(@($o.from, $o.to, $o.lvl)) }
 
+# attach each species' forward evolution to the PRE-evo, and drop the misplaced raw
+# "Evolves at level X" note (the sheet writes it on the result stage)
+$evoInto = @{}
+foreach ($o in $evoObjs) {
+  $fk = Norm $o.from
+  if (-not $evoInto.ContainsKey($fk)) { $evoInto[$fk] = New-Object System.Collections.ArrayList }
+  [void]$evoInto[$fk].Add([ordered]@{ into=$o.to; level=$o.lvl })
+}
+foreach ($e in $sorted) {
+  $k = Norm $e.name
+  $e.evo = if ($evoInto.ContainsKey($k)) { @($evoInto[$k]) } else { @() }
+  $e.notes = @($e.notes | Where-Object { $_ -notmatch '^Evolves at level' })
+}
+
 # ---------- keep only moves actually in Brutal Black ----------
 # a learnset move, a trainer's move, a move a TM teaches, or a move the hack changed.
 $usedMoves = @{}

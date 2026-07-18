@@ -210,7 +210,7 @@ function collapsibleAbout(id,meta,extra){
 const PK=arr(RAW.pokemon.entries).map(e=>({
   dex:e.dex,name:e.name,attrs:arr(e.attrs),changes:arr(e.changes),moves:arr(e.moves),notes:arr(e.notes),
   stats:e.stats||{},statChg:e.statChg||{},a1:e.a1||'',a2:e.a2||'',ah:e.ah||'',megas:arr(e.megas),
-  tms:(e.tms||'').split(' ').filter(Boolean),tmsNew:new Set((e.tmsNew||'').split(' ').filter(Boolean)),tmsExtra:arr(e.tmsExtra),
+  tms:(e.tms||'').split(' ').filter(Boolean),tmsNew:new Set((e.tmsNew||'').split(' ').filter(Boolean)),tmsExtra:arr(e.tmsExtra),evo:arr(e.evo),
   loc:(arr(e.attrs).find(a=>a.label==='Location')||{}).value||'',
   _s:(e.dex+' '+e.name+' '+arr(e.attrs).map(a=>a.value).join(' ')+' '+arr(e.moves).map(m=>m.name).join(' ')).toLowerCase()
 }));
@@ -355,6 +355,15 @@ function pokemonDetail(p){
   }
   // single left column: abilities, other changes, moves, TMs, notes (stats stay full-width above)
   const left=el('div','detailcol');
+  // evolution: what this species evolves into, and how (shown on the pre-evo)
+  if(p.evo.length){
+    const evoHtml=p.evo.map(ev=>{
+      const meth=ev.level?`<span class="lv">${esc(ev.level)}</span>`:`<span class="lv">special</span>`;
+      const link=isMon(ev.into);
+      return `<span class="tmon${link?' monlink':''}"${link?monAttr(ev.into):''}>${spriteByName(ev.into,20,'cspr')}${esc(ev.into)}${meth}</span>`;
+    }).join('');
+    left.appendChild(sub('Evolves into',`<div class="team">${evoHtml}</div>`));
+  }
   // abilities: vanilla slots filled in. The docs' "Ability 2"/"Hidden Ability" = the hidden slot.
   const findChg=re=>p.changes.find(c=>re.test(c.label));
   const findAttr=re=>attrsNoLoc.find(a=>re.test(a.label));
