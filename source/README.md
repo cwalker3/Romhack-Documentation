@@ -83,10 +83,18 @@ spreadsheet exports, etc.) and can't reuse `parse.ps1` / `enrich.ps1`. Those bri
 their **own** build script inside their game folder:
 
 - `games/brutalblack/` — **Brutal Black** (a Gen-5 / Pokémon Black hack). Its
-  `build.ps1` parses the change CSV directly (species typing, abilities, base stats
-  with +/− vs vanilla, and level-up learnsets) and writes `../../../docs/data-brutalblack.js`.
+  `build.ps1` parses the source docs directly and writes `../../../docs/data-brutalblack.js`.
   Run it with `powershell -ExecutionPolicy Bypass -File games/brutalblack/build.ps1`.
-  First pass is Pokédex-only, so its data ships only the `pokemon` section.
+  It builds all eight RR/SS sections from these inputs:
+  - **Pokémon** (`… - <Region>.csv`, ×5) — typing, abilities, base stats (with +/− vs
+    vanilla), and level-up learnsets, for the full national dex.
+  - **Evolutions** — evolution lines + levels, derived from the same CSV bands.
+  - **Moves** — base move info from the shared PokeAPI dump, overlaid with
+    `Brutal Black Move Changes.txt`.
+  - **Areas** + **Gifts** — wild encounters and trainer teams parsed from
+    `Brutal Black Mastersheet.txt`.
+  - **Items & Shops** — `… - TM Changes.csv` plus the item-ball swap notes in the mastersheet.
+  - **Thief Items** — `Brutal Black Important Thief Items.txt`.
 
 A game may provide only some sections (e.g. a Pokédex-only game). The frontend hides
 any section a game has no data for, so its sidebar shows just the populated sections.
