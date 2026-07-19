@@ -68,9 +68,10 @@ $entries = New-Object System.Collections.ArrayList
 $unmatched = New-Object System.Collections.ArrayList
 $evoPairs = New-Object System.Collections.ArrayList   # [from, to] adjacent stages within a family band
 
-# three Pokemon per row-band; each occupies base cols (name, value, learnset)
-$bases = @(1,5,9)
-$cur = @{ 1=$null; 5=$null; 9=$null }
+# up to four Pokemon per row-band (branching families like Ralts/Kirlia/Gardevoir/Gallade);
+# each occupies base cols (name, value, learnset)
+$bases = @(1,5,9,13)
+$cur = @{ 1=$null; 5=$null; 9=$null; 13=$null }
 
 function Finalize($e){
   if ($null -eq $e) { return }
@@ -111,23 +112,30 @@ function Finalize($e){
 }
 
 function Parse-Grid($rows){
-  $cur = @{ 1=$null; 5=$null; 9=$null }
+  $cur = @{ 1=$null; 5=$null; 9=$null; 13=$null }
   foreach ($row in $rows) {
-    # a name row carries the family's stages left-to-right; record evolution adjacency
-    $band = @()
-    foreach ($b in $bases) { if ((Field $row ($b+2)) -eq 'Learnset') { $nb = Field $row $b; if ($nb) { if ($nameFix.ContainsKey($nb)) { $nb = $nameFix[$nb] }; $band += $nb } } }
-    for ($x = 0; $x -lt $band.Count - 1; $x++) { [void]$script:evoPairs.Add(@($band[$x], $band[$x+1])) }
+    # a name row is any row whose learnset-header cell says "Learnset" in some column.
+    # (a few blocks omit the header and put the first move there instead, e.g. Ralts)
+    $isNameRow = $false
+    foreach ($b in $bases) { if ((Field $row ($b+2)) -eq 'Learnset') { $isNameRow = $true; break } }
+    if ($isNameRow) {
+      $band = @()
+      foreach ($b in $bases) { $nb = Field $row $b; if ($nb) { if ($nameFix.ContainsKey($nb)) { $nb = $nameFix[$nb] }; $band += $nb } }
+      for ($x = 0; $x -lt $band.Count - 1; $x++) { [void]$script:evoPairs.Add(@($band[$x], $band[$x+1])) }
+    }
     foreach ($base in $bases) {
       $nm    = Field $row $base
       $val   = Field $row ($base+1)
       $learn = Field $row ($base+2)
 
-      if ($learn -eq 'Learnset' -and $nm) {
+      if ($isNameRow -and $nm) {
         Finalize $cur[$base]
         if ($nameFix.ContainsKey($nm)) { $nm = $nameFix[$nm] }
         $cur[$base] = @{ name=$nm; moves=(New-Object System.Collections.ArrayList);
           notes=(New-Object System.Collections.ArrayList); stats=@{}; chg=@{};
           type=''; a1=''; a2='' }
+        # a malformed header cell holds the first move instead of "Learnset" (e.g. Ralts)
+        if ($learn -match '^\s*(\d+)\s*-\s*(.+?)\s*$') { [void]$cur[$base].moves.Add([ordered]@{ level=[int]$Matches[1]; name=(Fix-Move $Matches[2]); rarity=0 }) }
         continue
       }
       $e = $cur[$base]
@@ -510,6 +518,48 @@ $moveInfoFiltered = [ordered]@{}
 foreach ($k in $moveInfo.Keys) { if ($usedMoves.ContainsKey($k)) { $moveInfoFiltered[$k] = $moveInfo[$k] } }
 $moveInfo = $moveInfoFiltered
 
+# ---------- species that appear in-game (wild / trainer / gift) but aren't in the change sheets ----------
+# Give them a national dex so their sprite shows and they can be caught. Species with a
+# unique dex also get a minimal stub entry (so they appear in the box / have a page);
+# alternate forms that share an existing entry's dex only get a name->dex mapping.
+$stubDexFix = @{ 'basculinblue'=550; 'basculinred'=550; 'wormadamsand'=413; 'wormadamtrash'=413; 'drowee'=96 }
+function Resolve-Dex($name){
+  $k = Norm $name
+  if ($script:stubDexFix.ContainsKey($k)) { return $script:stubDexFix[$k] }
+  if ($script:name2dex.ContainsKey($k)) { return $script:name2dex[$k] }
+  $base = ($name -split '[- ]')[0]; $bk = Norm $base           # strip a form suffix, retry the base species
+  if ($script:name2dex.ContainsKey($bk)) { return $script:name2dex[$bk] }
+  return $null
+}
+$entryKeys = @{}; $entryDex = @{}
+foreach ($e in $sorted) { $entryKeys[(Norm $e.name)] = $true; $entryDex[$e.dex] = $true }
+$refSpecies = [ordered]@{}
+foreach ($a in $areaData) {
+  foreach ($w in $a.wild) { foreach ($s in $w.species) { $refSpecies[$s.name] = $true } }
+  foreach ($r in $a.rosters) { foreach ($t in $r.trainers) { foreach ($m in $t.team) { $refSpecies[$m.species] = $true } } }
+  foreach ($g in $a.gifts) { foreach ($o in (($g -replace '\s*\(\d+%\)\s*$','') -split '/')) { $refSpecies[$o.Trim()] = $true } }
+}
+$nameDex = [ordered]@{}
+$stubs = New-Object System.Collections.ArrayList
+$stubUnresolved = New-Object System.Collections.ArrayList
+foreach ($nm in $refSpecies.Keys) {
+  if (-not $nm -or $entryKeys.ContainsKey((Norm $nm))) { continue }
+  $dex = Resolve-Dex $nm
+  if ($null -eq $dex) { [void]$stubUnresolved.Add($nm); continue }
+  $dexStr = '{0:D3}' -f $dex
+  $nameDex[(Norm $nm)] = $dexStr
+  if (-not $entryDex.ContainsKey($dexStr)) {
+    $entryDex[$dexStr] = $true
+    [void]$stubs.Add([ordered]@{ name=$nm; dex=$dexStr; moves=@(); changes=@(); attrs=@(); notes=@('Appears in-game but isn''t detailed in the Brutal Black change sheets.'); a1=''; a2=''; ah=''; tms=''; tmsNew=''; tmsExtra=@(); stats=[ordered]@{hp=0;atk=0;def=0;spa=0;spd=0;spe=0;total=0}; statChg=[ordered]@{}; evo=@() })
+  }
+}
+if ($stubs.Count) {
+  $all = New-Object System.Collections.ArrayList
+  foreach ($e in $sorted) { [void]$all.Add($e) }
+  foreach ($e in $stubs) { [void]$all.Add($e) }
+  $sorted = $all | Sort-Object @{ Expression = { if ($_.dex -eq '000') { 9999 } else { [int]$_.dex } } }, name
+}
+
 $data = [ordered]@{
   pokemon = [ordered]@{
     meta = [ordered]@{
@@ -519,6 +569,8 @@ $data = [ordered]@{
     entries = @($sorted)
     tmMoves = [ordered]@{}
   }
+  nameDex = $nameDex
+
   attacks = [ordered]@{
     meta = [ordered]@{
       subtitle = ''
@@ -585,6 +637,8 @@ $wildCount = ($areaData | ForEach-Object { $_.wild.Count } | Measure-Object -Sum
 "Gifts: {0} rows" -f $giftRows.Count
 "Items: {0} TM slot changes, {1} item-ball swaps" -f $tmChangeRows.Count, $itemRows.Count
 "Evolutions: {0} lines ({1} with a level)" -f $evoRows.Count, (@($evoRows | Where-Object { $_[2] }).Count)
+"Extra species (in-game, not in sheets): {0} stub entries, {1} name->dex" -f $stubs.Count, $nameDex.Count
+if ($stubUnresolved.Count) { "  UNRESOLVED (no sprite): {0} -> {1}" -f $stubUnresolved.Count, ($stubUnresolved -join ', ') }
 "Wrote {0} ({1:N0} bytes)" -f $out, ((Get-Item $out).Length)
 "Species: {0}" -f $sorted.Count
 if ($dupes.Count) { "Duplicates dropped: {0} -> {1}" -f $dupes.Count, ($dupes -join ', ') }

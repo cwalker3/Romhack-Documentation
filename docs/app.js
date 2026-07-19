@@ -215,6 +215,8 @@ const PK=arr(RAW.pokemon.entries).map(e=>({
   _s:(e.dex+' '+e.name+' '+arr(e.attrs).map(a=>a.value).join(' ')+' '+arr(e.moves).map(m=>m.name).join(' ')).toLowerCase()
 }));
 PK.forEach(p=>{const n=normName(p.name);if(!NAME2DEX[n])NAME2DEX[n]=p.dex;});
+// species that appear in-game but aren't Pokédex entries (alt forms, etc.) still need a dex for sprites/catching
+Object.keys(RAW.nameDex||{}).forEach(k=>{if(!NAME2DEX[k])NAME2DEX[k]=RAW.nameDex[k];});
 const TM_MOVES=RAW.pokemon.tmMoves||{};
 const MOVE_INFO=RAW.moveInfo||{};
 function moveData(name){return MOVE_INFO[normName(name)];}
@@ -890,7 +892,8 @@ function renderThief(c){
 
 /* ================= BOX ================= */
 function renderBox(c){
-  const caught=PK.filter(p=>CAUGHT.has(p.dex));
+  const seenDex=new Set();
+  const caught=PK.filter(p=>CAUGHT.has(p.dex)&&!seenDex.has(p.dex)&&(seenDex.add(p.dex),true));
   if(!caught.length){c.insertAdjacentHTML('beforeend',emptyState('Your box is empty. Tick a species’ box in the Areas tab to add it here.'));return;}
   const q=state.query.toLowerCase().trim();
   const items=q?caught.filter(p=>p._s.includes(q)):caught;
