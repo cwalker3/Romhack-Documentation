@@ -1,22 +1,23 @@
 # Fetches item sprites from the PokeAPI sprite repo and embeds them (base64) into
 # ../../../docs/item-sprites.js as window.RRSS_ITEMSPR = { <normalized item name>: <b64> }.
 # Run:  powershell -ExecutionPolicy Bypass -File fetch-item-sprites.ps1
-# Item names come from the built data-brutalblack.js so it stays in sync.
+# Item names come from every built data-*.js game file (shared window.RRSS_ITEMSPR).
 $ErrorActionPreference = 'Stop'
 [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12
 $docs = Join-Path (Split-Path (Split-Path (Split-Path $PSScriptRoot -Parent) -Parent) -Parent) 'docs'
-$dataFile = Join-Path $docs 'data-brutalblack.js'
-$raw = [System.IO.File]::ReadAllText($dataFile, [Text.Encoding]::UTF8)
-$json = $raw.Substring($raw.IndexOf('data:') + 5)
-$json = $json.Substring(0, $json.Length - 2)
-$dd = $json | ConvertFrom-Json
 
-# ---- collect distinct item strings (thief items, item-ball swaps, per-area items) ----
+# ---- collect distinct item strings across all games (thief, item-ball swaps, per-area, trainer held) ----
 $items = @{}
-foreach ($s in $dd.thief.stages) { foreach ($r in $s.rows) { if ($r.item) { $items[$r.item] = $true } } }
-foreach ($b in $dd.items.blocks) { if ($b.type -eq 'table') { foreach ($r in $b.rows) { if ($r.Count -ge 3) { $items[$r[1]] = $true; $items[$r[2]] = $true } } } }
-foreach ($a in $dd.areas.areas) { foreach ($it in $a.items) { if ($it.was) { $items[$it.was] = $true } } }
-foreach ($a in $dd.areas.areas) { foreach ($r in $a.rosters) { foreach ($t in $r.trainers) { foreach ($m in $t.team) { if ($m.item) { $items[$m.item] = $true } } } } }
+foreach ($dataFile in (Get-ChildItem -Path $docs -Filter 'data*.js' | Where-Object { $_.Name -notmatch 'sprites' })) {
+  $raw = [System.IO.File]::ReadAllText($dataFile.FullName, [Text.Encoding]::UTF8)
+  $s0 = $raw.IndexOf('data:'); if ($s0 -lt 0) { continue }
+  $json = $raw.Substring($s0 + 5); $json = $json.Substring(0, $json.Length - 2)
+  try { $dd = $json | ConvertFrom-Json } catch { continue }
+  foreach ($s in $dd.thief.stages) { foreach ($r in $s.rows) { if ($r.item) { $items[$r.item] = $true } } }
+  foreach ($b in $dd.items.blocks) { if ($b.type -eq 'table') { foreach ($r in $b.rows) { if ($r.Count -ge 3) { $items[$r[1]] = $true; $items[$r[2]] = $true } } } }
+  foreach ($a in $dd.areas.areas) { foreach ($it in $a.items) { if ($it.was) { $items[$it.was] = $true } } }
+  foreach ($a in $dd.areas.areas) { foreach ($r in $a.rosters) { foreach ($t in $r.trainers) { foreach ($m in $t.team) { if ($m.item) { $items[$m.item] = $true } } } } }
+}
 
 function Norm-Item($s){ return ([string]$s).ToLower() -replace '[^a-z0-9]','' }
 

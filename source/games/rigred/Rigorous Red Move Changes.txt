@@ -1,0 +1,175 @@
+﻿Replaced moves:
+Smokescreen > Aqua Jet
+Rage > Bullet Punch
+Bide > Accelerock
+Odor Sleuth > Flash Cannon
+Mimic > Head Smash
+Supersonic > Shadow Sneak
+Sing > Sucker Punch
+Bind > Ice Shard
+Spider Web > Night Daze
+Slam > Metal Bash
+Mist > Shadow Slam
+*Solar Beam on trainers is changed to have no secondary effect so the AI sees it as a normal attack, so be careful when using cloud nine mons as it will act the same way as it does in sun
+*Weather Ball is similar to solar beam as mentioned above and in the calc it is bugged, so just replace the move with blaze kick, muddy water or stone edge for sun, rain and sand respectively
+Normal:
+Double Slap: Acc: 85 > 100
+Comet Punch: BP: 15 > 25
+Tackle: BP 35 > 40, Acc: 95 > 100
+Take Down: Acc: 85 > 100
+Hyper Beam: Recharge > 33% Recoil, Acc: 90 > 100
+Double-Edge: 33% recoil > 25% recoil
+Screech: PP: 40 > 5
+Recover: PP: 10 > 5
+Swift: BP: 60 > 80
+Soft Boiled: PP: 10 > 5
+Glare: Acc: 85 > 100
+Hyper Fang: Acc: 90 > 100
+Tri Attack: BP: 80 > 100
+Protect: PP: 10 > 3
+Fake Out: PP: 10 > 5
+Encore: PP 5 > 3
+Crush Claw: BP: 75 > 100, Acc: 95 > 100, now 10% to lower defense
+Return: now is just a 102 BP move regardless of friendship
+Rapid Spin: BP: 20 > 50
+Covet: BP: 40 > 60
+Disable: Acc: 55 > 100
+
+
+Grass:
+Egg Bomb: Normal > Grass, Acc: 75 > 100
+Giga Drain: BP: 60 > 75, PP: 5 > 10
+Leech Seed: Acc: 90 > 100
+Razor Leaf: Acc: 95 > 100
+Stun Spore: Acc: 75 > 100
+Sleep Powder: Acc: 75 > 80
+Petal Dance: BP: 70 > 130, Now lowers SpAtk by 2 stages instead of locking you in
+Needle Arm: BP: 60 > 100
+Bullet Seed: BP: 10 > 25
+Frenzy Plant: Recharge > 33% Recoil, Acc: 90 > 100
+Magical Leaf: BP: 60 > 80
+Leaf Blade: BP: 70 > 90
+
+
+Fire:
+Sacred Fire: Acc: 95 > 100
+Heat Wave: Acc: 90 > 100
+Will-O-Wisp: Acc: 75 > 100
+Blaze Kick: BP: 85 > 100, Acc: 90 > 100
+Blast Burn: Recharge > 33% Recoil, Acc: 90 > 100
+Overheat: BP: 140 > 130, Acc: 90 > 100
+
+
+Water:
+Crabhammer: BP: 90 > 100, Acc: 85 > 100
+Octazooka: BP: 65 > 100, Acc: 90 > 100, 50% to drop Atk instead of Acc
+Hydro Cannon: Recharge > 33% Recoil, Acc: 90 > 100
+Muddy Water: BP: 95 > 100, Acc: 85 > 100, 30% to drop Atk instead of Acc
+Water Pulse: BP: 60 > 80, now cannot miss instead of having the chance to confuse
+
+
+Steel:
+Metal Bash: BP: 65, Acc: 100, PP: 20, no secondary effect
+Metal Sound: Acc: 85 > 100, PP: 40 > 5
+Flash Cannon: now has a 20% chance to drop Def
+Steel Wing: Acc: 90 > 100
+Iron Tail: Acc: 75 > 100
+Metal Claw: Acc: 95 > 100
+Meteor Mash: Acc: 85 > 100
+Doom Desire: BP: 120 > 140, Acc: 85 > 100, Now Deals 33% Recoil and hits immediately
+
+
+Rock:
+Head Smash: Acc: 80 > 100, 33% recoil
+Strength: Normal > Rock, BP: 80 > 90
+Rock Throw: Acc: 90 > 100
+Rock Slide: Acc: 90 > 100
+Rock Tomb: BP: 50 > 60, Acc: 80 > 100
+Rock Blast: Acc: 80 > 100
+
+
+Ground:
+Fissure: Now 25% Recoil, BP: 120, Acc: 30 > 100
+Bone Club: Acc: 85 > 100
+Bonemerang: Acc: 90 > 100
+Mud Shot: Acc: 95 > 100
+
+
+Bug:
+Cut: Normal > Bug, BP: 60, Acc: 100
+Horn Drill: Normal > Bug, BP: 120, Acc: 100, now 25% recoil
+Twineedle: BP: 25 > 50
+Pin Missile: BP: 14 > 25, Acc: 85 > 100
+Leech Life: BP: 20 > 75
+Fury Cutter: BP: 10 > 40, Acc: 95 > 100
+Signal Beam: BP: 75 > 90
+
+
+Ghost:
+Shadow Slam: BP: 100, Acc: 100, PP: 5, no secondary effect
+Shadow Ball: BP: 80 > 90, now can drop Defense
+Shadow Punch: BP: 60 > 80
+Astonish: BP: 30 > 60
+
+
+Psychic:
+Hypnosis: Acc: 60 > 70
+Future Sight: BP: 80 > 120
+Psycho Boost: Acc: 90 > 100, now deals 33% recoil 
+Luster Purge and Mist Ball: BP: 70 > 100, now 10% for their respective secondary effects
+
+
+Dark:
+Night Daze: BP: 120, Acc: 100, PP: 10, 25% recoil
+Sucker Punch: BP: 70 > 60, just priority, opponent doesn’t need to attack for it to work
+Feint Attack: BP: 60 > 80
+Crunch: BP: 80 > 90
+Knock Off: BP: 20 > 60
+
+
+Electric:
+Thunder: Acc: 70 > 85
+Zap Cannon: BP: 100 > 130, Acc: 50 > 100, now lowers SpAtk by 2 stages
+Shock Wave: BP: 60 > 80
+Volt Tackle: 33% recoil > 25% recoil
+
+
+Ice:
+Blizzard: Acc: 70 > 85
+Sheer Cold: Now 25% Recoil, BP: 120, Acc: 90 > 100
+Icy Wind: Acc: 95 > 100
+Icicle Spear: BP: 10 > 25
+
+
+Fighting:
+Jump Kick and High Jump Kick: updated to current BP
+Rolling Kick: BP: 60 > 100, Acc: 85 > 100
+Submission: BP: 80 > 90, Acc: 85 > 100, no longer recoil
+Sky Uppercut: BP: 85 > 100, Acc: 90 > 100
+Vital Throw: BP: 70 > 80, now neutral priority
+Cross Chop: Acc: 80 > 100
+Rock Smash: BP: 20 > 60
+Superpower: Now 25% Recoil
+Arm Thrust: BP: 15 > 25
+Mega Kick: now fighting type, Acc: 75 > 100
+
+
+Flying:
+Fly: BP: 70 > 100, Acc: 90 > 100
+Drill Peck: BP: 80 > 100
+Sky Attack: BP: 140 > 120, Acc: 90 > 100, now 25% recoil
+Aeroblast: Acc: 95 > 100
+Air Cutter: Acc: 95 > 100
+Aerial Ace: BP: 60 > 80
+
+
+Dragon:
+Outrage: BP: 90 > 120, now 25% recoil
+Dragon Claw: BP: 80 > 90
+
+
+Poison:
+Poison Powder: Acc: 75 > 100
+Toxic: Acc: 85 > 100
+Poison Fang: BP: 50 > 120
+Poison Tail: BP: 50 > 120
