@@ -502,6 +502,22 @@ foreach ($a in $areas) {
   [void]$areaData.Add([ordered]@{ name=$a.name; wild=$wild; rosters=$rosters; special=@(); items=$items; notes=$notes; gifts=$gifts })
 }
 
+# Route 3's note says north and south count as separate encounters, and water / dark grass
+# are only in the south. Split it into two areas that each count on their own (sep=$true).
+for ($x = 0; $x -lt $areaData.Count; $x++) {
+  $a = $areaData[$x]
+  if ($a.name -eq 'Route 3' -and (@($a.notes) -match 'north and south')) {
+    $north = @($a.wild | Where-Object { $_.method -notmatch 'Dark Grass|Fishing|Surf' })  # Grass, Rustling Grass
+    $shNote = 'Shaking (rustling) grass can only be caught on North OR South, not both.'
+    $keep = @($a.notes | Where-Object { $_ -notmatch 'north and south' })
+    $nArea = [ordered]@{ name='Route 3 North'; wild=$north; rosters=$a.rosters; special=@(); items=$a.items; notes=(@($shNote) + $keep); gifts=@(); sep=$true }
+    $sArea = [ordered]@{ name='Route 3 South'; wild=@($a.wild); rosters=@(); special=@(); items=@(); notes=@($shNote,'Water and Dark Grass encounters are only here in the south.'); gifts=@(); sep=$true }
+    $areaData[$x] = $nArea
+    $areaData.Insert($x + 1, $sArea)
+    break
+  }
+}
+
 # ---------- Evolutions: family adjacency (from CSV bands) + level (from "Evolves at level X" notes) ----------
 $evoLevel = @{}; $evoMethod = @{}
 foreach ($e in $entries) {

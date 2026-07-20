@@ -545,7 +545,7 @@ const AREAS=arr(RAW.areas&&RAW.areas.areas).map(a=>{
   const giftMons=[];gifts.forEach(g=>g.replace(/\s*\(\d+%\)\s*$/,'').split('/').forEach(s=>{s=s.trim();if(s)giftMons.push(s);}));
   const mons=new Set();wild.forEach(w=>w.species.forEach(s=>mons.add(s.name.toLowerCase())));
   rosters.forEach(r=>r.trainers.forEach(t=>t.team.forEach(m=>mons.add((m.species||'').toLowerCase()))));
-  return {name:a.name,wild,rosters,special,items,notes,gifts,giftMons,_s:(a.name+' '+[...mons].join(' ')+' '+items.map(it=>it.name).join(' ')+' '+notes.join(' ')+' '+gifts.join(' ')).toLowerCase()};
+  return {name:a.name,wild,rosters,special,items,notes,gifts,giftMons,sep:!!a.sep,_s:(a.name+' '+[...mons].join(' ')+' '+items.map(it=>it.name).join(' ')+' '+notes.join(' ')+' '+gifts.join(' ')).toLowerCase()};
 });
 const wildOpen={};
 // gym badges: the gym locations, in story order, de-duped by name (ignoring "(…)" suffixes)
@@ -570,8 +570,8 @@ function metLoc(name){
   return s.trim();
 }
 const MET_GROUP={};
-AREAS.forEach(a=>{const m=metLoc(a.name);(MET_GROUP[m]=MET_GROUP[m]||[]).push(a);});
-function areaGroup(a){return MET_GROUP[metLoc(a.name)]||[a];}
+AREAS.forEach(a=>{if(a.sep)return;const m=metLoc(a.name);(MET_GROUP[m]=MET_GROUP[m]||[]).push(a);});
+function areaGroup(a){return a.sep?[a]:(MET_GROUP[metLoc(a.name)]||[a]);}
 function groupSiblings(a){return areaGroup(a).filter(x=>x!==a);}
 function groupCaughtArea(a){return areaGroup(a).find(x=>areaCaughtCount(x)>0);}
 function groupMissedArea(a){return areaGroup(a).find(x=>AREA_MISSED.has(x.name));}
