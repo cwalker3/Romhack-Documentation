@@ -428,6 +428,8 @@ $areas = New-Object System.Collections.ArrayList
 $giftRows = New-Object System.Collections.ArrayList
 $itemRows = New-Object System.Collections.ArrayList
 $area = $null; $trainer = $null; $baseTName = ''; $choice = ''; $noteBuf = $null; $curSplit = ''
+$splitList = New-Object System.Collections.ArrayList   # split names in story order
+$splitCaps = @{}                                       # split name -> level cap
 $pendingNotes = New-Object System.Collections.ArrayList
 
 function New-BBArea($name){
@@ -471,7 +473,11 @@ for ($i=0; $i -lt $ml.Count; $i++) {
   if ($noteBuf -ne $null -and $t.Length -gt 0 -and (@('-',[char]0x2013,[char]0x2014,[char]0x2022) -contains $t.Substring(0,1))) { $noteBuf += [char]10 + $t; continue }
   # any other line ends a pending note (buffered; assigned to the next trainer or area)
   if ($noteBuf -ne $null) { [void]$pendingNotes.Add($noteBuf); $noteBuf = $null }
-  if ($t -match '\(Level Cap:') { Flush-Notes; $curSplit = ($t -replace '\s*\(Level Cap:.*$','').Trim(); continue }   # gym split / phase
+  if ($t -match '\(Level Cap:\s*(\d+)') {                                  # gym split / phase
+    Flush-Notes; $cap = [int]$Matches[1]; $curSplit = ($t -replace '\s*\(Level Cap:.*$','').Trim()
+    if (-not $splitCaps.ContainsKey($curSplit)) { $splitCaps[$curSplit] = $cap; [void]$splitList.Add($curSplit) }
+    continue
+  }
   if ($t.StartsWith('*')) {
     $n = $t.TrimStart('*').Trim()
     if ($n -match '^(.+?)\s*>\s*(.+)$') { [void]$itemRows.Add(@($(if($area){$area.name}else{''}), $Matches[1].Trim(), $Matches[2].Trim())) }  # item-ball swap
@@ -578,10 +584,24 @@ foreach ($gr in $giftRows) {
 }
 
 # assign stable trainer ids; wrap into RR/SS's area/roster shape (skip empty locations)
+# also pick each split's "boss" (beating it raises the level cap): prefer the gym leader,
+# else a trainer whose name matches the split (rival / villain), else the split's last fight.
+$splitBoss = @{}
 $areaData = New-Object System.Collections.ArrayList
 foreach ($a in $areas) {
   $ti = 0; foreach ($tr in $a.trainers) {
     $tr.id = (Norm $a.name) + '-' + (Norm $tr.name) + $(if ($tr.choice) { '-' + (Norm $tr.choice) } else { '' }) + "-$ti"
+    if ($tr.splitAt) {
+      $kw = Norm ($tr.splitAt -replace '(?i)\s*split.*$','' -replace '\d+','')
+      $core = Norm ($tr.name -replace '\(.*$','')   # ignore parenthetical asides ("…outside Giovanni's room")
+      $rank = if ($tr.name -match '(?i)gym leader') { 3 } elseif ($kw.Length -ge 3 -and $core.Contains($kw)) { 2 } else { 1 }
+      if (-not $splitBoss.ContainsKey($tr.splitAt)) { $splitBoss[$tr.splitAt] = @{ rank=0; ids=(New-Object System.Collections.ArrayList); last='' } }
+      $sb = $splitBoss[$tr.splitAt]; $sb.last = $tr.id
+      if ($rank -ge 2) {                                      # gym leader(s) / named boss: any defeated advances (Striaton trio!)
+        if ($rank -gt $sb.rank) { $sb.rank = $rank; $sb.ids.Clear(); [void]$sb.ids.Add($tr.id) }
+        elseif ($rank -eq $sb.rank) { [void]$sb.ids.Add($tr.id) }
+      }
+    }
     # tag a fight that belongs to a different gym split than the area's first visit
     if ($tr.splitAt -and $a.homeSplit -and $tr.splitAt -ne $a.homeSplit) { $tr.split = $tr.splitAt } else { $tr.split = '' }
     [void]$tr.Remove('splitAt')
@@ -713,6 +733,14 @@ if ($stubs.Count) {
   $sorted = $all | Sort-Object @{ Expression = { if ($_.dex -eq '000') { 9999 } else { [int]$_.dex } } }, name
 }
 
+# level caps per split, in story order, with the boss whose defeat raises the cap
+$splitsMeta = New-Object System.Collections.ArrayList
+foreach ($sp in $splitList) {
+  $bosses = @()
+  if ($splitBoss.ContainsKey($sp)) { $sb = $splitBoss[$sp]; $bosses = if ($sb.rank -ge 2) { @($sb.ids) } elseif ($sb.last) { @($sb.last) } else { @() } }
+  [void]$splitsMeta.Add([ordered]@{ name=$sp; cap=$splitCaps[$sp]; bosses=$bosses })
+}
+
 $data = [ordered]@{
   pokemon = [ordered]@{
     meta = [ordered]@{
@@ -741,6 +769,7 @@ $data = [ordered]@{
       subtitle = ''
       blurb = @('Wild encounters and trainer teams for every location, in story order, from the Rigorous Red mastersheet. Tick wild Pokemon as caught and mark trainers beaten to track your run.')
       starters = @('Bulbasaur','Charmander','Squirtle')
+      splits = @($splitsMeta)
     }
     areas = @($areaData)
   }

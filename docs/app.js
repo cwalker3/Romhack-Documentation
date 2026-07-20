@@ -565,6 +565,11 @@ function badgeLabel(g){const k=gymBadgeKey(g);return k?k[0].toUpperCase()+k.slic
 // every area that holds a real gym leader (in story order), de-duped by badge (so Blaine's
 // oddly-named area still counts, and revisits collapse into one chip)
 const GYMS=AREAS.filter(a=>gymLeaderIds(a).length>0).filter((a,i,arr)=>{const k=gymBadgeKey(a)||gymKey(a.name);return arr.findIndex(x=>(gymBadgeKey(x)||gymKey(x.name))===k)===i;});
+// level caps: each split has a cap and a boss whose defeat advances you to the next cap
+const SPLITS=arr(RAW.areas&&RAW.areas.meta&&RAW.areas.meta.splits);
+function currentSplitIdx(){for(let i=0;i<SPLITS.length;i++){const bs=arr(SPLITS[i].bosses);if(!bs.length||!bs.some(b=>TRAINERS_DONE.has(b)))return i;}return SPLITS.length;}
+function currentCap(){const i=currentSplitIdx();return i<SPLITS.length?SPLITS[i].cap:(SPLITS.length?SPLITS[SPLITS.length-1].cap:null);}
+function splitLabel(n){return n.replace(/\s*Split$/i,'');}
 const AREA2IDX={};
 AREAS.forEach((a,i)=>{const n=normName(a.name);if(AREA2IDX[n]==null)AREA2IDX[n]=i;});
 function areaCaughtCount(a){
@@ -655,6 +660,15 @@ function renderAreas(c){
         img=badgeImg(g),glyph=img?`<img class="bimg" src="${img}" alt="">`:`<span class="bmark"></span>`;
         return `<button class="badgechip${on?' on':''}" data-badge="${esc(gymBadgeKey(g)||gymKey(g.name))}" title="${esc(lbl)} Badge${on?' — earned (leader beaten)':' — click when you beat the leader'}">${glyph}${esc(lbl)}</button>`;}).join('');
     c.appendChild(bd);
+  }
+  if(SPLITS.length){
+    const curIdx=currentSplitIdx(),cap=currentCap(),done=curIdx>=SPLITS.length;
+    const curName=done?'run complete':splitLabel(SPLITS[curIdx].name)+' split';
+    const lc=el('div','lcapbar');
+    lc.innerHTML=`<span class="plabel">Level cap <span class="lcapnow">${cap!=null?cap:'—'}</span> <span class="lcapsub">${esc(curName)}</span></span>`+
+      SPLITS.map((s,i)=>{const beaten=i<curIdx,cur=i===curIdx&&!done;
+        return `<span class="lcapchip${beaten?' done':''}${cur?' cur':''}" title="${esc(splitLabel(s.name))} split — cap ${s.cap}${beaten?' · cleared':cur?' · current':''}">${s.cap}</span>`;}).join('');
+    c.appendChild(lc);
   }
   const bar=el('div','areabar');
   const nc=CAUGHT.size, nt=TRAINERS_DONE.size, nm=AREA_MISSED.size, tTot=trainerTotal(), eTot=encounterTotal();
