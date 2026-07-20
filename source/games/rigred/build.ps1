@@ -751,6 +751,31 @@ if ($stubs.Count) {
   $sorted = $all | Sort-Object @{ Expression = { if ($_.dex -eq '000') { 9999 } else { [int]$_.dex } } }, name
 }
 
+# ---------- TM / HM compatibility (FireRed/LeafGreen baseline; vg 7) ----------
+$tmKeyByMove = @{}; $tmMoveByKey = [ordered]@{}
+foreach ($cl in [System.IO.File]::ReadAllLines("$src\machines.csv")) {
+  $p = $cl -split ','; if ($p.Count -lt 4 -or $p[1] -ne '7') { continue }
+  $mnum = [int]$p[0]; $mid = [int]$p[3]; $nm = $mvName[$mid]; if (-not $nm) { continue }
+  $key = if ($mnum -le 50) { 'TM{0:D2}' -f $mnum } else { 'HM{0:D2}' -f ($mnum - 100) }
+  $tmKeyByMove[$mid] = $key; $tmMoveByKey[$key] = (Fix-Move $nm)
+}
+$monTms = @{}
+$tmCompatPath = "$src\pokemon_moves_frlg_tm.csv"
+if (Test-Path $tmCompatPath) {
+  foreach ($cl in [System.IO.File]::ReadAllLines($tmCompatPath)) {
+    $p = $cl -split ','; if ($p.Count -lt 3 -or $p[1] -ne '7' -or $p[0] -notmatch '^\d+$') { continue }
+    $mid = [int]$p[2]; if (-not $tmKeyByMove.ContainsKey($mid)) { continue }
+    $pk = [int]$p[0]; if (-not $monTms.ContainsKey($pk)) { $monTms[$pk] = @{} }
+    $monTms[$pk][$tmKeyByMove[$mid]] = $true
+  }
+}
+function TmSortKey($k){ if ($k.StartsWith('HM')) { 100 + [int]$k.Substring(2) } else { [int]$k.Substring(2) } }
+foreach ($e in $sorted) {
+  if ($e.dex -eq '000') { continue }
+  $pk = [int]$e.dex
+  if ($monTms.ContainsKey($pk)) { $e.tms = ((@($monTms[$pk].Keys) | Sort-Object { TmSortKey $_ }) -join ' ') }
+}
+
 # level caps per split, in story order, with the boss whose defeat raises the cap
 $splitsMeta = New-Object System.Collections.ArrayList
 foreach ($sp in $splitList) {
@@ -766,7 +791,7 @@ $data = [ordered]@{
       blurb = @('Pokemon changes for Rigorous Red (a Gen-3 / FireRed hack): typing, abilities, base stats (with +/- vs vanilla), and level-up learnsets. Parsed from the official change sheet.')
     }
     entries = @($sorted)
-    tmMoves = [ordered]@{}
+    tmMoves = $tmMoveByKey
   }
   nameDex = $nameDex
 
