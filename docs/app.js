@@ -598,6 +598,16 @@ function areaRosterTrainers(a){
     out.push(t);});});
   return out;
 }
+// run-wide totals for the progress bar: trainers you'd face, and nuzlocke encounters
+// (one per met-location group that has a wild table, plus each gift-only encounter)
+function trainerTotal(){return AREAS.reduce((n,a)=>n+areaRosterTrainers(a).length,0);}
+function encounterTotal(){
+  const seen=new Set();let n=0;
+  AREAS.forEach(a=>{const key=a.sep?(' '+a.name):metLoc(a.name);if(seen.has(key))return;seen.add(key);
+    const grp=areaGroup(a);
+    if(grp.some(x=>x.wild.length>0)||grp.some(x=>x.wild.length===0&&x.giftMons.length>0))n++;});
+  return n;
+}
 function areaStatus(a){
   const caught=areaCaughtCount(a)>0, missed=AREA_MISSED.has(a.name), hasEnc=a.wild.length>0||a.giftMons.length>0;
   const grp=areaGroup(a);
@@ -644,8 +654,8 @@ function renderAreas(c){
     c.appendChild(bd);
   }
   const bar=el('div','areabar');
-  const nc=CAUGHT.size, nt=TRAINERS_DONE.size, nm=AREA_MISSED.size;
-  const parts=[];if(nc)parts.push(`<b>${nc}</b> caught`);if(nt)parts.push(`<b>${nt}</b> trainers beaten`);if(nm)parts.push(`<b>${nm}</b> missed`);
+  const nc=CAUGHT.size, nt=TRAINERS_DONE.size, nm=AREA_MISSED.size, tTot=trainerTotal(), eTot=encounterTotal();
+  const parts=[`<b>${nc}</b>/<b>${eTot}</b> caught`,`<b>${nt}</b>/<b>${tTot}</b> trainers beaten`];if(nm)parts.push(`<b>${nm}</b> missed`);
   bar.innerHTML=`<div class="attempts"><span class="plabel">Attempt</span>`+
       `<select class="attemptsel" aria-label="Choose attempt">${ATTEMPTS.map(a=>`<option value="${esc(a.id)}"${a.id===ATTEMPT_ID?' selected':''}>${esc(a.name)}</option>`).join('')}</select>`+
       `<button class="attbtn attnew" title="Start a new attempt with fresh tracking">+ New</button>`+
@@ -664,7 +674,7 @@ function renderAreas(c){
   md.append(list,detail);c.appendChild(md);
   const q=state.query.toLowerCase().trim();
   const items=q?AREAS.filter(a=>a._s.includes(q)):AREAS;
-  list.appendChild(el('div','count',items.length+' location'+(items.length===1?'':'s')));
+  list.appendChild(el('div','count',items.length+' location'+(items.length===1?'':'s')+(q?'':` · ${eTot} encounters · ${tTot} trainers`)));
   if(!items.length){detail.innerHTML=emptyState('No areas match your search.');return;}
   if(!items.includes(AREAS[state.areaSel]))state.areaSel=AREAS.indexOf(items[0]);
   const frag=document.createDocumentFragment();
