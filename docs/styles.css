@@ -179,7 +179,6 @@ button{font:inherit;color:inherit;cursor:pointer}
 .ast.a2{color:var(--star2)}
 /* clickable moves + move-info modal */
 .movelink{cursor:pointer}
-.mvdot{display:inline-block;width:8px;height:8px;border-radius:50%;flex:none;margin-right:5px;vertical-align:middle;box-shadow:0 0 0 1px rgba(0,0,0,.12) inset}
 .chgmark{display:inline-block;width:7px;height:7px;margin-left:5px;background:var(--star);transform:rotate(45deg);border-radius:1px;vertical-align:middle;cursor:help;flex:none}
 .move.movelink:hover{border-color:var(--accent)}
 .tmchip.movelink:hover{border-color:var(--accent)}
@@ -258,8 +257,8 @@ h3 .movelink:hover{color:var(--accent)}
 .tsmon.monlink{cursor:pointer}
 .tsmon.monlink:hover .tsname{color:var(--accent-2)}
 .tsitem{display:inline-flex;align-items:center;justify-content:center}
-.tsmove{padding:2px 0;font-size:13px;line-height:1.35}
-.tsmove.movelink{cursor:pointer;border-radius:5px}
+.tsmove{padding:3px 7px;margin:2px 0;font-size:13px;line-height:1.3;border-radius:5px}
+.tsmove.movelink{cursor:pointer}
 .tsmove.movelink:hover{color:var(--accent-2)}
 .pkid{display:flex;flex-direction:column;gap:3px}
 .chip.mon{display:inline-flex;align-items:center;gap:6px;padding:4px 12px 4px 6px}
