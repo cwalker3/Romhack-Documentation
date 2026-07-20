@@ -544,6 +544,17 @@ foreach ($a in $areas) {
   [void]$areaData.Add([ordered]@{ name=$a.name; wild=$wild; rosters=$rosters; special=@(); items=$items; notes=$notes; gifts=$gifts })
 }
 
+# areas the doc only mentions in prose around Celadon City: the Eevee at the Department
+# Store, and the Game Corner (its own separate encounter). Insert them after Celadon City.
+$celIdx = -1
+for ($x = 0; $x -lt $areaData.Count; $x++) { if ($areaData[$x].name -eq 'Celadon City') { $celIdx = $x; break } }
+if ($celIdx -ge 0) {
+  $dept = [ordered]@{ name='Celadon Department Store'; wild=@(); rosters=@(); special=@(); items=@(); notes=@('Eevee is on 1F (counts as its own encounter). TM40, TM03, TM20 and TM34 can also be found here.'); gifts=@('Eevee (100%)') }
+  $corner = [ordered]@{ name='Celadon Game Corner'; wild=@(); rosters=@(); special=@(); items=@(); notes=@('The Game Corner encounter counts as a separate encounter here.'); gifts=@() }
+  $areaData.Insert($celIdx + 1, $corner)
+  $areaData.Insert($celIdx + 1, $dept)
+}
+
 # ---------- Evolutions: family adjacency (from CSV bands) + level (from "Evolves at level X" notes) ----------
 $evoLevel = @{}; $evoMethod = @{}
 foreach ($e in $entries) {
