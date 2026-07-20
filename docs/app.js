@@ -165,7 +165,7 @@ SECTIONS.forEach(s=>{
   if(s.id==='moves')s.sub=Object.keys(RAW.moveInfo||{}).length+' moves · '+arr(RAW.attacks&&RAW.attacks.entries).length+' changed';
 });
 
-const state={section:(SECTIONS.find(s=>s.id==='areas')||SECTIONS[0]||{id:'pokemon'}).id,query:'',pkSel:0,areaSel:0};
+const state={section:(SECTIONS.find(s=>s.id==='areas')||SECTIONS[0]||{id:'pokemon'}).id,query:'',pkSel:0,areaSel:0,areaInit:false};
 const $=id=>document.getElementById(id);
 
 /* ---- build nav ---- */
@@ -695,6 +695,8 @@ function renderAreas(c){
   const oTot=trainerOptionalTotal();
   list.appendChild(el('div','count',items.length+' location'+(items.length===1?'':'s')+(q?'':` · ${eTot} encounters · ${tTot} trainers${oTot?` (${oTot} optional)`:''}`)));
   if(!items.length){detail.innerHTML=emptyState('No areas match your search.');return;}
+  // on first open, jump to the first area you still have work left in
+  if(!state.areaInit&&!q){state.areaInit=true;for(let i=0;i<AREAS.length;i++){const st=areaStatus(AREAS[i]);if((st.hasEnc||st.hasTr)&&!st.complete){state.areaSel=i;break;}}}
   if(!items.includes(AREAS[state.areaSel]))state.areaSel=AREAS.indexOf(items[0]);
   const frag=document.createDocumentFragment();
   items.forEach(a=>{
@@ -1074,7 +1076,7 @@ function gotoPokemon(name){
 }
 function gotoArea(name){
   const idx=AREA2IDX[normName(name)];if(idx==null)return;
-  state.section='areas';state.query='';$('search').value='';state.areaSel=idx;
+  state.section='areas';state.query='';$('search').value='';state.areaSel=idx;state.areaInit=true;
   render();history.replaceState(null,'','#areas');
   requestAnimationFrame(()=>{window.scrollTo(0,0);const a=document.querySelector('.mlist .litem.active');if(a)a.scrollIntoView({block:'center'});});
 }
