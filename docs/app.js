@@ -71,15 +71,12 @@ function toggleMissed(name){if(AREA_MISSED.has(name))AREA_MISSED.delete(name);el
 let ITEMS_DONE=new Set();try{ITEMS_DONE=new Set(JSON.parse(localStorage.getItem(gkey('items'))||'[]'));}catch(e){}
 function saveItems(){try{localStorage.setItem(gkey('items'),JSON.stringify([...ITEMS_DONE]));}catch(e){}}
 function toggleItem(id){if(ITEMS_DONE.has(id))ITEMS_DONE.delete(id);else ITEMS_DONE.add(id);saveItems();}
-// gym badges earned (by normalized gym name)
-let BADGES=new Set();try{BADGES=new Set(JSON.parse(localStorage.getItem(gkey('badges'))||'[]'));}catch(e){}
-function saveBadges(){try{localStorage.setItem(gkey('badges'),JSON.stringify([...BADGES]));}catch(e){}}
-function toggleBadge(k){if(BADGES.has(k))BADGES.delete(k);else BADGES.add(k);saveBadges();}
-function trackTotal(){return CAUGHT.size+TRAINERS_DONE.size+AREA_MISSED.size+ITEMS_DONE.size+BADGES.size;}
+// gym badges are earned automatically when a gym's leader is beaten (see GYMS/gymLeaderIds below)
+function trackTotal(){return CAUGHT.size+TRAINERS_DONE.size+AREA_MISSED.size+ITEMS_DONE.size;}
 function resetCaught(){
   if(!trackTotal())return;
   if(!confirm('Reset all run progress? This clears every caught Pokémon, missed encounter, completed trainer, and picked-up item.'))return;
-  CAUGHT.clear();TRAINERS_DONE.clear();AREA_MISSED.clear();ITEMS_DONE.clear();BADGES.clear();saveCaught();saveTrainers();saveMissed();saveItems();saveBadges();
+  CAUGHT.clear();TRAINERS_DONE.clear();AREA_MISSED.clear();ITEMS_DONE.clear();saveCaught();saveTrainers();saveMissed();saveItems();
   Object.keys(wildOpen).forEach(k=>delete wildOpen[k]);
   reRenderKeepScroll();
 }
@@ -548,9 +545,24 @@ const AREAS=arr(RAW.areas&&RAW.areas.areas).map(a=>{
   return {name:a.name,wild,rosters,special,items,notes,gifts,giftMons,sep:!!a.sep,_s:(a.name+' '+[...mons].join(' ')+' '+items.map(it=>it.name).join(' ')+' '+notes.join(' ')+' '+gifts.join(' ')).toLowerCase()};
 });
 const wildOpen={};
-// gym badges: the gym locations, in story order, de-duped by name (ignoring "(…)" suffixes)
+// gym badges — earned automatically when a gym's leader is beaten.
 function gymKey(n){return n.replace(/\s*\(.*\)\s*$/,'').toLowerCase().trim();}
-const GYMS=AREAS.filter(a=>/\bgym\b/i.test(a.name)).filter((a,i,arr)=>arr.findIndex(x=>gymKey(x.name)===gymKey(a.name))===i);
+// the badge-granting trainer(s) in a gym: names like "Gym Leader X" / "Leaders Liza & Tate"
+// (bracketed "Leader Rival [Theme]" battles are rival mirrors fought elsewhere, not real leaders)
+function gymLeaderIds(g){const out=[];g.rosters.forEach(r=>r.trainers.forEach(t=>{if(/^(gym )?leaders?\b/i.test(t.name)&&!/\[/.test(t.name))out.push(t.id);}));return out;}
+function badgeEarned(g){return gymLeaderIds(g).some(id=>TRAINERS_DONE.has(id));}
+// map a gym (by its leader's name) to its canonical badge image key in window.RRSS_BADGES
+const BADGE_BY_LEADER=[[/\bbrock\b/,'boulder'],[/\bmisty\b/,'cascade'],[/\bsurge\b/,'thunder'],[/\berika\b/,'rainbow'],[/\bkoga\b/,'soul'],[/\bsabrina\b/,'marsh'],[/\bblaine\b/,'volcano'],[/\bgiovanni\b/,'earth'],
+[/\broxanne\b/,'stone'],[/\bbrawly\b/,'knuckle'],[/\bwattson\b/,'dynamo'],[/\bflannery\b/,'heat'],[/\bnorman\b/,'balance'],[/\bwinona\b/,'feather'],[/\b(tate|liza)\b/,'mind'],[/\b(wallace|juan)\b/,'rain'],
+[/\b(cilan|chili|cress)\b/,'trio'],[/\blenora\b/,'basic'],[/\bburgh\b/,'insect'],[/\belesa\b/,'bolt'],[/\bclay\b/,'quake'],[/\bskyla\b/,'jet'],[/\bbrycen\b/,'freeze'],[/\b(drayden|iris)\b/,'legend']];
+function gymBadgeKey(g){const nm=g.name.toLowerCase();for(const[re,k]of BADGE_BY_LEADER){if(re.test(nm))return k;}
+  for(const id of gymLeaderIds(g)){const t=g.rosters.flatMap(r=>r.trainers).find(x=>x.id===id);if(t){const ln=t.name.toLowerCase();for(const[re,k]of BADGE_BY_LEADER){if(re.test(ln))return k;}}}return null;}
+function badgeImg(g){const bk=gymBadgeKey(g),spr=window.RRSS_BADGES;return bk&&spr&&spr[bk]?`data:image/png;base64,${spr[bk]}`:null;}
+// a chip label from the badge key ("boulder" -> "Boulder"); falls back to the gym name
+function badgeLabel(g){const k=gymBadgeKey(g);return k?k[0].toUpperCase()+k.slice(1):g.name.replace(/\s*\(.*\)\s*$/,'').replace(/\s*Gym$/,'');}
+// every area that holds a real gym leader (in story order), de-duped by badge (so Blaine's
+// oddly-named area still counts, and revisits collapse into one chip)
+const GYMS=AREAS.filter(a=>gymLeaderIds(a).length>0).filter((a,i,arr)=>{const k=gymBadgeKey(a)||gymKey(a.name);return arr.findIndex(x=>(gymBadgeKey(x)||gymKey(x.name))===k)===i;});
 const AREA2IDX={};
 AREAS.forEach((a,i)=>{const n=normName(a.name);if(AREA2IDX[n]==null)AREA2IDX[n]=i;});
 function areaCaughtCount(a){
@@ -621,11 +633,12 @@ function renderAreas(c){
   c.appendChild(collapsibleAbout('areas',RAW.areas.meta));
   c.appendChild(profileBar());
   if(GYMS.length){
-    const earned=GYMS.filter(g=>BADGES.has(gymKey(g.name))).length;
+    const earned=GYMS.filter(g=>badgeEarned(g)).length;
     const bd=el('div','badgebar');
     bd.innerHTML=`<span class="plabel">Badges <span class="badgecount">${earned}/${GYMS.length}</span></span>`+
-      GYMS.map(g=>{const k=gymKey(g.name),on=BADGES.has(k),nm=g.name.replace(/\s*\(.*\)\s*$/,'');
-        return `<button class="badgechip${on?' on':''}" data-badge="${esc(k)}" title="${esc(nm)}${on?' — earned':' — click when earned'}"><span class="bmark"></span>${esc(nm.replace(/\s*Gym$/,''))}</button>`;}).join('');
+      GYMS.map(g=>{const on=badgeEarned(g),lbl=badgeLabel(g),
+        img=badgeImg(g),glyph=img?`<img class="bimg" src="${img}" alt="">`:`<span class="bmark"></span>`;
+        return `<button class="badgechip${on?' on':''}" data-badge="${esc(gymBadgeKey(g)||gymKey(g.name))}" title="${esc(lbl)} Badge${on?' — earned (leader beaten)':' — click when you beat the leader'}">${glyph}${esc(lbl)}</button>`;}).join('');
     c.appendChild(bd);
   }
   const bar=el('div','areabar');
@@ -1046,7 +1059,9 @@ contentEl.addEventListener('click',e=>{
   const cb=e.target.closest('.catch');
   if(cb){e.preventDefault();e.stopPropagation();toggleCaught(cb.dataset.catch);reRenderKeepScroll();return;}
   const bg=e.target.closest('.badgechip');
-  if(bg){e.preventDefault();toggleBadge(bg.dataset.badge);reRenderKeepScroll();return;}
+  if(bg){e.preventDefault();const g=GYMS.find(x=>(gymBadgeKey(x)||gymKey(x.name))===bg.dataset.badge);if(g){const ids=gymLeaderIds(g);
+    if(badgeEarned(g))ids.forEach(id=>TRAINERS_DONE.delete(id));else if(ids.length)TRAINERS_DONE.add(ids[0]);
+    saveTrainers();}reRenderKeepScroll();return;}
   const mb=e.target.closest('.missbtn');
   if(mb){e.preventDefault();toggleMissed(mb.dataset.miss);reRenderKeepScroll();return;}
   const wb=e.target.closest('.collapsebtn');

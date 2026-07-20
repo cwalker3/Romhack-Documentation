@@ -473,8 +473,10 @@ for ($i=0; $i -lt $ml.Count; $i++) {
       Assign-Notes $trainer                              # pending fight notes attach to this trainer
     }
     # a ':' line that reads like a sentence (lowercase function words) is a note that
-    # introduces a fight, not a location — buffer it for the next trainer / area
-    elseif ($h -cmatch '\b(you|your|have|has|to|and|get|got|back|this|that|until|before|after|when|while|if|can|will|would|should|must|one|two|three|do|does|doing|done|fight|fights|wait|instead|only|available|between|make|sure|switch|teams|first|down|far|least|but|so|then|give|gives)\b') {
+    # introduces a fight, not a location — buffer it for the next trainer / area.
+    # ignore words inside "(…)" so a real location with a parenthetical aside
+    # (e.g. "Cinnabar Gym (…you still have to fight the trainers…) (PERMA SUN):") still counts.
+    elseif (($h -replace '\([^)]*\)','') -cmatch '\b(you|your|have|has|to|and|get|got|back|this|that|until|before|after|when|while|if|can|will|would|should|must|one|two|three|do|does|doing|done|fight|fights|wait|instead|only|available|between|make|sure|switch|teams|first|down|far|least|but|so|then|give|gives)\b') {
       [void]$pendingNotes.Add($h)
     }
     elseif ($h -match '^B?\d+F$') { Flush-Notes }         # a floor sub-header (B1F, 1F, …) — stay in the current area
