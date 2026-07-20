@@ -187,6 +187,16 @@ h3 .movelink:hover{color:var(--accent)}
 .movelink:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
 .movemodal-backdrop{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(4,10,20,.55);backdrop-filter:blur(3px)}
 .movemodal-backdrop.show{display:flex}
+/* Pokémon preview popup */
+.monmodal-backdrop{position:fixed;inset:0;z-index:110;display:none;align-items:flex-start;justify-content:center;padding:24px 20px;background:rgba(4,10,20,.6);backdrop-filter:blur(3px);overflow:auto}
+.monmodal-backdrop.show{display:flex}
+.monmodal{width:min(680px,100%);background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow-lg);overflow:hidden;animation:mmpop .14s ease;margin:auto}
+.pm-bar{display:flex;align-items:center;gap:8px;padding:10px 12px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--surface);z-index:2}
+.pm-full{margin-left:auto;font-size:12px;font-weight:600;padding:6px 11px;border:1px solid var(--line-2);border-radius:8px;background:var(--surface);color:var(--ink-2);cursor:pointer}
+.pm-full:hover{border-color:var(--accent);color:var(--accent-2)}
+.pm-close{flex:none;width:28px;height:28px;border:1px solid var(--line-2);border-radius:8px;background:var(--surface);color:var(--muted);font-size:13px;display:grid;place-items:center;cursor:pointer}
+.pm-close:hover{color:var(--ink)}
+.monmodal .panel{border:0;border-radius:0;background:transparent;padding:16px 18px 20px}
 .movemodal{width:min(420px,100%);background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow-lg);overflow:hidden;animation:mmpop .14s ease}
 @keyframes mmpop{from{transform:translateY(6px) scale(.98);opacity:0}to{transform:none;opacity:1}}
 .mm-head{display:flex;align-items:center;gap:12px;padding:15px 18px;border-bottom:1px solid var(--line);background:var(--surface-2)}

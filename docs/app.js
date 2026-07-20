@@ -281,8 +281,30 @@ const TYPE_COLORS={Normal:'#9099a1',Fire:'#ff9d55',Water:'#4d90d5',Electric:'#f4
 /* ---- move info modal ---- */
 const moveModal=el('div','movemodal-backdrop');moveModal.innerHTML='<div class="movemodal" role="dialog" aria-modal="true"></div>';document.body.appendChild(moveModal);
 moveModal.addEventListener('click',e=>{if(e.target===moveModal||e.target.closest('.mm-close'))closeMove();});
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMove();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeMove();closeMon();}});
 function closeMove(){moveModal.classList.remove('show');}
+/* ---- Pokémon preview popup (clicking a mon anywhere opens this instead of leaving the page) ---- */
+const monModal=el('div','monmodal-backdrop');monModal.innerHTML='<div class="monmodal" role="dialog" aria-modal="true"></div>';document.body.appendChild(monModal);
+monModal.addEventListener('click',e=>{
+  if(e.target===monModal||e.target.closest('.pm-close')){closeMon();return;}
+  const full=e.target.closest('.pm-full');
+  if(full){closeMon();gotoPokemon(full.dataset.mon);return;}
+  const mv=e.target.closest('.movelink');
+  if(mv&&mv.dataset.move){e.preventDefault();openMove(mv.dataset.move);return;}
+  const mon=e.target.closest('.monlink');
+  if(mon&&mon.dataset.mon){e.preventDefault();openMon(mon.dataset.mon);return;}
+});
+function closeMon(){monModal.classList.remove('show');}
+function openMon(name){
+  let p=PK.find(x=>normName(x.name)===normName(name));
+  if(!p){const d=NAME2DEX[normName(name)];if(d)p=PK.find(x=>x.dex===d);}
+  if(!p)return;
+  const box=monModal.firstElementChild;
+  box.innerHTML=`<div class="pm-bar"><button class="pm-full" data-mon="${esc(p.name)}" title="Open full Pokédex page">Full page ↗</button><button class="pm-close" aria-label="Close">✕</button></div>`;
+  box.appendChild(pokemonDetail(p));
+  monModal.scrollTop=0;box.scrollTop=0;
+  monModal.classList.add('show');
+}
 function openMove(name){
   const mi=moveData(name), box=moveModal.firstElementChild;
   if(!mi){box.innerHTML=`<div class="mm-head"><h3>${esc(name)}</h3><button class="mm-close" aria-label="Close">✕</button></div><div class="mm-body"><p class="mm-desc">No data available for this move.</p></div>`;}
@@ -1034,7 +1056,7 @@ contentEl.addEventListener('click',e=>{
   const al=e.target.closest('.arealink');
   if(al&&al.dataset.area){e.preventDefault();gotoArea(al.dataset.area);return;}
   const t=e.target.closest('.monlink');
-  if(t&&t.dataset.mon){e.preventDefault();gotoPokemon(t.dataset.mon);}
+  if(t&&t.dataset.mon){e.preventDefault();openMon(t.dataset.mon);}
 });
 contentEl.addEventListener('keydown',e=>{
   if(e.key!=='Enter'&&e.key!==' ')return;
@@ -1044,7 +1066,7 @@ contentEl.addEventListener('keydown',e=>{
   const al=e.target.closest('.arealink');
   if(al&&al.dataset.area){e.preventDefault();gotoArea(al.dataset.area);return;}
   const t=e.target.closest('.monlink');
-  if(t&&t.dataset.mon){e.preventDefault();gotoPokemon(t.dataset.mon);}
+  if(t&&t.dataset.mon){e.preventDefault();openMon(t.dataset.mon);}
 });
 
 /* ---- search wiring (debounced) ---- */
