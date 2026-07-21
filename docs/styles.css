@@ -367,6 +367,11 @@ tr.rivalrow{background:color-mix(in srgb,var(--accent) 6%,transparent)}
 .missbtn:hover{color:var(--down);border-color:var(--down)}
 .missbtn.on{background:var(--down-soft);border-color:var(--down);color:var(--down)}
 .submiss{color:var(--down);font-weight:700}
+.subdelay{color:var(--accent);font-weight:700}
+.delaybtn:hover{color:var(--accent);border-color:var(--accent)}
+.delaybtn.on{background:color-mix(in srgb,var(--accent) 15%,transparent);border-color:var(--accent);color:var(--accent)}
+.areacheck.delayed{color:var(--accent);font-size:12px}
+.litem.delayed{opacity:.72}
 .cmarks{margin-left:auto;display:inline-flex;gap:3px;flex:none}
 .cmark{font-size:9.5px;font-weight:800;width:15px;height:15px;display:inline-grid;place-items:center;border-radius:4px}
 .cmark.s{background:var(--up-soft);color:var(--up)}

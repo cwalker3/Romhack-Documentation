@@ -68,16 +68,20 @@ function toggleTrainer(id){if(TRAINERS_DONE.has(id))TRAINERS_DONE.delete(id);els
 let AREA_MISSED=new Set();try{AREA_MISSED=new Set(JSON.parse(localStorage.getItem(gkey('missed'))||'[]'));}catch(e){}
 function saveMissed(){try{localStorage.setItem(gkey('missed'),JSON.stringify([...AREA_MISSED]));}catch(e){}}
 function toggleMissed(name){if(AREA_MISSED.has(name))AREA_MISSED.delete(name);else AREA_MISSED.add(name);saveMissed();}
+// encounters you're deferring to later — the area still counts as complete for now
+let AREA_DELAYED=new Set();try{AREA_DELAYED=new Set(JSON.parse(localStorage.getItem(gkey('delayed'))||'[]'));}catch(e){}
+function saveDelayed(){try{localStorage.setItem(gkey('delayed'),JSON.stringify([...AREA_DELAYED]));}catch(e){}}
+function toggleDelayed(name){if(AREA_DELAYED.has(name))AREA_DELAYED.delete(name);else{AREA_DELAYED.add(name);AREA_MISSED.delete(name);saveMissed();}saveDelayed();}
 // items picked up (by per-area item id)
 let ITEMS_DONE=new Set();try{ITEMS_DONE=new Set(JSON.parse(localStorage.getItem(gkey('items'))||'[]'));}catch(e){}
 function saveItems(){try{localStorage.setItem(gkey('items'),JSON.stringify([...ITEMS_DONE]));}catch(e){}}
 function toggleItem(id){if(ITEMS_DONE.has(id))ITEMS_DONE.delete(id);else ITEMS_DONE.add(id);saveItems();}
 // gym badges are earned automatically when a gym's leader is beaten (see GYMS/gymLeaderIds below)
-function trackTotal(){return CAUGHT.size+TRAINERS_DONE.size+AREA_MISSED.size+ITEMS_DONE.size;}
+function trackTotal(){return CAUGHT.size+TRAINERS_DONE.size+AREA_MISSED.size+ITEMS_DONE.size+AREA_DELAYED.size;}
 function resetCaught(){
   if(!trackTotal())return;
   if(!confirm('Reset all run progress? This clears every caught Pokémon, missed encounter, completed trainer, and picked-up item.'))return;
-  CAUGHT.clear();TRAINERS_DONE.clear();AREA_MISSED.clear();ITEMS_DONE.clear();saveCaught();saveTrainers();saveMissed();saveItems();
+  CAUGHT.clear();TRAINERS_DONE.clear();AREA_MISSED.clear();ITEMS_DONE.clear();AREA_DELAYED.clear();saveCaught();saveTrainers();saveMissed();saveItems();saveDelayed();
   Object.keys(wildOpen).forEach(k=>delete wildOpen[k]);
   reRenderKeepScroll();
 }
@@ -631,17 +635,19 @@ function encounterTotal(){
 function areaStatus(a){
   const caught=areaCaughtCount(a)>0, missed=AREA_MISSED.has(a.name), hasEnc=a.wild.length>0||a.giftMons.length>0;
   const grp=areaGroup(a);
-  const grpCaught=grp.some(x=>areaCaughtCount(x)>0), grpMissed=grp.some(x=>AREA_MISSED.has(x.name));
+  const grpCaught=grp.some(x=>areaCaughtCount(x)>0), grpMissed=grp.some(x=>AREA_MISSED.has(x.name)), grpDelayed=grp.some(x=>AREA_DELAYED.has(x.name));
   const grpHasEnc=grp.some(x=>x.wild.length>0||x.giftMons.length>0);
   const trs=areaRosterTrainers(a), hasTr=trs.length>0;
   // optional fights (item-guard bosses, side trainers) don't block area completion
   const reqTrs=trs.filter(t=>!t.optional);
   const trainersDone=reqTrs.every(t=>TRAINERS_DONE.has(t.id));
-  const encResolved=!grpHasEnc||grpCaught||grpMissed;
+  // a "delayed" encounter counts as resolved for now, so the area still reads as complete
+  const encResolved=!grpHasEnc||grpCaught||grpMissed||grpDelayed;
   const complete=(hasEnc||hasTr)&&encResolved&&trainersDone;
   const optionalsLeft=trs.some(t=>t.optional&&!TRAINERS_DONE.has(t.id));
-  const resolvedElsewhere=hasEnc&&!caught&&!missed&&(grpCaught||grpMissed);
-  return {caught,missed,hasEnc,hasTr,trainersDone,complete,optionalsLeft,trs,resolvedElsewhere};
+  const delayed=grpDelayed&&!grpCaught&&!grpMissed;
+  const resolvedElsewhere=hasEnc&&!caught&&!missed&&(grpCaught||grpMissed||grpDelayed);
+  return {caught,missed,delayed,hasEnc,hasTr,trainersDone,complete,optionalsLeft,trs,resolvedElsewhere};
 }
 
 function profileBar(){
@@ -721,9 +727,11 @@ function renderAreas(c){
     const st=areaStatus(a);
     b.classList.toggle('done',st.complete);
     b.classList.toggle('optleft',st.complete&&st.optionalsLeft);
+    b.classList.toggle('delayed',st.delayed);
     const boss=areaHasBoss(a);b.classList.toggle('hasboss',boss);
     const optN=st.trs.filter(t=>t.optional&&!TRAINERS_DONE.has(t.id)).length;
-    const marker=st.complete&&st.optionalsLeft?`<span class="areacheck optleft" title="Done — ${optN} optional trainer${optN===1?'':'s'} still available here">◑</span>`
+    const marker=st.delayed?`<span class="areacheck delayed" title="Encounter delayed for later — area counts as done for now">🕒</span>`
+      :st.complete&&st.optionalsLeft?`<span class="areacheck optleft" title="Done — ${optN} optional trainer${optN===1?'':'s'} still available here">◑</span>`
       :st.complete?`<span class="areacheck done" title="Route complete">✓</span>`
       :st.caught?`<span class="areacheck" title="Pokémon caught here">✓</span>`
       :st.missed?`<span class="areamiss" title="Encounter missed here">✕</span>`
@@ -785,22 +793,24 @@ function areaDetail(a){
   if(wildRows.length){
     const caughtList=[];wildRows.forEach(w=>w.species.forEach(s=>{if(isCaught(s.name))caughtList.push(s);}));
     const caughtHere=caughtList.length;
-    const missed=AREA_MISSED.has(a.name);
+    const missed=AREA_MISSED.has(a.name), delayed=AREA_DELAYED.has(a.name);
     // shared met-location: this route's encounter may be used at a sibling area
     const sibs=groupSiblings(a);
     const elseCaught=sibs.find(x=>areaCaughtCount(x)>0);
     const elseMissed=sibs.find(x=>AREA_MISSED.has(x.name));
-    const resolvedElse=(caughtHere===0&&!missed)&&(elseCaught||elseMissed);
-    const resolved=caughtHere>0||missed||!!resolvedElse;
+    const resolvedElse=(caughtHere===0&&!missed&&!delayed)&&(elseCaught||elseMissed);
+    const resolved=caughtHere>0||missed||delayed||!!resolvedElse;
     const open=(a.name in wildOpen)?wildOpen[a.name]:!resolved;
     const areaLink=x=>`<span class="loclink arealink" data-area="${esc(x.name)}" role="button" tabindex="0">${esc(x.name)}</span>`;
     const p=el('div','panel');
     let sub;
-    if(missed)sub=`<span class="submiss">✕ Encounter missed</span>${open?'':' · collapsed'}`;
+    if(delayed)sub=`<span class="subdelay">🕒 Delayed for later</span>${open?'':' · collapsed'}`;
+    else if(missed)sub=`<span class="submiss">✕ Encounter missed</span>${open?'':' · collapsed'}`;
     else if(caughtHere>0)sub=`<span class="subcaught">✓ ${caughtHere} caught here</span>${open?'':' · collapsed for your nuzlocke'}`;
     else if(resolvedElse)sub=`<span class="submiss">↔ Encounter used at ${(elseCaught||elseMissed).name}</span>`;
     else sub='Wild encounters · tick a box to mark caught';
     p.innerHTML=`<div class="phead"><h3>${esc(a.name)}</h3><span class="sub">${sub}</span><div class="pheadbtns">`+
+      `<button class="missbtn delaybtn${delayed?' on':''}" data-delay="${esc(a.name)}" title="You'll come back for this encounter later — marks the area done for now">${delayed?'Un-delay':'Delay for later'}</button>`+
       `<button class="missbtn${missed?' on':''}" data-miss="${esc(a.name)}" title="No usable encounter here (fainted or fled)">${missed?'Un-miss':'Mark missed'}</button>`+
       `<button class="collapsebtn" data-wild="${esc(a.name)}" data-open="${open}">${open?'Hide':'Show'} wild</button></div></div>`;
     const body=el('div','pbody');
@@ -1135,6 +1145,8 @@ contentEl.addEventListener('click',e=>{
   if(bg){e.preventDefault();const g=GYMS.find(x=>(gymBadgeKey(x)||gymKey(x.name))===bg.dataset.badge);if(g){const ids=gymLeaderIds(g);
     if(badgeEarned(g))ids.forEach(id=>TRAINERS_DONE.delete(id));else if(ids.length)TRAINERS_DONE.add(ids[0]);
     saveTrainers();}reRenderKeepScroll();return;}
+  const db=e.target.closest('.delaybtn');
+  if(db){e.preventDefault();toggleDelayed(db.dataset.delay);reRenderKeepScroll();return;}
   const mb=e.target.closest('.missbtn');
   if(mb){e.preventDefault();toggleMissed(mb.dataset.miss);reRenderKeepScroll();return;}
   const wb=e.target.closest('.collapsebtn');
