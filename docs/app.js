@@ -261,6 +261,16 @@ PK.forEach(p=>{const n=normName(p.name);if(!NAME2DEX[n])NAME2DEX[n]=p.dex;});
 // species that appear in-game but aren't Pokédex entries (alt forms, etc.) still need a dex for sprites/catching
 Object.keys(RAW.nameDex||{}).forEach(k=>{if(!NAME2DEX[k])NAME2DEX[k]=RAW.nameDex[k];});
 const TM_MOVES=RAW.pokemon.tmMoves||{};
+// append the move a TM/HM teaches, e.g. "TM48" -> "TM48 (Round)" — unless it's already spelled out
+function tmAnnotate(text){
+  if(!text)return text;
+  return String(text).replace(/\b(TM|HM)\s?(\d{1,3})\b/gi,(m,pre,num,off,full)=>{
+    const move=TM_MOVES[pre.toUpperCase()+String(+num).padStart(2,'0')];
+    if(!move)return m;
+    const after=full.slice(off+m.length).replace(/^[\s:.,;()–-]+/,'');
+    return after.toLowerCase().startsWith(move.toLowerCase())?m:`${m} (${move})`;
+  });
+}
 const MOVE_INFO=RAW.moveInfo||{};
 function moveData(name){return MOVE_INFO[normName(name)];}
 // before→after change rows for moves the hack modifies (keyed by normalized name)
@@ -852,7 +862,7 @@ function areaDetail(a){
     const p=el('div','panel');
     p.innerHTML=`<div class="phead"><h3>Notes</h3></div>`;
     const body=el('div','pbody');
-    body.innerHTML=a.notes.map(n=>`<div class="note plain" style="margin-bottom:8px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg><div>${esc(n).replace(/\n/g,'<br>')}</div></div>`).join('');
+    body.innerHTML=a.notes.map(n=>`<div class="note plain" style="margin-bottom:8px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg><div>${esc(tmAnnotate(n)).replace(/\n/g,'<br>')}</div></div>`).join('');
     p.appendChild(body);wrap.appendChild(p);
   }
   // rosters (rival Brendan/May battles filtered by the chosen gender + starter)
@@ -873,7 +883,7 @@ function areaDetail(a){
     const p=el('div','panel'+(r.kind==='gauntlet'?' gauntlet':'')+(r.optional?' optroster':'')+(partner?' partnerroster':''));
     const gicon=r.kind==='gauntlet'?`<span class="gicon" title="A gauntlet: back-to-back fights with no healing in between">⚔</span> `:(partner?`<span class="gicon" title="An ally who fights on your side — not a trainer you beat">🤝</span> `:'');
     const otag=r.optional?`<span class="optpill big" title="Optional — you can skip this whole group; it doesn't block the area">optional</span>`:'';
-    const rtag=r.reward?`<span class="rewardpill" title="What clearing this gauntlet gets you">🎁 ${esc(r.reward)}</span>`:'';
+    const rtag=r.reward?`<span class="rewardpill" title="What clearing this gauntlet gets you">🎁 ${esc(tmAnnotate(r.reward))}</span>`:'';
     const gnote=r.note?`<div class="gauntnote">${esc(r.note)}</div>`:'';
     const sub=partner?`<span class="sub">fights on your side</span>`:`<span class="sub">${track&&doneN?`<span class="subcaught">✓ ${doneN}/${trainers.length} beaten</span>`:`${trainers.length} trainer${trainers.length===1?'':'s'}`}</span>`;
     p.innerHTML=`<div class="phead"><h3>${gicon}${esc(r.title)}</h3>${otag}${rtag}${sub}</div>${gnote}`;
@@ -887,11 +897,11 @@ function areaDetail(a){
         if(t.doubles)tag+=` <span class="doublespill" title="Double battle — you send out two Pokémon">👥 Doubles</span>`;
         if(t.b2b&&r.kind!=='gauntlet')tag+=` <span class="b2bpill" title="${esc(t.b2b)}">⚔ back-to-back</span>`;
         if(t.optional&&r.kind!=='gauntlet')tag+=` <span class="optpill" title="Optional — skippable; doesn't block this area from counting as done">optional</span>`;
-        if(t.reward)tag+=` <span class="rewardpill" title="Beating this trainer gives you this">🎁 ${esc(t.reward)}</span>`;
+        if(t.reward)tag+=` <span class="rewardpill" title="Beating this trainer gives you this">🎁 ${esc(tmAnnotate(t.reward))}</span>`;
         const tw=weatherOf(t);if(tw)tag+=` <span class="wxpill wx-${t.weather}" title="Permanent ${esc(tw.label.replace(/^Permanent /,''))} during this fight">${tw.icon} ${esc(t.weather)}</span>`;
         const done=track&&TRAINERS_DONE.has(t.id);
         const chk=track?`<button class="tcheck catch" data-trainer="${esc(t.id)}" aria-pressed="${done}" title="${done?'Beaten — click to unmark':'Mark as beaten'}"></button>`:'';
-        const tnote=arr(t.notes).length?`<div class="tnote">${t.notes.map(esc).join('<br>')}</div>`:'';
+        const tnote=arr(t.notes).length?`<div class="tnote">${t.notes.map(n=>esc(tmAnnotate(n))).join('<br>')}</div>`:'';
         const badge=t.badge?` <span class="badgepill" title="${t.badge==='C'?'Champion rematch':'Available after '+t.badge+' badge(s)'}">${esc(t.badge)}</span>`:'';
         const team=arr(t.team);
         const tcell=(fn)=>team.map(m=>`<td>${fn(m)}</td>`).join('');
@@ -926,7 +936,7 @@ function areaDetail(a){
     const body=el('div','pbody');
     body.innerHTML=`<div class="tblwrap"><table class="data"><tbody>`+
       items.map(it=>{const done=ITEMS_DONE.has(it.id);
-        return `<tr class="${done?'tdone':''}"><td style="width:1%"><button class="tcheck catch" data-item="${esc(it.id)}" aria-pressed="${done}" title="${done?'Picked up — click to unmark':'Mark as picked up'}"></button></td><td>${itemSpriteImg(it.name)}<b>${esc(it.name)}</b>${it.how?` <span class="ihow">${esc(it.how)}</span>`:''}</td></tr>`;
+        return `<tr class="${done?'tdone':''}"><td style="width:1%"><button class="tcheck catch" data-item="${esc(it.id)}" aria-pressed="${done}" title="${done?'Picked up — click to unmark':'Mark as picked up'}"></button></td><td>${itemSpriteImg(it.name)}<b>${esc(tmAnnotate(it.name))}</b>${it.how?` <span class="ihow">${esc(it.how)}</span>`:''}</td></tr>`;
       }).join('')+
       `</tbody></table></div>`;
     p.appendChild(body);wrap.appendChild(p);
