@@ -541,7 +541,7 @@ function chgRow(o){
 /* ================= AREAS ================= */
 const AREAS=arr(RAW.areas&&RAW.areas.areas).map(a=>{
   const wild=arr(a.wild).map(w=>({method:w.method,level:w.level,species:arr(w.species)}));
-  const rosters=arr(a.rosters).map(r=>({title:r.title,kind:r.kind,reward:r.reward||'',note:r.note||'',optional:!!r.optional,trainers:arr(r.trainers).map(t=>({id:t.id,name:t.name,badge:t.badge,choice:t.choice||'',split:t.split||'',optional:!!t.optional,b2b:t.b2b||'',reward:t.reward||'',weather:t.weather||'',notes:arr(t.notes),team:arr(t.team)}))}));
+  const rosters=arr(a.rosters).map(r=>({title:r.title,kind:r.kind,reward:r.reward||'',note:r.note||'',optional:!!r.optional,trainers:arr(r.trainers).map(t=>({id:t.id,name:t.name,badge:t.badge,choice:t.choice||'',split:t.split||'',optional:!!t.optional,b2b:t.b2b||'',reward:t.reward||'',weather:t.weather||'',doubles:!!t.doubles,notes:arr(t.notes),team:arr(t.team)}))}));
   const special=arr(a.special).map(s=>({title:s.title,team:arr(s.team).map(m=>({...m,moves:arr(m.moves)}))}));
   // note: rosters below already keep the full team objects (species/level/item/ability/nature/moves)
   const items=arr(a.items).map(it=>({id:it.id,name:it.name,how:it.how||''}));
@@ -884,6 +884,7 @@ function areaDetail(a){
           tag=(rn&&rs&&g===rn&&st===rs)?` <span class="rivalpill" title="Your rival, based on your gender & starter">★ Your rival</span>`:` <span class="varpill">${esc(g)} · ${esc(st)}</span>`;}
         if(t.choice&&!PROFILE.starter)tag+=` <span class="varpill">if ${esc(t.choice)}</span>`;
         if(t.split)tag+=` <span class="varpill" title="You fight this on a later visit here, during the ${esc(t.split)}">${esc(t.split)}</span>`;
+        if(t.doubles)tag+=` <span class="doublespill" title="Double battle — you send out two Pokémon">👥 Doubles</span>`;
         if(t.b2b&&r.kind!=='gauntlet')tag+=` <span class="b2bpill" title="${esc(t.b2b)}">⚔ back-to-back</span>`;
         if(t.optional&&r.kind!=='gauntlet')tag+=` <span class="optpill" title="Optional — skippable; doesn't block this area from counting as done">optional</span>`;
         if(t.reward)tag+=` <span class="rewardpill" title="Beating this trainer gives you this">🎁 ${esc(t.reward)}</span>`;

@@ -1854,6 +1854,7 @@
             {
               "id": "route3-twinskumiandamy-0",
               "name": "Twins Kumi and Amy",
+              "doubles": true,
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -3044,58 +3045,57 @@
           "note": "",
           "optional": false,
           "trainers": [
-                    {
-          "id": "route3-schoolkidal-6",
-          "name": "School Kid Al",
-          "optional": false,
-          "b2b": "",
-          "badge": "",
-          "choice": "",
-          "split": "",
-          "notes": [],
-          "team": [
             {
-              "species": "Sandslash",
-              "level": "22",
-              "item": "Passho Berry",
-              "ability": "Rough Skin",
-              "nature": "Docile",
-              "moves": [
-                "Bulldoze",
-                "Rock Tomb",
-                "Rock Smash",
-                "Metal Claw"
-              ]
-            },
-            {
-              "species": "Scraggy",
-              "level": "22",
-              "item": "Sitrus Berry",
-              "ability": "Intimidate",
-              "nature": "Hasty",
-              "moves": [
-                "Dragon Dance",
-                "Brick Break",
-                "Crunch",
-                "Rest"
-              ]
-            },
-            {
-              "species": "Shellder",
-              "level": "22",
-              "item": "Eviolite",
-              "ability": "Skill Link",
-              "nature": "Rash",
-              "moves": [
-                "Spike Cannon",
-                "Icicle Spear"
+              "id": "route3-schoolkidal-6",
+              "name": "School Kid Al",
+              "optional": false,
+              "b2b": "",
+              "badge": "",
+              "choice": "",
+              "split": "",
+              "notes": [],
+              "team": [
+                {
+                  "species": "Sandslash",
+                  "level": "22",
+                  "item": "Passho Berry",
+                  "ability": "Rough Skin",
+                  "nature": "Docile",
+                  "moves": [
+                    "Bulldoze",
+                    "Rock Tomb",
+                    "Rock Smash",
+                    "Metal Claw"
+                  ]
+                },
+                {
+                  "species": "Scraggy",
+                  "level": "22",
+                  "item": "Sitrus Berry",
+                  "ability": "Intimidate",
+                  "nature": "Hasty",
+                  "moves": [
+                    "Dragon Dance",
+                    "Brick Break",
+                    "Crunch",
+                    "Rest"
+                  ]
+                },
+                {
+                  "species": "Shellder",
+                  "level": "22",
+                  "item": "Eviolite",
+                  "ability": "Skill Link",
+                  "nature": "Rash",
+                  "moves": [
+                    "Spike Cannon",
+                    "Icicle Spear"
+                  ]
+                }
               ]
             }
           ]
-        }
-          ]
         },
-
         {
           "id": "route3-schoolkidmarsha-7",
           "name": "School Kid Marsha",
@@ -4596,7 +4596,8 @@
             },
             {
               "id": "pinwheelforest-pokemonrangermigueldoublesguardstm86andgivesanabsorbbulb-5",
-              "name": "Pokemon Ranger Miguel (DOUBLES, Guards TM86)",
+              "name": "Pokemon Ranger Miguel (Guards TM86)",
+              "doubles": true,
               "reward": "Absorb Bulb",
               "optional": true,
               "b2b": "",
@@ -4817,7 +4818,8 @@
             },
             {
               "id": "pinwheelforest-lassevadoublesleft-8",
-              "name": "Lass Eva (DOUBLES) (Left)",
+              "name": "Lass Eva (Left)",
+              "doubles": true,
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -5356,7 +5358,8 @@
             },
             {
               "id": "casteliagym-harlequinlouisdoubles-3",
-              "name": "Harlequin Louis (DOUBLES)",
+              "name": "Harlequin Louis",
+              "doubles": true,
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -7119,7 +7122,8 @@
             },
             {
               "id": "nimbasacity-pkmntrainern3doubles-1",
-              "name": "Pkmn Trainer N 3 (DOUBLES)",
+              "name": "Pkmn Trainer N 3",
+              "doubles": true,
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -7566,7 +7570,8 @@
           "trainers": [
             {
               "id": "route16-veteranchrilleguardslostlornforestdoubles-0",
-              "name": "Veteran Chrille (GUARDS LOSTLORN FOREST) (DOUBLES)",
+              "name": "Veteran Chrille (GUARDS LOSTLORN FOREST)",
+              "doubles": true,
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -8097,7 +8102,8 @@
             },
             {
               "id": "nimbasagym-richboyrolandoubles-2",
-              "name": "Rich Boy Rolan (DOUBLES)",
+              "name": "Rich Boy Rolan",
+              "doubles": true,
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -8246,7 +8252,8 @@
             },
             {
               "id": "nimbasagym-gymleaderelesadoublesnowgivestm93wildcharge-4",
-              "name": "Gym Leader Elesa (DOUBLES)",
+              "name": "Gym Leader Elesa",
+              "doubles": true,
               "reward": "TM93 Wild Charge",
               "optional": false,
               "b2b": "",
@@ -9663,7 +9670,8 @@
             },
             {
               "id": "coldstorage-workerglenndoubles-1",
-              "name": "Worker Glenn (DOUBLES)",
+              "name": "Worker Glenn",
+              "doubles": true,
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -9804,7 +9812,8 @@
             },
             {
               "id": "coldstorage-workerryandoubles-3",
-              "name": "Worker Ryan (DOUBLES)",
+              "name": "Worker Ryan",
+              "doubles": true,
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -10305,7 +10314,8 @@
             },
             {
               "id": "driftveilgym-clerkisaacdoubles-1",
-              "name": "Clerk Isaac (DOUBLES)",
+              "name": "Clerk Isaac",
+              "doubles": true,
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -11535,7 +11545,8 @@
             },
             {
               "id": "chargestonecave-sevensagerooddoubles-7",
-              "name": "Seven Sage Rood (DOUBLES)",
+              "name": "Seven Sage Rood",
+              "doubles": true,
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -12236,7 +12247,8 @@
           "trainers": [
             {
               "id": "celestialtower-psychicdoreendoubles-0",
-              "name": "Psychic Doreen (DOUBLES)",
+              "name": "Psychic Doreen",
+              "doubles": true,
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -12313,7 +12325,8 @@
             },
             {
               "id": "celestialtower-lasskaradoubles-1",
-              "name": "Lass Kara (DOUBLES)",
+              "name": "Lass Kara",
+              "doubles": true,
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -12390,7 +12403,8 @@
             },
             {
               "id": "celestialtower-pokefanjudedoubles-2",
-              "name": "Pokefan Jude (DOUBLES)",
+              "name": "Pokefan Jude",
+              "doubles": true,
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -12467,7 +12481,8 @@
             },
             {
               "id": "celestialtower-pokefangeorgiadoubles-3",
-              "name": "Pokefan Georgia (DOUBLES)",
+              "name": "Pokefan Georgia",
+              "doubles": true,
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -12566,7 +12581,8 @@
             },
             {
               "id": "celestialtower-acetrainerbeckettdoublesgivestm13youcanpressbtorotatebeckettandkassandra-5",
-              "name": "Ace Trainer Beckett (DOUBLES) (YOU CAN PRESS B TO ROTATE BECKETT AND KASSANDRA)",
+              "name": "Ace Trainer Beckett (YOU CAN PRESS B TO ROTATE BECKETT AND KASSANDRA)",
+              "doubles": true,
               "reward": "TM13",
               "optional": true,
               "b2b": "",
@@ -12644,7 +12660,8 @@
             },
             {
               "id": "celestialtower-acetrainerkassandradoublesgivestm35-6",
-              "name": "Ace Trainer Kassandra (DOUBLES)",
+              "name": "Ace Trainer Kassandra",
+              "doubles": true,
               "reward": "TM35",
               "optional": true,
               "b2b": "",
@@ -12877,7 +12894,8 @@
             },
             {
               "id": "mistraltongym-pilotteddoubles-2",
-              "name": "Pilot Ted (DOUBLES)",
+              "name": "Pilot Ted",
+              "doubles": true,
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -12951,10 +12969,19 @@
                   ]
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "title": "Back-to-back",
+          "kind": "gauntlet",
+          "reward": "",
+          "note": "You can't leave between these two fights.",
+          "optional": false,
+          "trainers": [
             {
               "id": "mistraltongym-pilotchaseyoucantleavebetweenthisfightandthenextone-3",
-              "name": "Pilot Chase (YOU CAN’T LEAVE BETWEEN THIS FIGHT AND THE NEXT ONE)",
+              "name": "Pilot Chase",
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -13031,7 +13058,8 @@
             },
             {
               "id": "mistraltongym-workerarnolddoubles-4",
-              "name": "Worker Arnold (DOUBLES)",
+              "name": "Worker Arnold",
+              "doubles": true,
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -13090,10 +13118,20 @@
                   ]
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "title": "Trainers",
+          "kind": "",
+          "reward": "",
+          "note": "",
+          "optional": false,
+          "trainers": [
             {
               "id": "mistraltongym-gymleaderskyladoubles-5",
-              "name": "Gym Leader Skyla (DOUBLES)",
+              "name": "Gym Leader Skyla",
+              "doubles": true,
               "optional": false,
               "b2b": "",
               "badge": "Leader",
@@ -13689,7 +13727,8 @@
             },
             {
               "id": "twistmountain-battlegirlsharondoubles-5",
-              "name": "Battle Girl Sharon (DOUBLES)",
+              "name": "Battle Girl Sharon",
+              "doubles": true,
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -14314,7 +14353,8 @@
             },
             {
               "id": "route17-swimmerwrightdoublesgivesburndrive-2",
-              "name": "Swimmer Wright (DOUBLES)",
+              "name": "Swimmer Wright",
+              "doubles": true,
               "reward": "Burn Drive",
               "optional": false,
               "b2b": "",
@@ -15475,7 +15515,8 @@
             },
             {
               "id": "route8-parasolladylumidoubles-3",
-              "name": "Parasol Lady Lumi (DOUBLES)",
+              "name": "Parasol Lady Lumi",
+              "doubles": true,
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -15671,7 +15712,8 @@
           "trainers": [
             {
               "id": "mooroficirrus-pokemonrangerchlorisdoublesgives5ejectbuttons-0",
-              "name": "Pokemon Ranger Chloris (DOUBLES)",
+              "name": "Pokemon Ranger Chloris",
+              "doubles": true,
               "reward": "5 Eject Buttons",
               "optional": false,
               "b2b": "",
@@ -16139,7 +16181,8 @@
             },
             {
               "id": "icirrusgym-battlegirlmikikodoubles-3",
-              "name": "Battle Girl Mikiko (DOUBLES)",
+              "name": "Battle Girl Mikiko",
+              "doubles": true,
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -16304,7 +16347,8 @@
             },
             {
               "id": "icirrusgym-blackbeltthomasdoubles-5",
-              "name": "Black Belt Thomas (DOUBLES)",
+              "name": "Black Belt Thomas",
+              "doubles": true,
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -17846,7 +17890,8 @@
           "trainers": [
             {
               "id": "route8-rivalbianca4doubles-snivy-0",
-              "name": "Rival Bianca 4 (DOUBLES)",
+              "name": "Rival Bianca 4",
+              "doubles": true,
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -17936,7 +17981,8 @@
             },
             {
               "id": "route8-rivalbianca4doubles-tepig-1",
-              "name": "Rival Bianca 4 (DOUBLES)",
+              "name": "Rival Bianca 4",
+              "doubles": true,
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -18026,7 +18072,8 @@
             },
             {
               "id": "route8-rivalbianca4doubles-oshawott-2",
-              "name": "Rival Bianca 4 (DOUBLES)",
+              "name": "Rival Bianca 4",
+              "doubles": true,
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -18422,7 +18469,8 @@
             },
             {
               "id": "route9-hooligansjimandcasdoubles-2",
-              "name": "Hooligans Jim and Cas (DOUBLES)",
+              "name": "Hooligans Jim and Cas",
+              "doubles": true,
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -18964,7 +19012,8 @@
             },
             {
               "id": "opelucidgym-acetrainerclaradoubles-3",
-              "name": "Ace Trainer Clara (DOUBLES)",
+              "name": "Ace Trainer Clara",
+              "doubles": true,
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -19325,7 +19374,8 @@
             },
             {
               "id": "opelucidgym-gymleaderdraydendoublesnowgivestm02dragonclaw-8",
-              "name": "Gym Leader Drayden (DOUBLES)",
+              "name": "Gym Leader Drayden",
+              "doubles": true,
               "reward": "TM02 Dragon Claw",
               "optional": false,
               "b2b": "",
@@ -19690,7 +19740,8 @@
             },
             {
               "id": "route10elitefoursplit-rivalcheren6doubles-snivy-3",
-              "name": "Rival Cheren 6 (DOUBLES)",
+              "name": "Rival Cheren 6",
+              "doubles": true,
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -19780,7 +19831,8 @@
             },
             {
               "id": "route10elitefoursplit-rivalcheren6doubles-tepig-4",
-              "name": "Rival Cheren 6 (DOUBLES)",
+              "name": "Rival Cheren 6",
+              "doubles": true,
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -19867,7 +19919,8 @@
             },
             {
               "id": "route10elitefoursplit-rivalcheren6doubles-oshawott-5",
-              "name": "Rival Cheren 6 (DOUBLES)",
+              "name": "Rival Cheren 6",
+              "doubles": true,
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -20046,7 +20099,8 @@
             },
             {
               "id": "route10elitefoursplit-acetrainercheyennedoubles-7",
-              "name": "Ace Trainer Cheyenne (DOUBLES)",
+              "name": "Ace Trainer Cheyenne",
+              "doubles": true,
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -20136,7 +20190,8 @@
             },
             {
               "id": "route10elitefoursplit-veteranchesterdoubles-8",
-              "name": "Veteran Chester (DOUBLES)",
+              "name": "Veteran Chester",
+              "doubles": true,
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -20602,7 +20657,8 @@
             },
             {
               "id": "victoryroad-veterantfgdoubles-3",
-              "name": "Veteran TFG (DOUBLES)",
+              "name": "Veteran TFG",
+              "doubles": true,
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -20872,7 +20928,8 @@
             },
             {
               "id": "victoryroad-waiterjohndoubles-6",
-              "name": "Waiter John (DOUBLES)",
+              "name": "Waiter John",
+              "doubles": true,
               "optional": false,
               "b2b": "",
               "badge": "",

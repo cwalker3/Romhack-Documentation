@@ -206,6 +206,7 @@
                 }
               ],
               "name": "Twins Amy & Liv",
+              "doubles": true,
               "id": "012",
               "badge": ""
             },
@@ -281,6 +282,7 @@
                 }
               ],
               "name": "Twins Amy & Liv",
+              "doubles": true,
               "id": "055",
               "badge": "4"
             },
@@ -304,6 +306,7 @@
                 }
               ],
               "name": "Twins Amy & Liv",
+              "doubles": true,
               "id": "368",
               "badge": "6"
             },
@@ -327,6 +330,7 @@
                 }
               ],
               "name": "Twins Amy & Liv",
+              "doubles": true,
               "id": "596",
               "badge": "7"
             },
@@ -350,6 +354,7 @@
                 }
               ],
               "name": "Twins Amy & Liv",
+              "doubles": true,
               "id": "597",
               "badge": "C"
             },
@@ -1464,6 +1469,7 @@
                 }
               ],
               "name": "Twins Gina & Mia",
+              "doubles": true,
               "id": "275",
               "badge": ""
             },
@@ -15684,6 +15690,7 @@
                 }
               ],
               "name": "Twins Miu & Yuki",
+              "doubles": true,
               "id": "276",
               "badge": ""
             },
