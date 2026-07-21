@@ -367,7 +367,7 @@ function changeFlags(p){
 function renderPokemon(c){
   c.appendChild(collapsibleAbout('pokemon',RAW.pokemon.meta,
     `<div class="note" style="margin-top:12px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
-     <div><b>*</b> = learnable but not by level-up (egg/TM/tutor). <b>**</b> = unobtainable in the base game (hack-only, omitted from the legal-only build).</div></div>`));
+     <div><b>**</b> = hack-only, not obtainable in the base game (omitted from the legal-only build).</div></div>`));
   const md=el('div','md');
   const list=el('div','mlist');
   const detail=el('div','detail');
@@ -478,7 +478,7 @@ function pokemonDetail(p){
       const dBadge=d?(d.type==='excl'
         ?`<span class="badge excl" title="${esc(nextName)} never learns this by level-up">exclusive</span>`
         :`<span class="badge early" title="${esc(nextName)} learns this ${d.n} levels later">${d.n} lv early</span>`):'';
-      return `<div class="move movelink${d?' mv-'+d.type:''}" data-move="${esc(m.name)}" role="button" tabindex="0"${moveTypeBg(m.name)}><span class="lv">${m.level}</span><span class="mv">${esc(m.name)}${starBadge(m.rarity)}${moveChgMark(m.name)}</span>${dBadge}</div>`;
+      return `<div class="move movelink${d?' mv-'+d.type:''}" data-move="${esc(m.name)}" role="button" tabindex="0"${moveTypeBg(m.name)}><span class="lv">${m.level}</span><span class="mv">${esc(m.name)}${moveChgMark(m.name)}</span>${dBadge}</div>`;
     }).join('')+'</div>';
     left.appendChild(sub('Level-up moves',mv));
   }
