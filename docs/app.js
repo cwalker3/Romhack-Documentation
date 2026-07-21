@@ -8,6 +8,7 @@ let GAME_ID = (function(){
 })();
 const GAME = GAMES[GAME_ID];
 const RAW = GAME.data;
+const GEN = (GAME && GAME.gen) || 6;   // base-game generation (drives gen-specific mechanics text)
 const SPR = window.RRSS_SPR || {};
 /* ---- attempts: each is its own independent run/tracking, per game ---- */
 const attemptsKey = 'rrss-'+GAME_ID+'-attempts';
@@ -547,12 +548,13 @@ const AREAS=arr(RAW.areas&&RAW.areas.areas).map(a=>{
   rosters.forEach(r=>r.trainers.forEach(t=>t.team.forEach(m=>mons.add((m.species||'').toLowerCase()))));
   return {name:a.name,weather:a.weather||'',wild,rosters,special,items,notes,gifts,giftMons,sep:!!a.sep,_s:(a.name+' '+[...mons].join(' ')+' '+items.map(it=>it.name).join(' ')+' '+notes.join(' ')+' '+gifts.join(' ')).toLowerCase()};
 });
-// permanent weather in an area (was "(PERMA X)" in the name); shown as an icon + a top banner
+// permanent weather in an area (was "(PERMA X)" in the name); shown as an icon + a top banner.
+// effect text is generation-aware — several mechanics were only added in Gen 4 / Gen 5.
 const WEATHER={
   sun:{icon:'☀️',label:'Permanent harsh sunlight',fx:'Fire moves ×1.5, Water ×0.5 · SolarBeam charges in one turn · Synthesis/Morning Sun heal more.'},
-  rain:{icon:'🌧️',label:'Permanent rain',fx:'Water moves ×1.5, Fire ×0.5 · Thunder & Hurricane never miss · SolarBeam weakened.'},
-  sand:{icon:'🏜️',label:'Permanent sandstorm',fx:'Non Rock/Ground/Steel lose 1⁄16 HP each turn · Rock types get +50% Sp. Def.'},
-  hail:{icon:'❄️',label:'Permanent hail',fx:'Non-Ice Pokémon lose 1⁄16 HP each turn · Blizzard never misses.'}
+  rain:{icon:'🌧️',label:'Permanent rain',fx:'Water moves ×1.5, Fire ×0.5 · Thunder'+(GEN>=5?' & Hurricane':'')+' never miss · SolarBeam weakened.'},
+  sand:{icon:'🌪️',label:'Permanent sandstorm',fx:'Non Rock/Ground/Steel lose 1⁄16 HP each turn.'+(GEN>=4?' · Rock types get +50% Sp. Def.':'')},
+  hail:{icon:'❄️',label:'Permanent hail',fx:'Non-Ice Pokémon lose 1⁄16 HP each turn.'+(GEN>=4?' · Blizzard never misses.':'')}
 };
 function weatherOf(a){return (a&&a.weather&&WEATHER[a.weather])||null;}
 const wildOpen={};

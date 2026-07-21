@@ -27,7 +27,7 @@
     if (part.meta) for (const k in part.meta) {
       if (!['id', 'name', 'short', 'gen'].includes(k)) data[k] = part.meta[k];  // nameDex, generated, ...
     }
-    window.RRSS_GAMES[g.id] = { id: g.id, name: g.name, short: g.short, data };
+    window.RRSS_GAMES[g.id] = { id: g.id, name: g.name, short: g.short, gen: g.gen, data };
   }));
 
   const s = document.createElement('script');
