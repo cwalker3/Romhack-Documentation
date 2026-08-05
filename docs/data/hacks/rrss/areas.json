@@ -32,7 +32,54 @@
         "desc": "Static Encounter / Gift Pokémon Values"
       }
     ],
-    "bodyStart": 75
+    "bodyStart": 75,
+    "splits": [
+      {
+        "name": "Roxanne Split",
+        "cap": 16,
+        "bosses": "561"
+      },
+      {
+        "name": "Brawly Split",
+        "cap": 19,
+        "bosses": "563"
+      },
+      {
+        "name": "Wattson Split",
+        "cap": 28,
+        "bosses": "567"
+      },
+      {
+        "name": "Flannery Split",
+        "cap": 38,
+        "bosses": "569"
+      },
+      {
+        "name": "Norman Split",
+        "cap": 42,
+        "bosses": "570"
+      },
+      {
+        "name": "Winona Split",
+        "cap": 50,
+        "bosses": "571"
+      },
+      {
+        "name": "Liza & Tate Split",
+        "cap": 62,
+        "bosses": "552"
+      },
+      {
+        "name": "Wallace Split",
+        "cap": 67,
+        "bosses": "572"
+      },
+      {
+        "name": "Elite Four Split",
+        "cap": 79,
+        "bosses": "557"
+      }
+    ]
   },
   "areas": [
     {
