@@ -95,10 +95,13 @@ function encPcts(list){
 }
 function fmtPct(p){return (Math.round(p*10)/10).toString().replace(/\.0$/,'')+'%';}
 
-/* ---- player profile: gender + starter -> which Brendan/May rival fight ---- */
-let PROFILE={gender:null,starter:null};
-try{const p=JSON.parse(localStorage.getItem(gkey('profile'))||'{}');PROFILE.gender=p.gender||null;PROFILE.starter=p.starter||null;}catch(e){}
+/* ---- player profile: gender + starter -> which Brendan/May rival fight; version -> Aqua/Magma ---- */
+let PROFILE={gender:null,starter:null,version:null};
+try{const p=JSON.parse(localStorage.getItem(gkey('profile'))||'{}');PROFILE.gender=p.gender||null;PROFILE.starter=p.starter||null;PROFILE.version=p.version||null;}catch(e){}
 function saveProfile(){try{localStorage.setItem(gkey('profile'),JSON.stringify(PROFILE));}catch(e){}}
+// version-exclusive fights: Rising Ruby = Team Magma, Sinking Sapphire = Team Aqua
+function trainerVersion(t){if(/\bAqua\b/i.test(t.name))return 'Sapphire';if(/\bMagma\b/i.test(t.name))return 'Ruby';return null;}
+function versionHidden(t){const v=trainerVersion(t);return !!(v&&PROFILE.version&&v!==PROFILE.version);}
 const RIVAL_COUNTER={Treecko:'Torchic',Torchic:'Mudkip',Mudkip:'Treecko'};
 function rivalGenderOf(name){if(/\bBrendan\b/.test(name))return 'Brendan';if(/\bMay\b/.test(name))return 'May';return null;}
 function rivalStarterOf(team){const s=team.map(m=>m.species).join(' ');
@@ -573,6 +576,8 @@ const AREAS=arr(RAW.areas&&RAW.areas.areas).map(a=>{
   rosters.forEach(r=>r.trainers.forEach(t=>t.team.forEach(m=>mons.add((m.species||'').toLowerCase()))));
   return {name:a.name,weather:a.weather||'',wild,rosters,special,items,notes,gifts,giftMons,sep:!!a.sep,_s:(a.name+' '+[...mons].join(' ')+' '+items.map(it=>it.name).join(' ')+' '+notes.join(' ')+' '+gifts.join(' ')).toLowerCase()};
 });
+// does this game have version-exclusive (Aqua/Magma) fights? -> show the Ruby/Sapphire toggle
+const HAS_VERSIONS=AREAS.some(a=>a.rosters.some(r=>r.trainers.some(t=>trainerVersion(t))));
 // permanent weather in an area (was "(PERMA X)" in the name); shown as an icon + a top banner.
 // effect text is generation-aware — several mechanics were only added in Gen 4 / Gen 5.
 const WEATHER={
@@ -638,6 +643,7 @@ function areaRosterTrainers(a){
   const rn=rivalName(), rs=rivalStarter(), out=[];
   a.rosters.forEach(r=>{if(r.kind==='rematch'||r.kind==='partner')return;r.trainers.forEach(t=>{
     if(t.ally)return;   // tag-battle allies fight with you; not tracked
+    if(versionHidden(t))return;   // opposite-version (Aqua/Magma) fight
     if(t.choice&&PROFILE.starter&&t.choice!==PROFILE.starter)return;
     if(isRivalTrainer(t)){if(rn&&rivalGenderOf(t.name)!==rn)return;if(rs&&rivalStarterOf(t.team)!==rs)return;}
     out.push(t);});});
@@ -686,8 +692,15 @@ function profileBar(){
     const genders=[{val:'Brendan',html:'Brendan'},{val:'May',html:'May'}];
     const starters=['Treecko','Torchic','Mudkip'].map(s=>({val:s,html:spriteByName(s,18,'cspr')+s}));
     const rn=rivalName(), rs=rivalStarter();
-    const hint=(rn&&rs)?`Rival battles show only <b>${rn}</b> with <b>${rs}</b>`:'Pick both to filter rival (Brendan/May) battles to yours';
-    wrap.innerHTML=`${seg('You play as','gender',genders)}${seg('Your starter','starter',starters)}<div class="pnote">${hint}</div>`;
+    const rhint=(rn&&rs)?`Rival battles show only <b>${rn}</b> with <b>${rs}</b>`:'Pick both to filter rival (Brendan/May) battles to yours';
+    let versionSeg='',hint=rhint;
+    if(HAS_VERSIONS){
+      const versions=[{val:'Ruby',html:'Rising Ruby'},{val:'Sapphire',html:'Sinking Sapphire'}];
+      versionSeg=seg('Your version','version',versions);
+      const vhint=PROFILE.version==='Ruby'?'Showing <b>Team Magma</b> fights (Rising Ruby)':PROFILE.version==='Sapphire'?'Showing <b>Team Aqua</b> fights (Sinking Sapphire)':'Pick your version to show only its team (Ruby → Magma, Sapphire → Aqua)';
+      hint=`${rhint} · ${vhint}`;
+    }
+    wrap.innerHTML=`${seg('You play as','gender',genders)}${seg('Your starter','starter',starters)}${versionSeg}<div class="pnote">${hint}</div>`;
   }
   wrap.querySelectorAll('.segbtn').forEach(b=>b.onclick=()=>{const k=b.dataset.pkey,v=b.dataset.pval;PROFILE[k]=(PROFILE[k]===v)?null:v;saveProfile();reRenderKeepScroll();});
   return wrap;
@@ -745,7 +758,7 @@ function renderAreas(c){
   items.forEach(a=>{
     const idx=AREAS.indexOf(a);
     const b=el('button','litem');b.classList.toggle('active',idx===state.areaSel);
-    const tc=a.rosters.reduce((n,r)=>n+(r.kind==='rematch'||r.kind==='partner'?0:r.trainers.filter(t=>!t.ally).length),0);
+    const tc=a.rosters.reduce((n,r)=>n+(r.kind==='rematch'||r.kind==='partner'?0:r.trainers.filter(t=>!t.ally&&!versionHidden(t)).length),0);
     const st=areaStatus(a);
     b.classList.toggle('done',st.complete);
     b.classList.toggle('optleft',st.complete&&st.optionalsLeft);
@@ -912,6 +925,7 @@ function areaDetail(a){
   a.rosters.forEach(r=>{
     if(r.kind==='rematch')return;
     const trainers=r.trainers.filter(t=>{
+      if(versionHidden(t))return false;   // opposite-version (Aqua/Magma) fight
       if(t.choice&&PROFILE.starter&&t.choice!==PROFILE.starter)return false;   // starter-variant battle
       if(!isRivalTrainer(t))return true;
       if(rn&&rivalGenderOf(t.name)!==rn)return false;
