@@ -17641,7 +17641,8 @@
           ],
           "title": "Courtney"
         }
-      ]
+      ],
+      "version": "ruby"
     },
     {
       "rosters": [
@@ -17903,7 +17904,8 @@
           ],
           "title": "Matt"
         }
-      ]
+      ],
+      "version": "sapphire"
     },
     {
       "rosters": [
@@ -25360,7 +25362,8 @@
       ],
       "wild": [],
       "name": "Magma Hideout",
-      "special": []
+      "special": [],
+      "version": "ruby"
     },
     {
       "rosters": [
@@ -25487,7 +25490,8 @@
       ],
       "wild": [],
       "name": "Aqua Hideout",
-      "special": []
+      "special": [],
+      "version": "sapphire"
     },
     {
       "rosters": [

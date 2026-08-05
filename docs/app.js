@@ -99,8 +99,9 @@ function fmtPct(p){return (Math.round(p*10)/10).toString().replace(/\.0$/,'')+'%
 let PROFILE={gender:null,starter:null,version:null};
 try{const p=JSON.parse(localStorage.getItem(gkey('profile'))||'{}');PROFILE.gender=p.gender||null;PROFILE.starter=p.starter||null;PROFILE.version=p.version||null;}catch(e){}
 function saveProfile(){try{localStorage.setItem(gkey('profile'),JSON.stringify(PROFILE));}catch(e){}}
-// version-exclusive fights: Rising Ruby = Team Magma, Sinking Sapphire = Team Aqua
-function trainerVersion(t){if(/\bAqua\b/i.test(t.name))return 'Sapphire';if(/\bMagma\b/i.test(t.name))return 'Ruby';return null;}
+// version-exclusive fights: Rising Ruby = Team Magma, Sinking Sapphire = Team Aqua.
+// an explicit t.version wins (for any spot the hack flips the team); otherwise infer from the team name.
+function trainerVersion(t){if(t.version)return t.version==='ruby'?'Ruby':t.version==='sapphire'?'Sapphire':t.version;if(/\bAqua\b/i.test(t.name))return 'Sapphire';if(/\bMagma\b/i.test(t.name))return 'Ruby';return null;}
 function versionHidden(t){const v=trainerVersion(t);return !!(v&&PROFILE.version&&v!==PROFILE.version);}
 const RIVAL_COUNTER={Treecko:'Torchic',Torchic:'Mudkip',Mudkip:'Treecko'};
 function rivalGenderOf(name){if(/\bBrendan\b/.test(name))return 'Brendan';if(/\bMay\b/.test(name))return 'May';return null;}
@@ -565,7 +566,7 @@ function chgRow(o){
 /* ================= AREAS ================= */
 const AREAS=arr(RAW.areas&&RAW.areas.areas).map(a=>{
   const wild=arr(a.wild).map(w=>({method:w.method,level:w.level,species:arr(w.species)}));
-  const rosters=arr(a.rosters).map(r=>({title:r.title,kind:r.kind,reward:r.reward||'',note:r.note||'',optional:!!r.optional,trainers:arr(r.trainers).map(t=>({id:t.id,name:t.name,badge:t.badge,choice:t.choice||'',split:t.split||'',optional:!!t.optional,b2b:t.b2b||'',reward:t.reward||'',weather:t.weather||'',doubles:!!t.doubles,ally:!!t.ally,notes:arr(t.notes),team:arr(t.team)}))}));
+  const rosters=arr(a.rosters).map(r=>({title:r.title,kind:r.kind,reward:r.reward||'',note:r.note||'',optional:!!r.optional,trainers:arr(r.trainers).map(t=>({id:t.id,name:t.name,badge:t.badge,choice:t.choice||'',split:t.split||'',optional:!!t.optional,b2b:t.b2b||'',reward:t.reward||'',weather:t.weather||'',doubles:!!t.doubles,ally:!!t.ally,version:t.version||'',notes:arr(t.notes),team:arr(t.team)}))}));
   const special=arr(a.special).map(s=>({title:s.title,team:arr(s.team).map(m=>({...m,moves:arr(m.moves)}))}));
   // note: rosters below already keep the full team objects (species/level/item/ability/nature/moves)
   const items=arr(a.items).map(it=>({id:it.id,name:it.name,how:it.how||''}));
@@ -574,8 +575,10 @@ const AREAS=arr(RAW.areas&&RAW.areas.areas).map(a=>{
   const giftMons=[];gifts.forEach(g=>g.replace(/\s*\(\d+%\)\s*$/,'').split('/').forEach(s=>{s=s.trim();if(s)giftMons.push(s);}));
   const mons=new Set();wild.forEach(w=>w.species.forEach(s=>mons.add(s.name.toLowerCase())));
   rosters.forEach(r=>r.trainers.forEach(t=>t.team.forEach(m=>mons.add((m.species||'').toLowerCase()))));
-  return {name:a.name,weather:a.weather||'',wild,rosters,special,items,notes,gifts,giftMons,sep:!!a.sep,_s:(a.name+' '+[...mons].join(' ')+' '+items.map(it=>it.name).join(' ')+' '+notes.join(' ')+' '+gifts.join(' ')).toLowerCase()};
+  return {name:a.name,weather:a.weather||'',wild,rosters,special,items,notes,gifts,giftMons,sep:!!a.sep,version:a.version||'',_s:(a.name+' '+[...mons].join(' ')+' '+items.map(it=>it.name).join(' ')+' '+notes.join(' ')+' '+gifts.join(' ')).toLowerCase()};
 });
+// an area that belongs to the other version (e.g. Magma Hideout in Sinking Sapphire) is hidden entirely
+function areaHidden(a){return !!(a.version&&PROFILE.version&&a.version.toLowerCase()!==PROFILE.version.toLowerCase());}
 // does this game have version-exclusive (Aqua/Magma) fights? -> show the Ruby/Sapphire toggle
 const HAS_VERSIONS=AREAS.some(a=>a.rosters.some(r=>r.trainers.some(t=>trainerVersion(t))));
 // permanent weather in an area (was "(PERMA X)" in the name); shown as an icon + a top banner.
@@ -652,10 +655,10 @@ function areaRosterTrainers(a){
 // run-wide totals for the progress bar: trainers you'd face, and nuzlocke encounters
 // (one per met-location group that has a wild table, plus each gift-only encounter)
 // mandatory / optional trainer totals and beaten counts, tracked separately
-function trainerCounts(){let mT=0,oT=0,mB=0,oB=0;AREAS.forEach(a=>areaRosterTrainers(a).forEach(t=>{const done=TRAINERS_DONE.has(t.id);if(t.optional){oT++;if(done)oB++;}else{mT++;if(done)mB++;}}));return{mT,oT,mB,oB};}
+function trainerCounts(){let mT=0,oT=0,mB=0,oB=0;AREAS.forEach(a=>{if(areaHidden(a))return;areaRosterTrainers(a).forEach(t=>{const done=TRAINERS_DONE.has(t.id);if(t.optional){oT++;if(done)oB++;}else{mT++;if(done)mB++;}})});return{mT,oT,mB,oB};}
 function encounterTotal(){
   const seen=new Set();let n=0;
-  AREAS.forEach(a=>{const key=a.sep?(' '+a.name):metLoc(a.name);if(seen.has(key))return;seen.add(key);
+  AREAS.forEach(a=>{if(areaHidden(a))return;const key=a.sep?(' '+a.name):metLoc(a.name);if(seen.has(key))return;seen.add(key);
     const grp=areaGroup(a);
     if(grp.some(x=>x.wild.length>0)||grp.some(x=>x.wild.length===0&&x.giftMons.length>0))n++;});
   return n;
@@ -748,7 +751,7 @@ function renderAreas(c){
   const md=el('div','md');const list=el('div','mlist');const detail=el('div','detail');
   md.append(list,detail);c.appendChild(md);
   const q=state.query.toLowerCase().trim();
-  const items=q?AREAS.filter(a=>a._s.includes(q)):AREAS;
+  const items=(q?AREAS.filter(a=>a._s.includes(q)):AREAS).filter(a=>!areaHidden(a));
   list.appendChild(el('div','count',items.length+' location'+(items.length===1?'':'s')+(q?'':` · ${eTot} encounters · ${tc.mT} trainers${tc.oT?` + ${tc.oT} optional`:''}`)));
   if(!items.length){detail.innerHTML=emptyState('No areas match your search.');return;}
   // on first open, jump to the first area you still have work left in
