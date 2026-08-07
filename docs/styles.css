@@ -236,7 +236,7 @@ h3 .movelink:hover{color:var(--accent)}
 /* collapsible trainer */
 .trainer{border:1px solid var(--line);border-radius:10px;margin-bottom:8px;background:var(--surface-2)}
 .trainer[open]{border-color:var(--line-2);background:var(--surface)}
-.trainer>summary{list-style:none;cursor:pointer;padding:10px 13px}
+.trainer>summary{list-style:none;cursor:pointer;padding:10px 13px;position:relative}
 .trainer>summary::-webkit-details-marker{display:none}
 .tsumhead{display:flex;align-items:center;gap:8px;font-weight:650;font-size:14.5px}
 .tsumhead::before{content:"▸";color:var(--muted);font-size:11px;flex:none}
@@ -246,6 +246,13 @@ h3 .movelink:hover{color:var(--accent)}
 .trainer[open] .tpreview{display:none}
 .tdetail{padding:2px 13px 12px}
 .trainer.tdone>summary .tname{opacity:.55}
+/* skip a trainer you won't fight — hover-revealed button, stays visible once skipped */
+.tskip{position:absolute;top:8px;right:11px;font-size:10px;font-weight:800;letter-spacing:.03em;text-transform:uppercase;padding:3px 9px;border:1px solid var(--line-2);border-radius:7px;background:var(--surface);color:var(--faint);cursor:pointer;opacity:0;transition:opacity .12s}
+.trainer>summary:hover .tskip,.tskip.on{opacity:1}
+.tskip:hover{color:var(--ink-2);border-color:var(--muted)}
+.tskip.on{color:var(--muted);border-color:var(--line-2);background:var(--surface-2)}
+.skippill{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.02em;padding:2px 7px;border-radius:6px;background:var(--surface-2);color:var(--muted);border:1px solid var(--line-2)}
+.trainer.tskipped>summary .tname{opacity:.5;text-decoration:line-through;text-decoration-color:var(--faint)}
 .faint{color:var(--faint)}
 /* team sheet: attributes down the left, one Pokémon per column (like the source docs) */
 .data.teamsheet{border-collapse:collapse}

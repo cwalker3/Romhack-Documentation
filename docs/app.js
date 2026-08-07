@@ -64,7 +64,11 @@ function toggleCaught(name){const d=NAME2DEX[normName(name)];if(!d)return;if(CAU
 // trainers marked complete (by trainer id) + areas with a missed/killed encounter
 let TRAINERS_DONE=new Set();try{TRAINERS_DONE=new Set(JSON.parse(localStorage.getItem(gkey('trainers'))||'[]'));}catch(e){}
 function saveTrainers(){try{localStorage.setItem(gkey('trainers'),JSON.stringify([...TRAINERS_DONE]));}catch(e){}}
-function toggleTrainer(id){if(TRAINERS_DONE.has(id))TRAINERS_DONE.delete(id);else TRAINERS_DONE.add(id);saveTrainers();}
+function toggleTrainer(id){if(TRAINERS_DONE.has(id))TRAINERS_DONE.delete(id);else{TRAINERS_DONE.add(id);TRAINERS_SKIPPED.delete(id);saveSkipped();}saveTrainers();}
+// trainers you're skipping (won't fight) — they don't block area completion or count toward your total
+let TRAINERS_SKIPPED=new Set();try{TRAINERS_SKIPPED=new Set(JSON.parse(localStorage.getItem(gkey('skipped'))||'[]'));}catch(e){}
+function saveSkipped(){try{localStorage.setItem(gkey('skipped'),JSON.stringify([...TRAINERS_SKIPPED]));}catch(e){}}
+function toggleSkip(id){if(TRAINERS_SKIPPED.has(id))TRAINERS_SKIPPED.delete(id);else{TRAINERS_SKIPPED.add(id);TRAINERS_DONE.delete(id);saveTrainers();}saveSkipped();}
 let AREA_MISSED=new Set();try{AREA_MISSED=new Set(JSON.parse(localStorage.getItem(gkey('missed'))||'[]'));}catch(e){}
 function saveMissed(){try{localStorage.setItem(gkey('missed'),JSON.stringify([...AREA_MISSED]));}catch(e){}}
 function toggleMissed(name){if(AREA_MISSED.has(name))AREA_MISSED.delete(name);else AREA_MISSED.add(name);saveMissed();}
@@ -77,11 +81,11 @@ let ITEMS_DONE=new Set();try{ITEMS_DONE=new Set(JSON.parse(localStorage.getItem(
 function saveItems(){try{localStorage.setItem(gkey('items'),JSON.stringify([...ITEMS_DONE]));}catch(e){}}
 function toggleItem(id){if(ITEMS_DONE.has(id))ITEMS_DONE.delete(id);else ITEMS_DONE.add(id);saveItems();}
 // gym badges are earned automatically when a gym's leader is beaten (see GYMS/gymLeaderIds below)
-function trackTotal(){return CAUGHT.size+TRAINERS_DONE.size+AREA_MISSED.size+ITEMS_DONE.size+AREA_DELAYED.size;}
+function trackTotal(){return CAUGHT.size+TRAINERS_DONE.size+AREA_MISSED.size+ITEMS_DONE.size+AREA_DELAYED.size+TRAINERS_SKIPPED.size;}
 function resetCaught(){
   if(!trackTotal())return;
   if(!confirm('Reset all run progress? This clears every caught Pokémon, missed encounter, completed trainer, and picked-up item.'))return;
-  CAUGHT.clear();TRAINERS_DONE.clear();AREA_MISSED.clear();ITEMS_DONE.clear();AREA_DELAYED.clear();saveCaught();saveTrainers();saveMissed();saveItems();saveDelayed();
+  CAUGHT.clear();TRAINERS_DONE.clear();AREA_MISSED.clear();ITEMS_DONE.clear();AREA_DELAYED.clear();TRAINERS_SKIPPED.clear();saveCaught();saveTrainers();saveMissed();saveItems();saveDelayed();saveSkipped();
   Object.keys(wildOpen).forEach(k=>delete wildOpen[k]);
   reRenderKeepScroll();
 }
@@ -660,7 +664,7 @@ function areaRosterTrainers(a){
 // run-wide totals for the progress bar: trainers you'd face, and nuzlocke encounters
 // (one per met-location group that has a wild table, plus each gift-only encounter)
 // mandatory / optional trainer totals and beaten counts, tracked separately
-function trainerCounts(){let mT=0,oT=0,mB=0,oB=0;AREAS.forEach(a=>{if(areaHidden(a))return;areaRosterTrainers(a).forEach(t=>{const done=TRAINERS_DONE.has(t.id);if(t.optional){oT++;if(done)oB++;}else{mT++;if(done)mB++;}})});return{mT,oT,mB,oB};}
+function trainerCounts(){let mT=0,oT=0,mB=0,oB=0;AREAS.forEach(a=>{if(areaHidden(a))return;areaRosterTrainers(a).forEach(t=>{if(TRAINERS_SKIPPED.has(t.id))return;const done=TRAINERS_DONE.has(t.id);if(t.optional){oT++;if(done)oB++;}else{mT++;if(done)mB++;}})});return{mT,oT,mB,oB};}
 function encounterTotal(){
   const seen=new Set();let n=0;
   AREAS.forEach(a=>{if(areaHidden(a))return;const key=a.sep?(' '+a.name):metLoc(a.name);if(seen.has(key))return;seen.add(key);
@@ -674,8 +678,8 @@ function areaStatus(a){
   const grpCaught=grp.some(x=>areaCaughtCount(x)>0), grpMissed=grp.some(x=>AREA_MISSED.has(x.name)), grpDelayed=grp.some(x=>AREA_DELAYED.has(x.name));
   const grpHasEnc=grp.some(x=>x.wild.length>0||x.giftMons.length>0);
   const trs=areaRosterTrainers(a), hasTr=trs.length>0;
-  // optional fights (item-guard bosses, side trainers) don't block area completion
-  const reqTrs=trs.filter(t=>!t.optional);
+  // optional fights (item-guard bosses, side trainers) and skipped trainers don't block area completion
+  const reqTrs=trs.filter(t=>!t.optional&&!TRAINERS_SKIPPED.has(t.id));
   const trainersDone=reqTrs.every(t=>TRAINERS_DONE.has(t.id));
   // a "delayed" encounter counts as resolved for now, so the area still reads as complete
   const encResolved=!grpHasEnc||grpCaught||grpMissed||grpDelayed;
@@ -914,7 +918,9 @@ function areaDetail(a){
     if(t.reward)tag+=` <span class="rewardpill" title="Beating this trainer gives you this">🎁 ${esc(tmAnnotate(t.reward))}</span>`;
     const tw=weatherOf(t);if(tw)tag+=` <span class="wxpill wx-${t.weather}" title="Permanent ${esc(tw.label.replace(/^Permanent /,''))} during this fight">${tw.icon} ${esc(t.weather)}</span>`;
     const done=track&&TRAINERS_DONE.has(t.id);
+    const skipped=track&&TRAINERS_SKIPPED.has(t.id);
     const chk=track?`<button class="tcheck catch" data-trainer="${esc(t.id)}" aria-pressed="${done}" title="${done?'Beaten — click to unmark':'Mark as beaten'}"></button>`:'';
+    const skipbtn=track?`<button class="tskip${skipped?' on':''}" data-skip="${esc(t.id)}" title="${skipped?'Skipped — click to un-skip':"Skip this trainer (won't count against your progress)"}">${skipped?'skipped':'skip'}</button>`:'';
     const tnote=arr(t.notes).length?`<div class="tnote">${t.notes.map(n=>esc(tmAnnotate(n))).join('<br>')}</div>`:'';
     const badge=t.badge?` <span class="badgepill" title="${t.badge==='C'?'Champion rematch':'Available after '+t.badge+' badge(s)'}">${esc(t.badge)}</span>`:'';
     const team=arr(t.team);
@@ -928,7 +934,7 @@ function areaDetail(a){
       (hasNat?`<tr><th>Nature</th>${tcell(m=>m.nature?esc(m.nature):'<span class="faint">—</span>')}</tr>`:'')+
       `<tr><th>Moves</th>${tcell(m=>arr(m.moves).map(mv=>`<div class="tsmove movelink" data-move="${esc(mv)}" role="button" tabindex="0"${moveTypeBg(mv)}>${esc(mv)}${moveChgMark(mv)}</div>`).join('')||'<span class="faint">—</span>')}</tr>`+
       `</table></div>`;
-    return `<details class="trainer${done?' tdone':''}${rival?' rivalrow':''}${t.optional?' optrow':''}${t.ally?' allyrow':''}"><summary><span class="tsumhead">${chk}<span class="tname">${esc(t.name)}${badge}${tag}</span></span>${tnote}<div class="tpreview">${teamInline(t.team)}</div></summary><div class="tdetail">${detail}</div></details>`;
+    return `<details class="trainer${done?' tdone':''}${skipped?' tskipped':''}${rival?' rivalrow':''}${t.optional?' optrow':''}${t.ally?' allyrow':''}"><summary><span class="tsumhead">${chk}<span class="tname">${esc(t.name)}${badge}${tag}${skipped?' <span class="skippill">skipped</span>':''}</span></span>${tnote}<div class="tpreview">${teamInline(t.team)}</div>${skipbtn}</summary><div class="tdetail">${detail}</div></details>`;
   }
   a.rosters.forEach(r=>{
     if(r.kind==='rematch')return;
@@ -1201,6 +1207,8 @@ function locHtml(loc){
 const contentEl=$('content');
 function reRenderKeepScroll(){const ml=document.querySelector('.mlist');const sc=ml?ml.scrollTop:0;render();const ml2=document.querySelector('.mlist');if(ml2)ml2.scrollTop=sc;}
 contentEl.addEventListener('click',e=>{
+  const sk=e.target.closest('.tskip');
+  if(sk){e.preventDefault();e.stopPropagation();toggleSkip(sk.dataset.skip);reRenderKeepScroll();return;}
   const tc=e.target.closest('.tcheck');
   if(tc){e.preventDefault();e.stopPropagation();if(tc.dataset.item!=null)toggleItem(tc.dataset.item);else toggleTrainer(tc.dataset.trainer);reRenderKeepScroll();return;}
   const cb=e.target.closest('.catch');
