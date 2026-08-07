@@ -150,7 +150,11 @@
         "spe": 45,
         "total": 318
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Ivysaur",
+        "level": "Lv. 16"
+      }
     },
     {
       "name": "Ivysaur",
@@ -269,7 +273,11 @@
         "spe": 60,
         "total": 405
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Venusaur",
+        "level": "Lv. 32"
+      }
     },
     {
       "name": "Venusaur",
@@ -541,7 +549,11 @@
         "spe": 65,
         "total": 309
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Charmeleon",
+        "level": "Lv. 16"
+      }
     },
     {
       "name": "Charmeleon",
@@ -665,7 +677,11 @@
         "spe": 80,
         "total": 405
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Charizard",
+        "level": "Lv. 36"
+      }
     },
     {
       "name": "Charizard",
@@ -974,7 +990,11 @@
         "spe": 43,
         "total": 314
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Wartortle",
+        "level": "Lv. 16"
+      }
     },
     {
       "name": "Wartortle",
@@ -1098,7 +1118,11 @@
         "spe": 58,
         "total": 405
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Blastoise",
+        "level": "Lv. 36"
+      }
     },
     {
       "name": "Blastoise",
@@ -1325,7 +1349,11 @@
         "spe": 45,
         "total": 195
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Metapod",
+        "level": "Lv. 7"
+      }
     },
     {
       "name": "Metapod",
@@ -1370,7 +1398,11 @@
         "spe": 30,
         "total": 205
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Butterfree",
+        "level": "Lv. 10"
+      }
     },
     {
       "name": "Butterfree",
@@ -1615,7 +1647,11 @@
         "spe": 50,
         "total": 195
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Kakuna",
+        "level": "Lv. 7"
+      }
     },
     {
       "name": "Kakuna",
@@ -1660,7 +1696,11 @@
         "spe": 35,
         "total": 205
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Beedrill",
+        "level": "Lv. 10"
+      }
     },
     {
       "name": "Beedrill",
@@ -1994,7 +2034,11 @@
         "spe": 56,
         "total": 251
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Pidgeotto",
+        "level": "Lv. 18"
+      }
     },
     {
       "name": "Pidgeotto",
@@ -2109,7 +2153,11 @@
         "spe": 71,
         "total": 349
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Pidgeot",
+        "level": "Lv. 36"
+      }
     },
     {
       "name": "Pidgeot",
@@ -2368,7 +2416,11 @@
         "spe": 72,
         "total": 253
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Raticate",
+        "level": "Lv. 20"
+      }
     },
     {
       "name": "Raticate",
@@ -2650,7 +2702,11 @@
         "spe": 70,
         "total": 262
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Fearow",
+        "level": "Lv. 20"
+      }
     },
     {
       "name": "Fearow",
@@ -2932,7 +2988,11 @@
         "spe": 55,
         "total": 288
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Arbok",
+        "level": "Lv. 22"
+      }
     },
     {
       "name": "Arbok",
@@ -3288,7 +3348,11 @@
         "spe": 90,
         "total": 320
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Raichu",
+        "level": "Thunder Stone"
+      }
     },
     {
       "name": "Raichu",
@@ -3518,7 +3582,11 @@
         "spe": 40,
         "total": 300
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Sandslash",
+        "level": "Lv. 22"
+      }
     },
     {
       "name": "Sandslash",
@@ -3781,7 +3849,17 @@
         "spe": 41,
         "total": 275
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": [
+        {
+          "into": "Nidorina",
+          "level": "Lv. 16"
+        },
+        {
+          "into": "Nidorino",
+          "level": "Lv. 16"
+        }
+      ]
     },
     {
       "name": "Nidorina",
@@ -3891,7 +3969,11 @@
         "spe": 56,
         "total": 365
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Nidoqueen",
+        "level": "Moon Stone"
+      }
     },
     {
       "name": "Nidoqueen",
@@ -4196,7 +4278,11 @@
         "spe": 65,
         "total": 365
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Nidoking",
+        "level": "Moon Stone"
+      }
     },
     {
       "name": "Nidoking",
@@ -4426,7 +4512,11 @@
         "spe": 35,
         "total": 323
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Clefable",
+        "level": "Moon Stone"
+      }
     },
     {
       "name": "Clefable",
@@ -4645,7 +4735,11 @@
         "spe": 65,
         "total": 299
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Ninetales",
+        "level": "Fire Stone"
+      }
     },
     {
       "name": "Ninetales",
@@ -4872,6 +4966,10 @@
           "to": 40,
           "from": 25
         }
+      },
+      "evo": {
+        "into": "Wigglytuff",
+        "level": "Moon Stone"
       }
     },
     {
@@ -5144,7 +5242,11 @@
         "spe": 55,
         "total": 245
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Golbat",
+        "level": "Lv. 22"
+      }
     },
     {
       "name": "Golbat",
@@ -5278,7 +5380,11 @@
         "spe": 90,
         "total": 455
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Crobat",
+        "level": "Happiness"
+      }
     },
     {
       "name": "Oddish",
@@ -5397,7 +5503,11 @@
         "spe": 30,
         "total": 320
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Gloom",
+        "level": "Lv. 21"
+      }
     },
     {
       "name": "Gloom",
@@ -5521,7 +5631,17 @@
         "spe": 40,
         "total": 395
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": [
+        {
+          "into": "Vileplume",
+          "level": "Leaf Stone"
+        },
+        {
+          "into": "Bellossom",
+          "level": "Sun Stone"
+        }
+      ]
     },
     {
       "name": "Vileplume",
@@ -5723,6 +5843,10 @@
           "to": 80,
           "from": 70
         }
+      },
+      "evo": {
+        "into": "Parasect",
+        "level": "Lv. 24"
       }
     },
     {
@@ -6006,7 +6130,11 @@
         "spe": 45,
         "total": 305
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Venomoth",
+        "level": "Lv. 31"
+      }
     },
     {
       "name": "Venomoth",
@@ -6294,7 +6422,11 @@
         "spe": 95,
         "total": 265
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Dugtrio",
+        "level": "Lv. 26"
+      }
     },
     {
       "name": "Dugtrio",
@@ -6592,7 +6724,11 @@
         "spe": 90,
         "total": 290
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Persian",
+        "level": "Lv. 28"
+      }
     },
     {
       "name": "Persian",
@@ -6870,7 +7006,11 @@
         "spe": 55,
         "total": 320
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Golduck",
+        "level": "Lv. 33"
+      }
     },
     {
       "name": "Golduck",
@@ -7155,7 +7295,11 @@
         "spe": 70,
         "total": 305
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Primeape",
+        "level": "Lv. 28"
+      }
     },
     {
       "name": "Primeape",
@@ -7430,7 +7574,11 @@
         "spe": 60,
         "total": 350
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Arcanine",
+        "level": "Fire Stone"
+      }
     },
     {
       "name": "Arcanine",
@@ -7600,7 +7748,11 @@
         "spe": 90,
         "total": 300
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Poliwhirl",
+        "level": "Lv. 25"
+      }
     },
     {
       "name": "Poliwhirl",
@@ -7709,7 +7861,17 @@
         "spe": 90,
         "total": 385
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": [
+        {
+          "into": "Poliwrath",
+          "level": "Water Stone"
+        },
+        {
+          "into": "Politoed",
+          "level": "King's Rock"
+        }
+      ]
     },
     {
       "name": "Poliwrath",
@@ -7834,7 +7996,11 @@
         "spe": 90,
         "total": 310
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Kadabra",
+        "level": "Lv. 16"
+      }
     },
     {
       "name": "Kadabra",
@@ -7953,7 +8119,11 @@
         "spe": 105,
         "total": 400
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Alakazam",
+        "level": "Happiness / Lv. 36"
+      }
     },
     {
       "name": "Alakazam",
@@ -8212,7 +8382,11 @@
         "spe": 35,
         "total": 305
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Machoke",
+        "level": "Lv. 28"
+      }
     },
     {
       "name": "Machoke",
@@ -8351,7 +8525,11 @@
         "spe": 45,
         "total": 405
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Machamp",
+        "level": "Happiness / Lv. 39"
+      }
     },
     {
       "name": "Machamp",
@@ -8625,7 +8803,11 @@
         "spe": 40,
         "total": 300
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Weepinbell",
+        "level": "Lv. 21"
+      }
     },
     {
       "name": "Weepinbell",
@@ -8744,7 +8926,11 @@
         "spe": 55,
         "total": 390
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Victreebel",
+        "level": "Leaf Stone"
+      }
     },
     {
       "name": "Victreebel",
@@ -8963,7 +9149,11 @@
         "spe": 70,
         "total": 335
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Tentacruel",
+        "level": "Lv. 30"
+      }
     },
     {
       "name": "Tentacruel",
@@ -9218,7 +9408,11 @@
         "spe": 20,
         "total": 300
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Graveler",
+        "level": "Lv. 25"
+      }
     },
     {
       "name": "Graveler",
@@ -9337,7 +9531,11 @@
         "spe": 35,
         "total": 390
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Golem",
+        "level": "Happiness / Lv. 36"
+      }
     },
     {
       "name": "Golem",
@@ -9604,7 +9802,11 @@
         "spe": 90,
         "total": 410
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Rapidash",
+        "level": "Lv. 37"
+      }
     },
     {
       "name": "Rapidash",
@@ -9889,7 +10091,17 @@
         "spe": 15,
         "total": 315
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": [
+        {
+          "into": "Slowbro",
+          "level": "Lv. 33"
+        },
+        {
+          "into": "Slowking",
+          "level": "King's Rock"
+        }
+      ]
     },
     {
       "name": "Slowbro",
@@ -10162,7 +10374,11 @@
         "spe": 45,
         "total": 325
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Magneton",
+        "level": "Lv. 30"
+      }
     },
     {
       "name": "Magneton",
@@ -10292,7 +10508,11 @@
         "spe": 70,
         "total": 465
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Magnezone",
+        "level": "New Mauville"
+      }
     },
     {
       "name": "Farfetch'd",
@@ -10636,7 +10856,11 @@
         "spe": 75,
         "total": 310
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Dodrio",
+        "level": "Lv. 31"
+      }
     },
     {
       "name": "Dodrio",
@@ -10891,7 +11115,11 @@
         "spe": 45,
         "total": 325
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Dewgong",
+        "level": "Lv. 34"
+      }
     },
     {
       "name": "Dewgong",
@@ -11201,7 +11429,11 @@
         "spe": 25,
         "total": 325
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Muk",
+        "level": "Lv. 35"
+      }
     },
     {
       "name": "Muk",
@@ -11451,7 +11683,11 @@
         "spe": 40,
         "total": 305
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Cloyster",
+        "level": "Water Stone"
+      }
     },
     {
       "name": "Cloyster",
@@ -11655,7 +11891,11 @@
         "spe": 80,
         "total": 310
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Haunter",
+        "level": "Lv. 25"
+      }
     },
     {
       "name": "Haunter",
@@ -11778,7 +12018,11 @@
         "spe": 95,
         "total": 405
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Gengar",
+        "level": "Happiness / Lv. 36"
+      }
     },
     {
       "name": "Gengar",
@@ -12103,6 +12347,10 @@
           "to": 100,
           "from": 70
         }
+      },
+      "evo": {
+        "into": "Steelix",
+        "level": "Metal Coat"
       }
     },
     {
@@ -12223,7 +12471,11 @@
         "spe": 42,
         "total": 328
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Hypno",
+        "level": "Lv. 26"
+      }
     },
     {
       "name": "Hypno",
@@ -12482,7 +12734,11 @@
         "spe": 50,
         "total": 325
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Kingler",
+        "level": "Lv. 28"
+      }
     },
     {
       "name": "Kingler",
@@ -12746,7 +13002,11 @@
         "spe": 100,
         "total": 330
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Electrode",
+        "level": "Lv. 30"
+      }
     },
     {
       "name": "Electrode",
@@ -13005,7 +13265,11 @@
         "spe": 40,
         "total": 325
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Exeggutor",
+        "level": "Leaf Stone"
+      }
     },
     {
       "name": "Exeggutor",
@@ -13214,7 +13478,11 @@
         "spe": 35,
         "total": 320
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Marowak",
+        "level": "Lv. 28"
+      }
     },
     {
       "name": "Marowak",
@@ -13792,7 +14060,11 @@
         "spe": 30,
         "total": 385
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Lickilicky",
+        "level": "Lv. knowing Rollout"
+      }
     },
     {
       "name": "Koffing",
@@ -13928,7 +14200,11 @@
         "spe": 35,
         "total": 340
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Weezing",
+        "level": "Lv. 33"
+      }
     },
     {
       "name": "Weezing",
@@ -14174,7 +14450,11 @@
         "spe": 25,
         "total": 345
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Rhydon",
+        "level": "Lv. 39"
+      }
     },
     {
       "name": "Rhydon",
@@ -14313,7 +14593,11 @@
         "spe": 40,
         "total": 485
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Rhyperior",
+        "level": "Protector"
+      }
     },
     {
       "name": "Chansey",
@@ -14438,7 +14722,11 @@
         "spe": 50,
         "total": 450
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Blissey",
+        "level": "Happiness"
+      }
     },
     {
       "name": "Tangela",
@@ -14563,7 +14851,11 @@
         "spe": 60,
         "total": 435
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Tangrowth",
+        "level": "Level w/Ancient Power"
+      }
     },
     {
       "name": "Kangaskhan",
@@ -14802,7 +15094,11 @@
         "spe": 60,
         "total": 295
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Seadra",
+        "level": "Lv. 32"
+      }
     },
     {
       "name": "Seadra",
@@ -14921,7 +15217,11 @@
         "spe": 85,
         "total": 440
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Kingdra",
+        "level": "Dragon Scale"
+      }
     },
     {
       "name": "Goldeen",
@@ -15046,7 +15346,11 @@
         "spe": 63,
         "total": 320
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Seaking",
+        "level": "Lv. 33"
+      }
     },
     {
       "name": "Seaking",
@@ -15354,7 +15658,11 @@
         "spe": 85,
         "total": 340
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Starmie",
+        "level": "Water Stone"
+      }
     },
     {
       "name": "Starmie",
@@ -15698,7 +16006,11 @@
         "spe": 105,
         "total": 500
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Scizor",
+        "level": "Metal Coat"
+      }
     },
     {
       "name": "Jynx",
@@ -15956,7 +16268,11 @@
         "spe": 105,
         "total": 490
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Electivire",
+        "level": "Electirizer"
+      }
     },
     {
       "name": "Magmar",
@@ -16079,7 +16395,11 @@
         "spe": 93,
         "total": 495
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Magmortar",
+        "level": "Magmarizer"
+      }
     },
     {
       "name": "Pinsir",
@@ -16407,7 +16727,11 @@
         "spe": 80,
         "total": 200
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Gyarados",
+        "level": "Lv. 20"
+      }
     },
     {
       "name": "Gyarados",
@@ -16801,7 +17125,41 @@
         "spe": 55,
         "total": 325
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": [
+        {
+          "into": "Vaporeon",
+          "level": "Water Stone"
+        },
+        {
+          "into": "Jolteon",
+          "level": "Thunder Stone"
+        },
+        {
+          "into": "Flareon",
+          "level": "Fire Stone"
+        },
+        {
+          "into": "Espeon",
+          "level": "Happiness, Day"
+        },
+        {
+          "into": "Umbreon",
+          "level": "Happiness, Night"
+        },
+        {
+          "into": "Leafeon",
+          "level": "Petalburg Woods"
+        },
+        {
+          "into": "Glaceon",
+          "level": "Shoal Cave"
+        },
+        {
+          "into": "Sylveon",
+          "level": "Fairy Move & Amie Affection"
+        }
+      ]
     },
     {
       "name": "Vaporeon",
@@ -17263,7 +17621,11 @@
         "spe": 40,
         "total": 395
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Porygon2",
+        "level": "Up-Grade"
+      }
     },
     {
       "name": "Omanyte",
@@ -17375,7 +17737,11 @@
         "spe": 35,
         "total": 355
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Omastar",
+        "level": "Lv. 37"
+      }
     },
     {
       "name": "Omastar",
@@ -17602,7 +17968,11 @@
         "spe": 55,
         "total": 355
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Kabutops",
+        "level": "Lv. 37"
+      }
     },
     {
       "name": "Kabutops",
@@ -18481,7 +18851,11 @@
         "spe": 50,
         "total": 300
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Dragonair",
+        "level": "Lv. 30"
+      }
     },
     {
       "name": "Dragonair",
@@ -18595,7 +18969,11 @@
         "spe": 70,
         "total": 420
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Dragonite",
+        "level": "Lv. 55"
+      }
     },
     {
       "name": "Dragonite",
@@ -19118,7 +19496,11 @@
         "spe": 45,
         "total": 318
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Bayleef",
+        "level": "Lv. 16"
+      }
     },
     {
       "name": "Bayleef",
@@ -19247,7 +19629,11 @@
         "spe": 60,
         "total": 405
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Meganium",
+        "level": "Lv. 32"
+      }
     },
     {
       "name": "Meganium",
@@ -19510,7 +19896,11 @@
         "spe": 65,
         "total": 309
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Quilava",
+        "level": "Lv. 14"
+      }
     },
     {
       "name": "Quilava",
@@ -19634,7 +20024,11 @@
         "spe": 80,
         "total": 405
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Typhlosion",
+        "level": "Lv. 36"
+      }
     },
     {
       "name": "Typhlosion",
@@ -20275,7 +20669,11 @@
         "spe": 20,
         "total": 215
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Furret",
+        "level": "Lv. 15"
+      }
     },
     {
       "name": "Furret",
@@ -20653,6 +21051,10 @@
           "to": 65,
           "from": 56
         }
+      },
+      "evo": {
+        "into": "Noctowl",
+        "level": "Lv. 20"
       }
     },
     {
@@ -21042,6 +21444,10 @@
           "to": 20,
           "from": 40
         }
+      },
+      "evo": {
+        "into": "Ledian",
+        "level": "Lv. 18"
       }
     },
     {
@@ -21377,6 +21783,10 @@
           "to": 40,
           "from": 30
         }
+      },
+      "evo": {
+        "into": "Ariados",
+        "level": "Lv. 22"
       }
     },
     {
@@ -21814,7 +22224,11 @@
         "spe": 67,
         "total": 330
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Lanturn",
+        "level": "Lv. 27"
+      }
     },
     {
       "name": "Lanturn",
@@ -22030,7 +22444,11 @@
         "spe": 60,
         "total": 205
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Pikachu",
+        "level": "Happiness"
+      }
     },
     {
       "name": "Cleffa",
@@ -22102,7 +22520,11 @@
         "spe": 15,
         "total": 218
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Clefairy",
+        "level": "Happiness"
+      }
     },
     {
       "name": "Igglybuff",
@@ -22169,7 +22591,11 @@
         "spe": 15,
         "total": 210
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Jigglypuff",
+        "level": "Happiness"
+      }
     },
     {
       "name": "Togepi",
@@ -22301,7 +22727,11 @@
         "spe": 20,
         "total": 245
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Togetic",
+        "level": "Happiness"
+      }
     },
     {
       "name": "Togetic",
@@ -22436,7 +22866,11 @@
         "spe": 40,
         "total": 405
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Togekiss",
+        "level": "Shiny Stone"
+      }
     },
     {
       "name": "Natu",
@@ -22556,7 +22990,11 @@
         "spe": 70,
         "total": 320
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Xatu",
+        "level": "Lv. 25"
+      }
     },
     {
       "name": "Xatu",
@@ -22826,7 +23264,11 @@
         "spe": 35,
         "total": 280
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Flaaffy",
+        "level": "Lv. 15"
+      }
     },
     {
       "name": "Flaaffy",
@@ -22941,7 +23383,11 @@
         "spe": 45,
         "total": 365
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Ampharos",
+        "level": "Lv. 30"
+      }
     },
     {
       "name": "Ampharos",
@@ -23308,7 +23754,11 @@
         "spe": 40,
         "total": 250
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Azumarill",
+        "level": "Lv. 18"
+      }
     },
     {
       "name": "Azumarill",
@@ -23881,6 +24331,10 @@
           "to": 55,
           "from": 50
         }
+      },
+      "evo": {
+        "into": "Skiploom",
+        "level": "Lv. 18"
       }
     },
     {
@@ -24058,6 +24512,10 @@
           "to": 75,
           "from": 65
         }
+      },
+      "evo": {
+        "into": "Jumpluff",
+        "level": "Lv. 27"
       }
     },
     {
@@ -24345,7 +24803,11 @@
         "spe": 85,
         "total": 360
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Ambipom",
+        "level": "Lv. knowing Double Hit"
+      }
     },
     {
       "name": "Sunkern",
@@ -24455,7 +24917,11 @@
         "spe": 30,
         "total": 180
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Sunflora",
+        "level": "Sun Stone"
+      }
     },
     {
       "name": "Sunflora",
@@ -24767,7 +25233,11 @@
         "spe": 95,
         "total": 390
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Yanmega",
+        "level": "Lv. knowing Ancient Power"
+      }
     },
     {
       "name": "Wooper",
@@ -24900,6 +25370,10 @@
           "to": 55,
           "from": 45
         }
+      },
+      "evo": {
+        "into": "Quagsire",
+        "level": "Lv. 20"
       }
     },
     {
@@ -25371,7 +25845,11 @@
         "spe": 91,
         "total": 405
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Honchkrow",
+        "level": "Dusk Stone"
+      }
     },
     {
       "name": "Slowking",
@@ -25647,7 +26125,11 @@
         "spe": 85,
         "total": 435
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Mismagius",
+        "level": "Dusk Stone"
+      }
     },
     {
       "name": "Unown",
@@ -26146,7 +26628,11 @@
         "spe": 15,
         "total": 290
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Forretress",
+        "level": "Lv. 31"
+      }
     },
     {
       "name": "Forretress",
@@ -26618,7 +27104,11 @@
         "spe": 85,
         "total": 430
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Gliscor",
+        "level": "Razor Fang + Level Up @ Night"
+      }
     },
     {
       "name": "Steelix",
@@ -26907,7 +27397,11 @@
         "spe": 30,
         "total": 300
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Granbull",
+        "level": "Lv. 23"
+      }
     },
     {
       "name": "Granbull",
@@ -27764,7 +28258,11 @@
         "spe": 115,
         "total": 430
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Weavile",
+        "level": "Lv. holding Razor Claw (Night)"
+      }
     },
     {
       "name": "Teddiursa",
@@ -27899,7 +28397,11 @@
         "spe": 40,
         "total": 330
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Ursaring",
+        "level": "Lv. 30"
+      }
     },
     {
       "name": "Ursaring",
@@ -28223,6 +28725,10 @@
           "to": 50,
           "from": 40
         }
+      },
+      "evo": {
+        "into": "Magcargo",
+        "level": "Lv. 33"
       }
     },
     {
@@ -28522,7 +29028,11 @@
         "spe": 50,
         "total": 250
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Piloswine",
+        "level": "Lv. 33"
+      }
     },
     {
       "name": "Piloswine",
@@ -28662,7 +29172,11 @@
         "spe": 50,
         "total": 450
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Mamoswine",
+        "level": "Level w/Ancient Power"
+      }
     },
     {
       "name": "Corsola",
@@ -28945,7 +29459,11 @@
         "spe": 65,
         "total": 300
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Octillery",
+        "level": "Lv. 25"
+      }
     },
     {
       "name": "Octillery",
@@ -29654,7 +30172,11 @@
         "spe": 65,
         "total": 330
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Houndoom",
+        "level": "Lv. 24"
+      }
     },
     {
       "name": "Houndoom",
@@ -30047,7 +30569,11 @@
         "spe": 40,
         "total": 330
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Donphan",
+        "level": "Lv. 25"
+      }
     },
     {
       "name": "Donphan",
@@ -30301,7 +30827,11 @@
         "spe": 60,
         "total": 515
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Porygon-Z",
+        "level": "Dubious Disc"
+      }
     },
     {
       "name": "Stantler",
@@ -30576,7 +31106,21 @@
         "spe": 35,
         "total": 210
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": [
+        {
+          "into": "Hitmonlee",
+          "level": "Lv. 20, Atk > Def"
+        },
+        {
+          "into": "Hitmonchan",
+          "level": "Lv. 20, Def > Atk"
+        },
+        {
+          "into": "Hitmontop",
+          "level": "Lv. 20, Atk = Def"
+        }
+      ]
     },
     {
       "name": "Hitmontop",
@@ -30816,7 +31360,11 @@
         "spe": 65,
         "total": 305
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Jynx",
+        "level": "Lv. 30"
+      }
     },
     {
       "name": "Elekid",
@@ -30935,7 +31483,11 @@
         "spe": 95,
         "total": 360
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Electabuzz",
+        "level": "Lv. 30"
+      }
     },
     {
       "name": "Magby",
@@ -31054,7 +31606,11 @@
         "spe": 83,
         "total": 365
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Magmar",
+        "level": "Lv. 30"
+      }
     },
     {
       "name": "Miltank",
@@ -31720,7 +32276,11 @@
         "spe": 41,
         "total": 300
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Pupitar",
+        "level": "Lv. 30"
+      }
     },
     {
       "name": "Pupitar",
@@ -31830,7 +32390,11 @@
         "spe": 51,
         "total": 410
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Tyranitar",
+        "level": "Lv. 55"
+      }
     },
     {
       "name": "Tyranitar",
@@ -32440,7 +33004,11 @@
         "spe": 70,
         "total": 310
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Grovyle",
+        "level": "Lv. 16"
+      }
     },
     {
       "name": "Grovyle",
@@ -32579,7 +33147,11 @@
         "spe": 95,
         "total": 405
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Sceptile",
+        "level": "Lv. 36"
+      }
     },
     {
       "name": "Sceptile",
@@ -32881,7 +33453,11 @@
         "spe": 45,
         "total": 310
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Combusken",
+        "level": "Lv. 16"
+      }
     },
     {
       "name": "Combusken",
@@ -33020,7 +33596,11 @@
         "spe": 55,
         "total": 405
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Blaziken",
+        "level": "Lv. 36"
+      }
     },
     {
       "name": "Blaziken",
@@ -33322,7 +33902,11 @@
         "spe": 40,
         "total": 310
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Marshtomp",
+        "level": "Lv. 16"
+      }
     },
     {
       "name": "Marshtomp",
@@ -33461,7 +34045,11 @@
         "spe": 50,
         "total": 405
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Swampert",
+        "level": "Lv. 36"
+      }
     },
     {
       "name": "Swampert",
@@ -33739,7 +34327,11 @@
         "spe": 35,
         "total": 220
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Mightyena",
+        "level": "Lv. 18"
+      }
     },
     {
       "name": "Mightyena",
@@ -34049,6 +34641,10 @@
           "to": 20,
           "from": 30
         }
+      },
+      "evo": {
+        "into": "Linoone",
+        "level": "Lv. 20"
       }
     },
     {
@@ -34316,7 +34912,17 @@
         "spe": 20,
         "total": 195
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": [
+        {
+          "into": "Silcoon",
+          "level": "Lv. 7"
+        },
+        {
+          "into": "Cascoon",
+          "level": "Lv. 7"
+        }
+      ]
     },
     {
       "name": "Silcoon",
@@ -34361,7 +34967,11 @@
         "spe": 15,
         "total": 205
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Beautifly",
+        "level": "Lv. 10"
+      }
     },
     {
       "name": "Beautifly",
@@ -34597,7 +35207,11 @@
         "spe": 15,
         "total": 205
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Dustox",
+        "level": "Lv. 10"
+      }
     },
     {
       "name": "Dustox",
@@ -34848,7 +35462,11 @@
         "spe": 30,
         "total": 220
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Lombre",
+        "level": "Lv. 14"
+      }
     },
     {
       "name": "Lombre",
@@ -34958,7 +35576,11 @@
         "spe": 50,
         "total": 340
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Ludicolo",
+        "level": "Water Stone"
+      }
     },
     {
       "name": "Ludicolo",
@@ -35118,7 +35740,11 @@
         "spe": 30,
         "total": 220
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Nuzleaf",
+        "level": "Lv. 14"
+      }
     },
     {
       "name": "Nuzleaf",
@@ -35218,7 +35844,11 @@
         "spe": 60,
         "total": 340
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Shiftry",
+        "level": "Leaf Stone"
+      }
     },
     {
       "name": "Shiftry",
@@ -35392,7 +36022,11 @@
         "spe": 85,
         "total": 270
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Swellow",
+        "level": "Lv. 22"
+      }
     },
     {
       "name": "Swellow",
@@ -35647,7 +36281,11 @@
         "spe": 85,
         "total": 270
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Pelipper",
+        "level": "Lv. 25"
+      }
     },
     {
       "name": "Pelipper",
@@ -35961,6 +36599,10 @@
           "to": 55,
           "from": 35
         }
+      },
+      "evo": {
+        "into": "Kirlia",
+        "level": "Lv. 20"
       }
     },
     {
@@ -36119,7 +36761,17 @@
           "to": 75,
           "from": 55
         }
-      }
+      },
+      "evo": [
+        {
+          "into": "Gardevoir",
+          "level": "Lv. 30"
+        },
+        {
+          "into": "Gallade",
+          "level": "Dawn Stone ♂"
+        }
+      ]
     },
     {
       "name": "Gardevoir",
@@ -36420,6 +37072,10 @@
           "to": 62,
           "from": 60
         }
+      },
+      "evo": {
+        "into": "Masquerain",
+        "level": "Lv. 22"
       }
     },
     {
@@ -36742,7 +37398,11 @@
         "spe": 35,
         "total": 295
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Breloom",
+        "level": "Lv. 23"
+      }
     },
     {
       "name": "Breloom",
@@ -36957,7 +37617,11 @@
         "spe": 30,
         "total": 280
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Vigoroth",
+        "level": "Lv. 18"
+      }
     },
     {
       "name": "Vigoroth",
@@ -37052,7 +37716,11 @@
         "spe": 90,
         "total": 440
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Slaking",
+        "level": "Lv. 36"
+      }
     },
     {
       "name": "Slaking",
@@ -37291,7 +37959,17 @@
         "spe": 40,
         "total": 266
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": [
+        {
+          "into": "Ninjask",
+          "level": "Lv. 20"
+        },
+        {
+          "into": "Shedinja",
+          "level": "Lv. 20"
+        }
+      ]
     },
     {
       "name": "Ninjask",
@@ -37623,7 +38301,11 @@
         "spe": 28,
         "total": 240
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Loudred",
+        "level": "Lv. 20"
+      }
     },
     {
       "name": "Loudred",
@@ -37732,7 +38414,11 @@
         "spe": 48,
         "total": 360
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Exploud",
+        "level": "Lv. 40"
+      }
     },
     {
       "name": "Exploud",
@@ -38001,7 +38687,11 @@
         "spe": 25,
         "total": 237
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Hariyama",
+        "level": "Lv. 24"
+      }
     },
     {
       "name": "Hariyama",
@@ -38228,7 +38918,11 @@
         "spe": 20,
         "total": 190
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Marill",
+        "level": "Happiness"
+      }
     },
     {
       "name": "Nosepass",
@@ -38343,7 +39037,11 @@
         "spe": 30,
         "total": 375
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Probopass",
+        "level": "Lv. at special location"
+      }
     },
     {
       "name": "Skitty",
@@ -38526,6 +39224,10 @@
           "to": 45,
           "from": 35
         }
+      },
+      "evo": {
+        "into": "Delcatty",
+        "level": "Moon Stone"
       }
     },
     {
@@ -39313,7 +40015,11 @@
         "spe": 30,
         "total": 330
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Lairon",
+        "level": "Lv. 32"
+      }
     },
     {
       "name": "Lairon",
@@ -39443,7 +40149,11 @@
         "spe": 40,
         "total": 430
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Aggron",
+        "level": "Lv. 42"
+      }
     },
     {
       "name": "Aggron",
@@ -39729,7 +40439,11 @@
         "spe": 60,
         "total": 280
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Medicham",
+        "level": "Lv. 35"
+      }
     },
     {
       "name": "Medicham",
@@ -39998,7 +40712,11 @@
         "spe": 65,
         "total": 295
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Manectric",
+        "level": "Lv. 26"
+      }
     },
     {
       "name": "Manectric",
@@ -41130,7 +41848,11 @@
         "spe": 65,
         "total": 400
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Roserade",
+        "level": "Shiny Stone"
+      }
     },
     {
       "name": "Gulpin",
@@ -41255,7 +41977,11 @@
         "spe": 40,
         "total": 302
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Swalot",
+        "level": "Lv. 26"
+      }
     },
     {
       "name": "Swalot",
@@ -41514,7 +42240,11 @@
         "spe": 65,
         "total": 305
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Sharpedo",
+        "level": "Lv. 30"
+      }
     },
     {
       "name": "Sharpedo",
@@ -41814,7 +42544,11 @@
         "spe": 60,
         "total": 400
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Wailord",
+        "level": "Lv. 37"
+      }
     },
     {
       "name": "Wailord",
@@ -42059,7 +42793,11 @@
         "spe": 35,
         "total": 305
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Camerupt",
+        "level": "Lv. 33"
+      }
     },
     {
       "name": "Camerupt",
@@ -42447,7 +43185,11 @@
         "spe": 60,
         "total": 330
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Grumpig",
+        "level": "Lv. 32"
+      }
     },
     {
       "name": "Grumpig",
@@ -42864,7 +43606,11 @@
         "spe": 10,
         "total": 290
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Vibrava",
+        "level": "Lv. 35"
+      }
     },
     {
       "name": "Vibrava",
@@ -42984,7 +43730,11 @@
         "spe": 70,
         "total": 340
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Flygon",
+        "level": "Lv. 45"
+      }
     },
     {
       "name": "Flygon",
@@ -43290,7 +44040,11 @@
         "spe": 35,
         "total": 335
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Cacturne",
+        "level": "Lv. 32"
+      }
     },
     {
       "name": "Cacturne",
@@ -43590,7 +44344,11 @@
         "spe": 50,
         "total": 310
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Altaria",
+        "level": "Lv. 33"
+      }
     },
     {
       "name": "Altaria",
@@ -44542,7 +45300,11 @@
         "spe": 60,
         "total": 288
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Whiscash",
+        "level": "Lv. 30"
+      }
     },
     {
       "name": "Whiscash",
@@ -44797,7 +45559,11 @@
         "spe": 35,
         "total": 308
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Crawdaunt",
+        "level": "Lv. 30"
+      }
     },
     {
       "name": "Crawdaunt",
@@ -45066,7 +45832,11 @@
         "spe": 55,
         "total": 300
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Claydol",
+        "level": "Lv. 36"
+      }
     },
     {
       "name": "Claydol",
@@ -45336,7 +46106,11 @@
         "spe": 23,
         "total": 355
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Cradily",
+        "level": "Lv. 37"
+      }
     },
     {
       "name": "Cradily",
@@ -45596,7 +46370,11 @@
         "spe": 75,
         "total": 355
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Armaldo",
+        "level": "Lv. 37"
+      }
     },
     {
       "name": "Armaldo",
@@ -45809,7 +46587,11 @@
         "spe": 80,
         "total": 200
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Milotic",
+        "level": "Prism Scale"
+      }
     },
     {
       "name": "Milotic",
@@ -46407,7 +47189,11 @@
         "spe": 45,
         "total": 295
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Banette",
+        "level": "Lv. 34"
+      }
     },
     {
       "name": "Banette",
@@ -46667,7 +47453,11 @@
         "spe": 25,
         "total": 295
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Dusclops",
+        "level": "Lv. 34"
+      }
     },
     {
       "name": "Dusclops",
@@ -46830,7 +47620,11 @@
         "spe": 25,
         "total": 455
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Dusknoir",
+        "level": "Reaper Cloth"
+      }
     },
     {
       "name": "Tropius",
@@ -47460,7 +48254,11 @@
         "spe": 23,
         "total": 260
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Wobbuffet",
+        "level": "Lv. 15"
+      }
     },
     {
       "name": "Snorunt",
@@ -47562,7 +48360,17 @@
         "spe": 50,
         "total": 300
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": [
+        {
+          "into": "Glalie",
+          "level": "Lv. 39"
+        },
+        {
+          "into": "Froslass",
+          "level": "Dawn Stone"
+        }
+      ]
     },
     {
       "name": "Glalie",
@@ -47811,7 +48619,11 @@
         "spe": 25,
         "total": 290
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Sealeo",
+        "level": "Lv. 32"
+      }
     },
     {
       "name": "Sealeo",
@@ -47921,7 +48733,11 @@
         "spe": 45,
         "total": 410
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Walrein",
+        "level": "Lv. 44"
+      }
     },
     {
       "name": "Walrein",
@@ -48110,7 +48926,17 @@
         "spe": 32,
         "total": 345
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": [
+        {
+          "into": "Huntail",
+          "level": "Deep Sea Tooth"
+        },
+        {
+          "into": "Gorebyss",
+          "level": "Deep Sea Scale"
+        }
+      ]
     },
     {
       "name": "Huntail",
@@ -48754,7 +49580,11 @@
         "spe": 50,
         "total": 300
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Shelgon",
+        "level": "Lv. 30"
+      }
     },
     {
       "name": "Shelgon",
@@ -48862,7 +49692,11 @@
         "spe": 50,
         "total": 420
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Salamence",
+        "level": "Lv. 50"
+      }
     },
     {
       "name": "Salamence",
@@ -49080,7 +49914,11 @@
         "spe": 30,
         "total": 300
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Metang",
+        "level": "Lv. 20"
+      }
     },
     {
       "name": "Metang",
@@ -49206,7 +50044,11 @@
         "spe": 50,
         "total": 420
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Metagross",
+        "level": "Lv. 45"
+      }
     },
     {
       "name": "Metagross",
@@ -50914,7 +51756,11 @@
         "spe": 31,
         "total": 318
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Grotle",
+        "level": "Lv. 18"
+      }
     },
     {
       "name": "Grotle",
@@ -51023,7 +51869,11 @@
         "spe": 36,
         "total": 405
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Torterra",
+        "level": "Lv. 32"
+      }
     },
     {
       "name": "Torterra",
@@ -51266,7 +52116,11 @@
         "spe": 61,
         "total": 309
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Monferno",
+        "level": "Lv. 14"
+      }
     },
     {
       "name": "Monferno",
@@ -51385,7 +52239,11 @@
         "spe": 81,
         "total": 405
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Infernape",
+        "level": "Lv. 36"
+      }
     },
     {
       "name": "Infernape",
@@ -51633,7 +52491,11 @@
         "spe": 40,
         "total": 314
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Prinplup",
+        "level": "Lv. 16"
+      }
     },
     {
       "name": "Prinplup",
@@ -51752,7 +52614,11 @@
         "spe": 50,
         "total": 405
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Empoleon",
+        "level": "Lv. 36"
+      }
     },
     {
       "name": "Empoleon",
@@ -51995,7 +52861,11 @@
         "spe": 60,
         "total": 245
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Staravia",
+        "level": "Lv. 14"
+      }
     },
     {
       "name": "Staravia",
@@ -52099,7 +52969,11 @@
         "spe": 80,
         "total": 340
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Staraptor",
+        "level": "Lv. 34"
+      }
     },
     {
       "name": "Staraptor",
@@ -52308,7 +53182,11 @@
         "spe": 31,
         "total": 250
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Bibarel",
+        "level": "Lv. 15"
+      }
     },
     {
       "name": "Bibarel",
@@ -52530,7 +53408,11 @@
         "spe": 25,
         "total": 194
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Kricketune",
+        "level": "Lv. 10"
+      }
     },
     {
       "name": "Kricketune",
@@ -52807,7 +53689,11 @@
         "spe": 45,
         "total": 263
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Luxio",
+        "level": "Lv. 15"
+      }
     },
     {
       "name": "Luxio",
@@ -52922,7 +53808,11 @@
         "spe": 60,
         "total": 363
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Luxray",
+        "level": "Lv. 30"
+      }
     },
     {
       "name": "Luxray",
@@ -53150,7 +54040,11 @@
         "spe": 55,
         "total": 280
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Roselia",
+        "level": "Happiness (Day)"
+      }
     },
     {
       "name": "Roserade",
@@ -53577,7 +54471,11 @@
         "spe": 30,
         "total": 350
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Bastiodon",
+        "level": "Lv. 30"
+      }
     },
     {
       "name": "Bastiodon",
@@ -53755,7 +54653,17 @@
         "spe": 36,
         "total": 224
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": [
+        {
+          "into": "Wormadam",
+          "level": "Lv. 20"
+        },
+        {
+          "into": "Mothim",
+          "level": "Lv. 20"
+        }
+      ]
     },
     {
       "name": "Wormadam",
@@ -54431,7 +55339,11 @@
         "spe": 70,
         "total": 244
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Vespiquen",
+        "level": "Lv. 21"
+      }
     },
     {
       "name": "Vespiquen",
@@ -54870,7 +55782,11 @@
         "spe": 85,
         "total": 330
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Floatzel",
+        "level": "Lv. 26"
+      }
     },
     {
       "name": "Floatzel",
@@ -55099,7 +56015,11 @@
         "spe": 35,
         "total": 275
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Cherrim",
+        "level": "Lv. 25"
+      }
     },
     {
       "name": "Cherrim",
@@ -55358,7 +56278,11 @@
         "spe": 34,
         "total": 325
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Gastrodon",
+        "level": "Lv. 30"
+      }
     },
     {
       "name": "Gastrodon",
@@ -55718,7 +56642,11 @@
         "spe": 70,
         "total": 348
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Drifblim",
+        "level": "Lv. 28"
+      }
     },
     {
       "name": "Drifblim",
@@ -56000,7 +56928,11 @@
         "spe": 85,
         "total": 350
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Lopunny",
+        "level": "Happiness"
+      }
     },
     {
       "name": "Lopunny",
@@ -56488,7 +57420,11 @@
         "spe": 85,
         "total": 310
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Purugly",
+        "level": "Lv. 33"
+      }
     },
     {
       "name": "Purugly",
@@ -56690,7 +57626,11 @@
         "spe": 45,
         "total": 285
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Chimecho",
+        "level": "Happiness (Night)"
+      }
     },
     {
       "name": "Stunky",
@@ -56810,7 +57750,11 @@
         "spe": 74,
         "total": 329
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Skuntank",
+        "level": "Lv. 34"
+      }
     },
     {
       "name": "Skuntank",
@@ -57060,7 +58004,11 @@
         "spe": 23,
         "total": 300
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Bronzong",
+        "level": "Lv. 33"
+      }
     },
     {
       "name": "Bronzong",
@@ -57284,7 +58232,11 @@
         "spe": 10,
         "total": 290
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Sudowoodo",
+        "level": "Lv. knowing Mimic"
+      }
     },
     {
       "name": "Mime Jr.",
@@ -57404,7 +58356,11 @@
         "spe": 60,
         "total": 310
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Mr. Mime",
+        "level": "Lv. knowing Mimic"
+      }
     },
     {
       "name": "Happiny",
@@ -57459,7 +58415,11 @@
         "spe": 30,
         "total": 220
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Chansey",
+        "level": "Lv. holding Oval Stone (Day)"
+      }
     },
     {
       "name": "Chatot",
@@ -57884,7 +58844,11 @@
         "spe": 42,
         "total": 300
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Gabite",
+        "level": "Lv. 24"
+      }
     },
     {
       "name": "Gabite",
@@ -57988,7 +58952,11 @@
         "spe": 82,
         "total": 410
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Garchomp",
+        "level": "Lv. 48"
+      }
     },
     {
       "name": "Garchomp",
@@ -58256,7 +59224,11 @@
         "spe": 5,
         "total": 390
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Snorlax",
+        "level": "Happiness"
+      }
     },
     {
       "name": "Riolu",
@@ -58356,7 +59328,11 @@
         "spe": 60,
         "total": 285
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Lucario",
+        "level": "Happiness @ Day"
+      }
     },
     {
       "name": "Lucario",
@@ -58633,7 +59609,11 @@
         "spe": 32,
         "total": 330
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Hippowdon",
+        "level": "Lv. 34"
+      }
     },
     {
       "name": "Hippowdon",
@@ -58894,7 +59874,11 @@
         "spe": 65,
         "total": 330
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Drapion",
+        "level": "Lv. 37"
+      }
     },
     {
       "name": "Drapion",
@@ -59176,7 +60160,11 @@
         "spe": 50,
         "total": 300
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Toxicroak",
+        "level": "Lv. 35"
+      }
     },
     {
       "name": "Toxicroak",
@@ -59551,7 +60539,11 @@
         "spe": 66,
         "total": 330
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Lumineon",
+        "level": "Lv. 31"
+      }
     },
     {
       "name": "Lumineon",
@@ -59864,7 +60856,11 @@
         "spe": 50,
         "total": 345
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Mantine",
+        "level": "Level up"
+      }
     },
     {
       "name": "Snover",
@@ -59973,7 +60969,11 @@
         "spe": 40,
         "total": 334
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Abomasnow",
+        "level": "Lv. 40"
+      }
     },
     {
       "name": "Abomasnow",
@@ -64422,7 +65422,11 @@
         "spe": 63,
         "total": 308
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Servine",
+        "level": "Lv. 17"
+      }
     },
     {
       "name": "Servine",
@@ -64541,7 +65545,11 @@
         "spe": 83,
         "total": 413
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Serperior",
+        "level": "Lv. 36"
+      }
     },
     {
       "name": "Serperior",
@@ -64847,7 +65855,11 @@
         "spe": 45,
         "total": 308
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Pignite",
+        "level": "Lv. 17"
+      }
     },
     {
       "name": "Pignite",
@@ -64981,7 +65993,11 @@
         "spe": 55,
         "total": 418
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Emboar",
+        "level": "Lv. 36"
+      }
     },
     {
       "name": "Emboar",
@@ -65272,7 +66288,11 @@
         "spe": 45,
         "total": 308
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Dewott",
+        "level": "Lv. 17"
+      }
     },
     {
       "name": "Dewott",
@@ -65398,7 +66418,11 @@
         "spe": 60,
         "total": 413
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Samurott",
+        "level": "Lv. 36"
+      }
     },
     {
       "name": "Samurott",
@@ -65686,7 +66710,11 @@
         "spe": 42,
         "total": 255
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Watchog",
+        "level": "Lv. 20"
+      }
     },
     {
       "name": "Watchog",
@@ -65999,7 +67027,11 @@
         "spe": 55,
         "total": 275
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Herdier",
+        "level": "Lv. 16"
+      }
     },
     {
       "name": "Herdier",
@@ -66109,7 +67141,11 @@
         "spe": 60,
         "total": 370
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Stoutland",
+        "level": "Lv. 32"
+      }
     },
     {
       "name": "Stoutland",
@@ -66374,7 +67410,11 @@
         "spe": 66,
         "total": 281
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Liepard",
+        "level": "Lv. 20"
+      }
     },
     {
       "name": "Liepard",
@@ -66695,7 +67735,11 @@
         "spe": 64,
         "total": 316
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Simisage",
+        "level": "Leaf Stone"
+      }
     },
     {
       "name": "Simisage",
@@ -66876,7 +67920,11 @@
         "spe": 64,
         "total": 316
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Simisear",
+        "level": "Fire Stone"
+      }
     },
     {
       "name": "Simisear",
@@ -67057,7 +68105,11 @@
         "spe": 64,
         "total": 316
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Simipour",
+        "level": "Water Stone"
+      }
     },
     {
       "name": "Simipour",
@@ -67235,7 +68287,11 @@
         "spe": 24,
         "total": 292
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Musharna",
+        "level": "Moon Stone"
+      }
     },
     {
       "name": "Musharna",
@@ -67424,7 +68480,11 @@
         "spe": 43,
         "total": 264
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Tranquill",
+        "level": "Lv. 21"
+      }
     },
     {
       "name": "Tranquill",
@@ -67553,7 +68613,11 @@
         "spe": 65,
         "total": 358
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Unfezant",
+        "level": "Lv. 32"
+      }
     },
     {
       "name": "Unfezant",
@@ -67802,7 +68866,11 @@
         "spe": 76,
         "total": 295
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Zebstrika",
+        "level": "Lv. 27"
+      }
     },
     {
       "name": "Zebstrika",
@@ -68051,7 +69119,11 @@
         "spe": 15,
         "total": 280
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Boldore",
+        "level": "Lv. 25"
+      }
     },
     {
       "name": "Boldore",
@@ -68169,7 +69241,11 @@
         "spe": 20,
         "total": 390
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Gigalith",
+        "level": "Happiness / Lv. 36"
+      }
     },
     {
       "name": "Gigalith",
@@ -68420,7 +69496,11 @@
         "spe": 72,
         "total": 313
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Swoobat",
+        "level": "Happiness"
+      }
     },
     {
       "name": "Swoobat",
@@ -68733,7 +69813,11 @@
         "spe": 68,
         "total": 328
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Excadrill",
+        "level": "Lv. 31"
+      }
     },
     {
       "name": "Excadrill",
@@ -69132,7 +70216,11 @@
         "spe": 35,
         "total": 305
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Gurdurr",
+        "level": "Lv. 25"
+      }
     },
     {
       "name": "Gurdurr",
@@ -69252,7 +70340,11 @@
         "spe": 40,
         "total": 405
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Conkeldurr",
+        "level": "Happiness / Lv. 36"
+      }
     },
     {
       "name": "Conkeldurr",
@@ -69501,7 +70593,11 @@
         "spe": 64,
         "total": 294
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Palpitoad",
+        "level": "Lv. 25"
+      }
     },
     {
       "name": "Palpitoad",
@@ -69615,7 +70711,11 @@
         "spe": 69,
         "total": 384
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Seismitoad",
+        "level": "Lv. 36"
+      }
     },
     {
       "name": "Seismitoad",
@@ -70081,7 +71181,11 @@
         "spe": 42,
         "total": 310
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Swadloon",
+        "level": "Lv. 20"
+      }
     },
     {
       "name": "Swadloon",
@@ -70148,7 +71252,11 @@
         "spe": 42,
         "total": 380
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Leavanny",
+        "level": "Happiness"
+      }
     },
     {
       "name": "Leavanny",
@@ -70388,7 +71496,11 @@
         "spe": 57,
         "total": 260
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Whirlipede",
+        "level": "Lv. 22"
+      }
     },
     {
       "name": "Whirlipede",
@@ -70508,7 +71620,11 @@
         "spe": 47,
         "total": 360
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Scolipede",
+        "level": "Lv. 30"
+      }
     },
     {
       "name": "Scolipede",
@@ -70763,7 +71879,11 @@
         "spe": 66,
         "total": 280
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Whimsicott",
+        "level": "Sun Stone"
+      }
     },
     {
       "name": "Whimsicott",
@@ -70968,7 +72088,11 @@
         "spe": 30,
         "total": 280
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Lilligant",
+        "level": "Sun Stone"
+      }
     },
     {
       "name": "Lilligant",
@@ -71301,7 +72425,11 @@
         "spe": 65,
         "total": 292
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Krokorok",
+        "level": "Lv. 29"
+      }
     },
     {
       "name": "Krokorok",
@@ -71416,7 +72544,11 @@
         "spe": 74,
         "total": 351
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Krookodile",
+        "level": "Lv. 40"
+      }
     },
     {
       "name": "Krookodile",
@@ -71674,7 +72806,11 @@
         "spe": 50,
         "total": 315
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Darmanitan",
+        "level": "Lv. 35"
+      }
     },
     {
       "name": "Darmanitan",
@@ -72077,7 +73213,11 @@
         "spe": 55,
         "total": 325
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Crustle",
+        "level": "Lv. 34"
+      }
     },
     {
       "name": "Crustle",
@@ -72344,7 +73484,11 @@
         "spe": 48,
         "total": 348
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Scrafty",
+        "level": "Lv. 34"
+      }
     },
     {
       "name": "Scrafty",
@@ -72743,7 +73887,11 @@
         "spe": 30,
         "total": 303
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Cofagrigus",
+        "level": "Lv. 34"
+      }
     },
     {
       "name": "Cofagrigus",
@@ -72998,7 +74146,11 @@
         "spe": 22,
         "total": 355
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Carracosta",
+        "level": "Lv. 37"
+      }
     },
     {
       "name": "Carracosta",
@@ -73253,7 +74405,11 @@
         "spe": 70,
         "total": 401
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Archeops",
+        "level": "Lv. 37"
+      }
     },
     {
       "name": "Archeops",
@@ -73520,7 +74676,11 @@
         "spe": 65,
         "total": 329
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Garbodor",
+        "level": "Lv. 34"
+      }
     },
     {
       "name": "Garbodor",
@@ -73770,7 +74930,11 @@
         "spe": 65,
         "total": 330
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Zoroark",
+        "level": "Lv. 30"
+      }
     },
     {
       "name": "Zoroark",
@@ -74030,7 +75194,11 @@
         "spe": 75,
         "total": 300
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Cinccino",
+        "level": "Shiny Stone"
+      }
     },
     {
       "name": "Cinccino",
@@ -74232,7 +75400,11 @@
         "spe": 45,
         "total": 290
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Gothorita",
+        "level": "Lv. 26"
+      }
     },
     {
       "name": "Gothorita",
@@ -74364,7 +75536,11 @@
         "spe": 55,
         "total": 390
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Gothitelle",
+        "level": "Lv. 39"
+      }
     },
     {
       "name": "Gothitelle",
@@ -74621,7 +75797,11 @@
         "spe": 20,
         "total": 290
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Duosion",
+        "level": "Lv. 26"
+      }
     },
     {
       "name": "Duosion",
@@ -74753,7 +75933,11 @@
         "spe": 30,
         "total": 370
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Reuniclus",
+        "level": "Lv. 39"
+      }
     },
     {
       "name": "Reuniclus",
@@ -75004,7 +76188,11 @@
         "spe": 55,
         "total": 305
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Swanna",
+        "level": "Lv. 33"
+      }
     },
     {
       "name": "Swanna",
@@ -75244,7 +76432,11 @@
         "spe": 44,
         "total": 305
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Vanillish",
+        "level": "Lv. 33"
+      }
     },
     {
       "name": "Vanillish",
@@ -75370,7 +76562,11 @@
         "spe": 59,
         "total": 395
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Vanilluxe",
+        "level": "Lv. 44"
+      }
     },
     {
       "name": "Vanilluxe",
@@ -75624,7 +76820,11 @@
         "spe": 75,
         "total": 335
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Sawsbuck",
+        "level": "Lv. 34"
+      }
     },
     {
       "name": "Sawsbuck",
@@ -76069,7 +77269,11 @@
         "spe": 60,
         "total": 315
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Escavalier",
+        "level": "Lv. with Shelmet in party"
+      }
     },
     {
       "name": "Escavalier",
@@ -76360,7 +77564,11 @@
         "spe": 15,
         "total": 294
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Amoonguss",
+        "level": "Lv. 37"
+      }
     },
     {
       "name": "Amoonguss",
@@ -76631,7 +77839,11 @@
         "spe": 40,
         "total": 335
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Jellicent",
+        "level": "Lv. 37"
+      }
     },
     {
       "name": "Jellicent",
@@ -77028,7 +78240,11 @@
         "spe": 65,
         "total": 319
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Galvantula",
+        "level": "Lv. 33"
+      }
     },
     {
       "name": "Galvantula",
@@ -77285,7 +78501,11 @@
         "spe": 10,
         "total": 305
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Ferrothorn",
+        "level": "Lv. 37"
+      }
     },
     {
       "name": "Ferrothorn",
@@ -77527,7 +78747,11 @@
         "spe": 30,
         "total": 300
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Klang",
+        "level": "Lv. 33"
+      }
     },
     {
       "name": "Klang",
@@ -77648,7 +78872,11 @@
         "spe": 50,
         "total": 440
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Klinklang",
+        "level": "Lv. 44"
+      }
     },
     {
       "name": "Klinklang",
@@ -77834,7 +79062,11 @@
         "spe": 60,
         "total": 275
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Eelektrik",
+        "level": "Lv. 34"
+      }
     },
     {
       "name": "Eelektrik",
@@ -77949,7 +79181,11 @@
         "spe": 40,
         "total": 405
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Eelektross",
+        "level": "Thunder Stone"
+      }
     },
     {
       "name": "Eelektross",
@@ -78166,7 +79402,11 @@
         "spe": 30,
         "total": 335
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Beheeyem",
+        "level": "Lv. 39"
+      }
     },
     {
       "name": "Beheeyem",
@@ -78443,7 +79683,11 @@
         "spe": 20,
         "total": 275
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Lampent",
+        "level": "Lv. 34"
+      }
     },
     {
       "name": "Lampent",
@@ -78568,7 +79812,11 @@
         "spe": 55,
         "total": 370
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Chandelure",
+        "level": "Dusk Stone"
+      }
     },
     {
       "name": "Chandelure",
@@ -78745,7 +79993,11 @@
         "spe": 57,
         "total": 320
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Fraxure",
+        "level": "Lv. 32"
+      }
     },
     {
       "name": "Fraxure",
@@ -78860,7 +80112,11 @@
         "spe": 67,
         "total": 410
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Haxorus",
+        "level": "Lv. 48"
+      }
     },
     {
       "name": "Haxorus",
@@ -79114,7 +80370,11 @@
         "spe": 40,
         "total": 305
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Beartic",
+        "level": "Lv. 37"
+      }
     },
     {
       "name": "Beartic",
@@ -79549,7 +80809,11 @@
         "spe": 25,
         "total": 305
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Accelgor",
+        "level": "Lv. with Karrablast in party"
+      }
     },
     {
       "name": "Accelgor",
@@ -79946,7 +81210,11 @@
         "spe": 65,
         "total": 350
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Mienshao",
+        "level": "Lv. 36"
+      }
     },
     {
       "name": "Mienshao",
@@ -80328,7 +81596,11 @@
         "spe": 35,
         "total": 303
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Golurk",
+        "level": "Lv. 39"
+      }
     },
     {
       "name": "Golurk",
@@ -80615,7 +81887,11 @@
         "spe": 60,
         "total": 340
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Bisharp",
+        "level": "Lv. 37"
+      }
     },
     {
       "name": "Bisharp",
@@ -81007,7 +82283,11 @@
         "spe": 60,
         "total": 350
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Braviary",
+        "level": "Lv. 39"
+      }
     },
     {
       "name": "Braviary",
@@ -81269,7 +82549,11 @@
         "spe": 60,
         "total": 370
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Mandibuzz",
+        "level": "Lv. 39"
+      }
     },
     {
       "name": "Mandibuzz",
@@ -81821,7 +83105,11 @@
         "spe": 38,
         "total": 300
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Zweilous",
+        "level": "Lv. 39"
+      }
     },
     {
       "name": "Zweilous",
@@ -81968,7 +83256,11 @@
         "spe": 58,
         "total": 420
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Hydreigon",
+        "level": "Lv. 59"
+      }
     },
     {
       "name": "Hydreigon",
@@ -82234,7 +83526,11 @@
         "spe": 60,
         "total": 360
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Volcarona",
+        "level": "Lv. 50"
+      }
     },
     {
       "name": "Volcarona",
@@ -83983,7 +85279,11 @@
         "spe": 38,
         "total": 313
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Quilladin",
+        "level": "Lv. 16"
+      }
     },
     {
       "name": "Quilladin",
@@ -84107,7 +85407,11 @@
         "spe": 57,
         "total": 405
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Chesnaught",
+        "level": "Lv. 36"
+      }
     },
     {
       "name": "Chesnaught",
@@ -84385,7 +85689,11 @@
         "spe": 60,
         "total": 307
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Braixen",
+        "level": "Lv. 16"
+      }
     },
     {
       "name": "Braixen",
@@ -84509,7 +85817,11 @@
         "spe": 73,
         "total": 409
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Delphox",
+        "level": "Lv. 36"
+      }
     },
     {
       "name": "Delphox",
@@ -84782,7 +86094,11 @@
         "spe": 71,
         "total": 314
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Frogadier",
+        "level": "Lv. 16"
+      }
     },
     {
       "name": "Frogadier",
@@ -84906,7 +86222,11 @@
         "spe": 97,
         "total": 405
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Greninja",
+        "level": "Lv. 36"
+      }
     },
     {
       "name": "Greninja",
@@ -85185,7 +86505,11 @@
         "spe": 57,
         "total": 237
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Diggersby",
+        "level": "Lv. 20"
+      }
     },
     {
       "name": "Diggersby",
@@ -85472,7 +86796,11 @@
         "spe": 62,
         "total": 278
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Fletchinder",
+        "level": "Lv. 17"
+      }
     },
     {
       "name": "Fletchinder",
@@ -85581,7 +86909,11 @@
         "spe": 84,
         "total": 382
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Talonflame",
+        "level": "Lv. 35"
+      }
     },
     {
       "name": "Talonflame",
@@ -85765,7 +87097,11 @@
         "spe": 35,
         "total": 200
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Spewpa",
+        "level": "Lv. 9"
+      }
     },
     {
       "name": "Spewpa",
@@ -85810,7 +87146,11 @@
         "spe": 29,
         "total": 213
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Vivillon",
+        "level": "Lv. 12"
+      }
     },
     {
       "name": "Vivillon",
@@ -86120,7 +87460,11 @@
         "spe": 72,
         "total": 369
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Pyroar",
+        "level": "Lv. 33"
+      }
     },
     {
       "name": "Pyroar",
@@ -86359,7 +87703,11 @@
         "spe": 42,
         "total": 303
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Floette",
+        "level": "Lv. 19"
+      }
     },
     {
       "name": "Floette",
@@ -86568,7 +87916,11 @@
         "spe": 52,
         "total": 371
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Florges",
+        "level": "Shiny Stone"
+      }
     },
     {
       "name": "Florges",
@@ -86781,7 +88133,11 @@
         "spe": 52,
         "total": 350
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Gogoat",
+        "level": "Lv. 32"
+      }
     },
     {
       "name": "Gogoat",
@@ -87030,7 +88386,11 @@
         "spe": 43,
         "total": 348
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Pangoro",
+        "level": "Lv. 32"
+      }
     },
     {
       "name": "Pangoro",
@@ -87375,7 +88735,11 @@
         "spe": 68,
         "total": 355
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Meowstic",
+        "level": "Lv. 25"
+      }
     },
     {
       "name": "Meowstic",
@@ -87725,7 +89089,11 @@
         "spe": 28,
         "total": 325
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Doublade",
+        "level": "Lv. 35"
+      }
     },
     {
       "name": "Doublade",
@@ -87835,7 +89203,11 @@
         "spe": 35,
         "total": 448
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Aegislash",
+        "level": "Dusk Stone"
+      }
     },
     {
       "name": "Aegislash",
@@ -88054,7 +89426,11 @@
         "spe": 23,
         "total": 341
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Aromatisse",
+        "level": "Sachet"
+      }
     },
     {
       "name": "Aromatisse",
@@ -88312,7 +89688,11 @@
         "spe": 49,
         "total": 341
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Slurpuff",
+        "level": "Whipped Dream"
+      }
     },
     {
       "name": "Slurpuff",
@@ -88551,7 +89931,11 @@
         "spe": 45,
         "total": 288
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Malamar",
+        "level": "Lv. 30"
+      }
     },
     {
       "name": "Malamar",
@@ -88812,7 +90196,11 @@
         "spe": 50,
         "total": 306
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Barbaracle",
+        "level": "Lv. 34"
+      }
     },
     {
       "name": "Barbaracle",
@@ -89088,7 +90476,11 @@
         "spe": 30,
         "total": 320
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Dragalge",
+        "level": "Lv. 35"
+      }
     },
     {
       "name": "Dragalge",
@@ -89325,7 +90717,11 @@
         "spe": 44,
         "total": 330
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Clawitzer",
+        "level": "Lv. 33"
+      }
     },
     {
       "name": "Clawitzer",
@@ -89549,7 +90945,11 @@
         "spe": 70,
         "total": 289
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Heliolisk",
+        "level": "Sun Stone"
+      }
     },
     {
       "name": "Heliolisk",
@@ -89738,7 +91138,11 @@
         "spe": 48,
         "total": 362
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Tyrantrum",
+        "level": "Lv. 39"
+      }
     },
     {
       "name": "Tyrantrum",
@@ -90026,7 +91430,11 @@
         "spe": 46,
         "total": 362
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Aurorus",
+        "level": "Lv. 39"
+      }
     },
     {
       "name": "Aurorus",
@@ -90840,7 +92248,11 @@
         "spe": 40,
         "total": 300
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Sliggoo",
+        "level": "Lv. 40"
+      }
     },
     {
       "name": "Sliggoo",
@@ -90935,7 +92347,11 @@
         "spe": 60,
         "total": 452
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Goodra",
+        "level": "Lv. 50 + Rain"
+      }
     },
     {
       "name": "Goodra",
@@ -91273,7 +92689,11 @@
         "spe": 38,
         "total": 309
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Trevenant",
+        "level": "Happiness / Lv. 23"
+      }
     },
     {
       "name": "Trevenant",
@@ -91482,7 +92902,11 @@
         "spe": 51,
         "total": 335
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Gourgeist",
+        "level": "Happiness / Lv. 23"
+      }
     },
     {
       "name": "Gourgeist",
@@ -91722,7 +93146,11 @@
         "spe": 28,
         "total": 304
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Avalugg",
+        "level": "Lv. 37"
+      }
     },
     {
       "name": "Avalugg",
@@ -91984,7 +93412,11 @@
         "spe": 55,
         "total": 245
       },
-      "statChg": {}
+      "statChg": {},
+      "evo": {
+        "into": "Noivern",
+        "level": "Lv. 44"
+      }
     },
     {
       "name": "Noivern",
