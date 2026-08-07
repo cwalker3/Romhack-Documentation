@@ -619,10 +619,15 @@ const BOSS_IDS=new Set();SPLITS.forEach(s=>arr(s.bosses).forEach(b=>{if(b)BOSS_I
 function areaHasBoss(a){return a.rosters.some(r=>r.trainers.some(t=>BOSS_IDS.has(t.id)));}
 const AREA2IDX={};
 AREAS.forEach((a,i)=>{const n=normName(a.name);if(AREA2IDX[n]==null)AREA2IDX[n]=i;});
+// the game's starter species (from meta.starters) — a starter gift always counts as its route's encounter
+const STARTER_SET=new Set(arr(RAW.areas&&RAW.areas.meta&&RAW.areas.meta.starters).map(normName));
 function areaCaughtCount(a){
   const wildC=a.wild.reduce((n,w)=>n+w.species.filter(s=>isCaught(s.name)).length,0);
-  // a gift (e.g. the starter) is its own separate encounter only where there's no wild
-  const giftC=a.wild.length?0:a.giftMons.filter(s=>isCaught(s)).length;
+  // a plain gift counts as its own encounter only where there's no wild; a starter gift always
+  // counts (e.g. your Route 101 starter IS that route's encounter)
+  const giftC=a.wild.length
+    ? a.giftMons.filter(s=>STARTER_SET.has(normName(s))&&isCaught(s)).length
+    : a.giftMons.filter(s=>isCaught(s)).length;
   return wildC+giftC;
 }
 // in-game "met location": areas sharing one count as a single nuzlocke encounter (e.g. Route 104 South/North -> Route 104)
@@ -686,7 +691,7 @@ function profileBar(){
   const seg=(label,key,opts)=>`<div class="pfield"><span class="plabel">${label}</span><div class="seg">`+
     opts.map(o=>`<button class="segbtn${PROFILE[key]===o.val?' on':''}" data-pkey="${key}" data-pval="${o.val}">${o.html}</button>`).join('')+`</div></div>`;
   const gameStarters=arr(RAW.areas&&RAW.areas.meta&&RAW.areas.meta.starters);
-  if(gameStarters.length){
+  if(gameStarters.length&&!HAS_VERSIONS){
     // starter-only games (e.g. Brutal Black): pick a starter to show its battle variants
     const starters=gameStarters.map(s=>({val:s,html:spriteByName(s,18,'cspr')+s}));
     const hint=PROFILE.starter?`Trainer battles show the teams for <b>${esc(PROFILE.starter)}</b>`:'Pick your starter to show the matching (rival & first-gym) battles';

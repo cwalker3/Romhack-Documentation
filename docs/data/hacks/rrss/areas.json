@@ -79,6 +79,11 @@
         "cap": 75,
         "bosses": "557"
       }
+    ],
+    "starters": [
+      "Treecko",
+      "Torchic",
+      "Mudkip"
     ]
   },
   "areas": [
@@ -155,7 +160,10 @@
         }
       ],
       "name": "Route 101",
-      "special": []
+      "special": [],
+      "gifts": [
+        "Treecko/Torchic/Mudkip (100%)"
+      ]
     },
     {
       "rosters": [
