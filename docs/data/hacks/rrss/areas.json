@@ -168,7 +168,7 @@
     {
       "rosters": [
         {
-          "title": "Trainers - West of River",
+          "title": "Trainers",
           "trainers": [
             {
               "team": {
@@ -226,303 +226,6 @@
             }
           ],
           "kind": "roster"
-        },
-        {
-          "title": "Trainers - East of River",
-          "trainers": [
-            {
-              "team": [
-                {
-                  "level": 19,
-                  "species": "Oddish"
-                },
-                {
-                  "level": 19,
-                  "species": "Cherubi"
-                },
-                {
-                  "level": 19,
-                  "species": "Budew"
-                }
-              ],
-              "name": "Aroma Lady Daisy",
-              "id": "011",
-              "badge": ""
-            },
-            {
-              "team": [
-                {
-                  "level": 20,
-                  "species": "Clefairy"
-                },
-                {
-                  "level": 20,
-                  "species": "Jigglypuff"
-                }
-              ],
-              "name": "Twins Amy & Liv",
-              "doubles": true,
-              "id": "012",
-              "badge": ""
-            },
-            {
-              "team": [
-                {
-                  "level": 18,
-                  "species": "Pikachu"
-                },
-                {
-                  "level": 18,
-                  "species": "Pikachu"
-                },
-                {
-                  "level": 18,
-                  "species": "Pikachu"
-                },
-                {
-                  "level": 18,
-                  "species": "Pikachu"
-                },
-                {
-                  "level": 18,
-                  "species": "Pikachu"
-                }
-              ],
-              "name": "Poké Fan Miguel",
-              "id": "644",
-              "badge": ""
-            },
-            {
-              "team": [
-                {
-                  "level": 19,
-                  "species": "Poliwag"
-                },
-                {
-                  "level": 19,
-                  "species": "Skrelp"
-                },
-                {
-                  "level": 19,
-                  "species": "Staryu"
-                }
-              ],
-              "name": "Fisherman Andrew",
-              "id": "013",
-              "badge": ""
-            }
-          ],
-          "kind": "roster"
-        },
-        {
-          "title": "Rematches",
-          "trainers": [
-            {
-              "team": [
-                {
-                  "level": 35,
-                  "species": "Delcatty"
-                },
-                {
-                  "level": 35,
-                  "species": "Lopunny"
-                },
-                {
-                  "level": 35,
-                  "species": "Clefable"
-                },
-                {
-                  "level": 35,
-                  "species": "Wigglytuff"
-                }
-              ],
-              "name": "Twins Amy & Liv",
-              "doubles": true,
-              "id": "055",
-              "badge": "4"
-            },
-            {
-              "team": [
-                {
-                  "level": 47,
-                  "species": "Delcatty"
-                },
-                {
-                  "level": 47,
-                  "species": "Lopunny"
-                },
-                {
-                  "level": 47,
-                  "species": "Clefable"
-                },
-                {
-                  "level": 47,
-                  "species": "Wigglytuff"
-                }
-              ],
-              "name": "Twins Amy & Liv",
-              "doubles": true,
-              "id": "368",
-              "badge": "6"
-            },
-            {
-              "team": [
-                {
-                  "level": 59,
-                  "species": "Delcatty"
-                },
-                {
-                  "level": 59,
-                  "species": "Lopunny"
-                },
-                {
-                  "level": 59,
-                  "species": "Clefable"
-                },
-                {
-                  "level": 59,
-                  "species": "Wigglytuff"
-                }
-              ],
-              "name": "Twins Amy & Liv",
-              "doubles": true,
-              "id": "596",
-              "badge": "7"
-            },
-            {
-              "team": [
-                {
-                  "level": 75,
-                  "species": "Delcatty"
-                },
-                {
-                  "level": 75,
-                  "species": "Lopunny"
-                },
-                {
-                  "level": 75,
-                  "species": "Clefable"
-                },
-                {
-                  "level": 75,
-                  "species": "Wigglytuff"
-                }
-              ],
-              "name": "Twins Amy & Liv",
-              "doubles": true,
-              "id": "597",
-              "badge": "C"
-            },
-            {
-              "team": [
-                {
-                  "level": 35,
-                  "species": "Pikachu"
-                },
-                {
-                  "level": 35,
-                  "species": "Pikachu"
-                },
-                {
-                  "level": 35,
-                  "species": "Pikachu"
-                },
-                {
-                  "level": 35,
-                  "species": "Pikachu"
-                },
-                {
-                  "level": 35,
-                  "species": "Pikachu"
-                }
-              ],
-              "name": "Poké Fan Miguel",
-              "id": "651",
-              "badge": "4"
-            },
-            {
-              "team": [
-                {
-                  "level": 39,
-                  "species": "Pikachu"
-                },
-                {
-                  "level": 39,
-                  "species": "Pikachu"
-                },
-                {
-                  "level": 39,
-                  "species": "Pikachu"
-                },
-                {
-                  "level": 39,
-                  "species": "Pikachu"
-                },
-                {
-                  "level": 39,
-                  "species": "Pikachu"
-                }
-              ],
-              "name": "Poké Fan Miguel",
-              "id": "652",
-              "badge": "5"
-            },
-            {
-              "team": [
-                {
-                  "level": 47,
-                  "species": "Pikachu"
-                },
-                {
-                  "level": 47,
-                  "species": "Pikachu"
-                },
-                {
-                  "level": 47,
-                  "species": "Pikachu"
-                },
-                {
-                  "level": 47,
-                  "species": "Pikachu"
-                },
-                {
-                  "level": 47,
-                  "species": "Pikachu"
-                }
-              ],
-              "name": "Poké Fan Miguel",
-              "id": "653",
-              "badge": "6"
-            },
-            {
-              "team": [
-                {
-                  "level": 75,
-                  "species": "Pikachu"
-                },
-                {
-                  "level": 75,
-                  "species": "Pikachu"
-                },
-                {
-                  "level": 75,
-                  "species": "Pikachu"
-                },
-                {
-                  "level": 75,
-                  "species": "Pikachu"
-                },
-                {
-                  "level": 75,
-                  "species": "Pikachu"
-                }
-              ],
-              "name": "Poké Fan Miguel",
-              "id": "654",
-              "badge": "C"
-            }
-          ],
-          "kind": "rematch"
         }
       ],
       "wild": [
@@ -4018,6 +3721,316 @@
       ],
       "name": "Route 109",
       "special": []
+    },
+    {
+      "name": "Route 103 (East)",
+      "wild": [],
+      "rosters": [
+        {
+          "title": "Trainers",
+          "trainers": [
+            {
+              "team": [
+                {
+                  "level": 19,
+                  "species": "Oddish"
+                },
+                {
+                  "level": 19,
+                  "species": "Cherubi"
+                },
+                {
+                  "level": 19,
+                  "species": "Budew"
+                }
+              ],
+              "name": "Aroma Lady Daisy",
+              "id": "011",
+              "badge": ""
+            },
+            {
+              "team": [
+                {
+                  "level": 20,
+                  "species": "Clefairy"
+                },
+                {
+                  "level": 20,
+                  "species": "Jigglypuff"
+                }
+              ],
+              "name": "Twins Amy & Liv",
+              "doubles": true,
+              "id": "012",
+              "badge": ""
+            },
+            {
+              "team": [
+                {
+                  "level": 18,
+                  "species": "Pikachu"
+                },
+                {
+                  "level": 18,
+                  "species": "Pikachu"
+                },
+                {
+                  "level": 18,
+                  "species": "Pikachu"
+                },
+                {
+                  "level": 18,
+                  "species": "Pikachu"
+                },
+                {
+                  "level": 18,
+                  "species": "Pikachu"
+                }
+              ],
+              "name": "Poké Fan Miguel",
+              "id": "644",
+              "badge": ""
+            },
+            {
+              "team": [
+                {
+                  "level": 19,
+                  "species": "Poliwag"
+                },
+                {
+                  "level": 19,
+                  "species": "Skrelp"
+                },
+                {
+                  "level": 19,
+                  "species": "Staryu"
+                }
+              ],
+              "name": "Fisherman Andrew",
+              "id": "013",
+              "badge": ""
+            }
+          ],
+          "kind": "roster"
+        },
+        {
+          "title": "Rematches",
+          "trainers": [
+            {
+              "team": [
+                {
+                  "level": 35,
+                  "species": "Delcatty"
+                },
+                {
+                  "level": 35,
+                  "species": "Lopunny"
+                },
+                {
+                  "level": 35,
+                  "species": "Clefable"
+                },
+                {
+                  "level": 35,
+                  "species": "Wigglytuff"
+                }
+              ],
+              "name": "Twins Amy & Liv",
+              "doubles": true,
+              "id": "055",
+              "badge": "4"
+            },
+            {
+              "team": [
+                {
+                  "level": 47,
+                  "species": "Delcatty"
+                },
+                {
+                  "level": 47,
+                  "species": "Lopunny"
+                },
+                {
+                  "level": 47,
+                  "species": "Clefable"
+                },
+                {
+                  "level": 47,
+                  "species": "Wigglytuff"
+                }
+              ],
+              "name": "Twins Amy & Liv",
+              "doubles": true,
+              "id": "368",
+              "badge": "6"
+            },
+            {
+              "team": [
+                {
+                  "level": 59,
+                  "species": "Delcatty"
+                },
+                {
+                  "level": 59,
+                  "species": "Lopunny"
+                },
+                {
+                  "level": 59,
+                  "species": "Clefable"
+                },
+                {
+                  "level": 59,
+                  "species": "Wigglytuff"
+                }
+              ],
+              "name": "Twins Amy & Liv",
+              "doubles": true,
+              "id": "596",
+              "badge": "7"
+            },
+            {
+              "team": [
+                {
+                  "level": 75,
+                  "species": "Delcatty"
+                },
+                {
+                  "level": 75,
+                  "species": "Lopunny"
+                },
+                {
+                  "level": 75,
+                  "species": "Clefable"
+                },
+                {
+                  "level": 75,
+                  "species": "Wigglytuff"
+                }
+              ],
+              "name": "Twins Amy & Liv",
+              "doubles": true,
+              "id": "597",
+              "badge": "C"
+            },
+            {
+              "team": [
+                {
+                  "level": 35,
+                  "species": "Pikachu"
+                },
+                {
+                  "level": 35,
+                  "species": "Pikachu"
+                },
+                {
+                  "level": 35,
+                  "species": "Pikachu"
+                },
+                {
+                  "level": 35,
+                  "species": "Pikachu"
+                },
+                {
+                  "level": 35,
+                  "species": "Pikachu"
+                }
+              ],
+              "name": "Poké Fan Miguel",
+              "id": "651",
+              "badge": "4"
+            },
+            {
+              "team": [
+                {
+                  "level": 39,
+                  "species": "Pikachu"
+                },
+                {
+                  "level": 39,
+                  "species": "Pikachu"
+                },
+                {
+                  "level": 39,
+                  "species": "Pikachu"
+                },
+                {
+                  "level": 39,
+                  "species": "Pikachu"
+                },
+                {
+                  "level": 39,
+                  "species": "Pikachu"
+                }
+              ],
+              "name": "Poké Fan Miguel",
+              "id": "652",
+              "badge": "5"
+            },
+            {
+              "team": [
+                {
+                  "level": 47,
+                  "species": "Pikachu"
+                },
+                {
+                  "level": 47,
+                  "species": "Pikachu"
+                },
+                {
+                  "level": 47,
+                  "species": "Pikachu"
+                },
+                {
+                  "level": 47,
+                  "species": "Pikachu"
+                },
+                {
+                  "level": 47,
+                  "species": "Pikachu"
+                }
+              ],
+              "name": "Poké Fan Miguel",
+              "id": "653",
+              "badge": "6"
+            },
+            {
+              "team": [
+                {
+                  "level": 75,
+                  "species": "Pikachu"
+                },
+                {
+                  "level": 75,
+                  "species": "Pikachu"
+                },
+                {
+                  "level": 75,
+                  "species": "Pikachu"
+                },
+                {
+                  "level": 75,
+                  "species": "Pikachu"
+                },
+                {
+                  "level": 75,
+                  "species": "Pikachu"
+                }
+              ],
+              "name": "Poké Fan Miguel",
+              "id": "654",
+              "badge": "C"
+            }
+          ],
+          "kind": "rematch"
+        }
+      ],
+      "special": [],
+      "items": [],
+      "notes": [
+        "The east side of Route 103, reached later by Surfing across the water. Counts as the same encounter as Route 103."
+      ],
+      "gifts": [],
+      "version": ""
     },
     {
       "rosters": [
