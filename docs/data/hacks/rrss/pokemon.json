@@ -126,6 +126,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Grass / Poison"
+        },
+        {
           "value": "Petalburg Woods",
           "label": "Location"
         },
@@ -248,6 +252,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass / Poison"
+        },
         {
           "value": "Evolve Bulbasaur (Lv. 16)",
           "label": "Location"
@@ -387,6 +395,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Grass / Poison"
+        },
+        {
           "value": "Evolve Venusaur (Lv. 32)",
           "label": "Location"
         },
@@ -525,6 +537,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fire"
+        },
+        {
           "value": "Route 102",
           "label": "Location"
         },
@@ -652,6 +668,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fire"
+        },
         {
           "value": "Evolve Charmander (Lv. 16)",
           "label": "Location"
@@ -816,6 +836,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fire / Flying"
+        },
+        {
           "value": "Evolve Charmeleon (Lv. 36)",
           "label": "Location"
         },
@@ -966,6 +990,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water"
+        },
+        {
           "value": "Route 103",
           "label": "Location"
         },
@@ -1093,6 +1121,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water"
+        },
         {
           "value": "Evolve Squirtle (Lv. 16)",
           "label": "Location"
@@ -1257,6 +1289,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water"
+        },
+        {
           "value": "Evolve Wartortle (Lv. 36)",
           "label": "Location"
         },
@@ -1325,6 +1361,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Bug"
+        },
+        {
           "value": "Route 101",
           "label": "Location"
         },
@@ -1377,6 +1417,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Bug"
+        },
         {
           "value": "Evolve Caterpie (Lv. 7)",
           "label": "Location"
@@ -1548,6 +1592,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Bug / Flying"
+        },
+        {
           "value": "Safari Zone",
           "label": "Location"
         },
@@ -1623,6 +1671,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Bug / Poison"
+        },
+        {
           "value": "Route 101",
           "label": "Location"
         },
@@ -1675,6 +1727,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Bug / Poison"
+        },
         {
           "value": "Evolve Weedle (Lv. 7)",
           "label": "Location"
@@ -1860,6 +1916,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Bug / Poison"
+        },
+        {
           "value": "Route 101",
           "label": "Location"
         },
@@ -2014,6 +2074,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal / Flying"
+        },
+        {
           "value": "Route 101",
           "label": "Location"
         }
@@ -2132,6 +2196,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal / Flying"
+        },
         {
           "value": "Safari Zone",
           "label": "Location"
@@ -2272,6 +2340,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal / Flying"
+        },
+        {
           "value": "Soaring in the Sky",
           "label": "Location"
         }
@@ -2395,6 +2467,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal"
+        },
         {
           "value": "Route 101",
           "label": "Location"
@@ -2561,6 +2637,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal"
+        },
+        {
           "value": "Safari Zone, Sky Pillar",
           "label": "Location"
         }
@@ -2677,6 +2757,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal / Flying"
+        },
         {
           "value": "Route 103, Mt. Pyre Summit",
           "label": "Location"
@@ -2820,6 +2904,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal / Flying"
+        },
         {
           "value": "Mt. Pyre Summit",
           "label": "Location"
@@ -2967,6 +3055,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Poison"
+        },
         {
           "value": "Route 112 North",
           "label": "Location"
@@ -3164,6 +3256,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Poison"
+        },
+        {
           "value": "Route 119",
           "label": "Location"
         }
@@ -3320,6 +3416,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Electric"
+        },
+        {
           "value": "New Mauville",
           "label": "Location"
         },
@@ -3405,6 +3505,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Electric"
+        },
         {
           "value": "Evolve Pikachu (Thunder Stone)",
           "label": "Location"
@@ -3557,6 +3661,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ground"
+        },
         {
           "value": "Route 113",
           "label": "Location"
@@ -3711,6 +3819,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Ground"
+        },
+        {
           "value": "Route 111",
           "label": "Location"
         },
@@ -3828,6 +3940,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Poison"
+        },
         {
           "value": "Route 103",
           "label": "Location"
@@ -3949,6 +4065,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Poison"
+        },
+        {
           "value": "Safari Zone",
           "label": "Location"
         }
@@ -4037,6 +4157,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Poison / Ground"
+        },
         {
           "value": "Evolve Nidorina (Moon Stone)",
           "label": "Location"
@@ -4148,6 +4272,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Poison"
+        },
+        {
           "value": "Route 103",
           "label": "Location"
         }
@@ -4258,6 +4386,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Poison"
+        },
+        {
           "value": "Safari Zone",
           "label": "Location"
         }
@@ -4346,6 +4478,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Poison / Ground"
+        },
         {
           "value": "Evolve Nidorino (Moon Stone)",
           "label": "Location"
@@ -4492,6 +4628,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fairy"
+        },
+        {
           "value": "Meteor Falls",
           "label": "Location"
         }
@@ -4575,6 +4715,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fairy"
+        },
         {
           "value": "Meteor Falls",
           "label": "Location"
@@ -4711,6 +4855,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fire"
+        },
+        {
           "value": "Route 112 North, Mt. Pyre",
           "label": "Location"
         },
@@ -4783,6 +4931,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fire"
+        },
         {
           "value": "Mt. Pyre",
           "label": "Location"
@@ -4933,6 +5085,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal / Fairy"
+        },
+        {
           "value": "Route 115",
           "label": "Location"
         }
@@ -5071,6 +5227,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal / Fairy"
+        },
         {
           "value": "Evolve Jigglypuff (Moon Stone)",
           "label": "Location"
@@ -5218,6 +5378,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Poison / Flying"
+        },
+        {
           "value": "Granite Cave, Scorched Slab, Mt. Pyre, Seafloor Cavern",
           "label": "Location"
         },
@@ -5356,6 +5520,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Poison / Flying"
+        },
+        {
           "value": "Meteor Falls, Scorched Slab, Mt. Pyre, Seafloor Cavern, Cave of Origin, Victory Road",
           "label": "Location"
         },
@@ -5478,6 +5646,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass / Poison"
+        },
         {
           "value": "Route 110",
           "label": "Location"
@@ -5607,6 +5779,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Grass / Poison"
+        },
+        {
           "value": "Route 119",
           "label": "Location"
         },
@@ -5690,6 +5866,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass / Poison"
+        },
         {
           "value": "Evolve Gloom (Leaf Stone)",
           "label": "Location"
@@ -5817,6 +5997,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Bug / Grass"
+        },
         {
           "value": "Rusturf Tunnel",
           "label": "Location"
@@ -5979,6 +6163,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Bug / Grass"
+        },
+        {
           "value": "Route 123",
           "label": "Location"
         }
@@ -6109,6 +6297,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Bug / Poison"
+        },
         {
           "value": "Petalburg Woods",
           "label": "Location"
@@ -6279,6 +6471,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Bug / Poison"
+        },
+        {
           "value": "Route 123",
           "label": "Location"
         }
@@ -6401,6 +6597,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ground"
+        },
         {
           "value": "Fiery Path",
           "label": "Location"
@@ -6562,6 +6762,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Ground"
+        },
+        {
           "value": "Route 123",
           "label": "Location"
         }
@@ -6703,6 +6907,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal"
+        },
         {
           "value": "Route 112 South, Route 121",
           "label": "Location"
@@ -6867,6 +7075,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal"
+        },
+        {
           "value": "Route 121",
           "label": "Location"
         }
@@ -6985,6 +7197,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water"
+        },
         {
           "value": "Route 104 South",
           "label": "Location"
@@ -7140,6 +7356,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water"
+        },
+        {
           "value": "Route 118",
           "label": "Location"
         }
@@ -7274,6 +7494,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fighting"
+        },
         {
           "value": "Route 103, Jagged Pass",
           "label": "Location"
@@ -7434,6 +7658,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fighting"
+        },
+        {
           "value": "Jagged Pass, Route 123",
           "label": "Location"
         }
@@ -7554,6 +7782,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fire"
+        },
+        {
           "value": "Route 116, Mt. Pyre",
           "label": "Location"
         }
@@ -7627,6 +7859,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fire"
+        },
         {
           "value": "Evolve Growlithe (Fire Stone)",
           "label": "Location"
@@ -7727,6 +7963,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water"
+        },
         {
           "value": "Route 103, Route 117, Scorched Slab, Victory Road",
           "label": "Location"
@@ -7837,6 +8077,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water"
+        },
+        {
           "value": "Route 103, Route 107, Scorched Slab, Victory Road",
           "label": "Location"
         },
@@ -7941,6 +8185,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water / Fighting"
+        },
+        {
           "value": "Evolve Poliwhirl (Water Stone)",
           "label": "Location"
         }
@@ -7975,6 +8223,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Psychic"
+        },
         {
           "value": "Granite Cave",
           "label": "Location"
@@ -8094,6 +8346,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Psychic"
+        },
         {
           "value": "Granite Cave, Victory Road",
           "label": "Location"
@@ -8222,6 +8478,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Psychic"
+        },
         {
           "value": "Evolve Kadabra (Happiness / Lv. 36)",
           "label": "Location"
@@ -8362,6 +8622,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fighting"
+        },
+        {
           "value": "Rusturf Tunnel, Route 123",
           "label": "Location"
         }
@@ -8500,6 +8764,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fighting"
+        },
         {
           "value": "Route 123, Victory Road",
           "label": "Location"
@@ -8664,6 +8932,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fighting"
+        },
+        {
           "value": "Evolve Machoke (Happiness / Lv. 39)",
           "label": "Location"
         }
@@ -8778,6 +9050,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass / Poison"
+        },
         {
           "value": "Route 102",
           "label": "Location"
@@ -8902,6 +9178,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Grass / Poison"
+        },
+        {
           "value": "Route 102, Route 119",
           "label": "Location"
         },
@@ -9009,6 +9289,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass / Poison"
+        },
         {
           "value": "Evolve Weepinbell (Leaf Stone)",
           "label": "Location"
@@ -9128,6 +9412,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water / Poison"
+        },
         {
           "value": "Route 105, Route 106, Route 107, Route 109, Route 115, Route 127, Route 130, Dewford Town, Team Aqua Hideout, Team Magma Hideout",
           "label": "Location"
@@ -9273,6 +9561,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water / Poison"
+        },
+        {
           "value": "Route 108, Seafloor Cavern, Underwater, Ever Grande City, Battle Resort",
           "label": "Location"
         }
@@ -9387,6 +9679,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Rock / Ground"
+        },
         {
           "value": "Granite Cave, Route 111",
           "label": "Location"
@@ -9506,6 +9802,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Rock / Ground"
+        },
         {
           "value": "Granite Cave, Route 114, Shoal Cave, Victory Road",
           "label": "Location"
@@ -9650,6 +9950,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Rock / Ground"
+        },
+        {
           "value": "Evolve Graveler (Happiness / Lv. 36)",
           "label": "Location"
         }
@@ -9781,6 +10085,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fire"
+        },
         {
           "value": "Route 112 South, Route 121",
           "label": "Location"
@@ -9931,6 +10239,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fire"
+        },
+        {
           "value": "Route 121",
           "label": "Location"
         }
@@ -10062,6 +10374,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water / Psychic"
+        },
         {
           "value": "Route 104 South",
           "label": "Location"
@@ -10221,6 +10537,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water / Psychic"
+        },
+        {
           "value": "Route 118",
           "label": "Location"
         },
@@ -10353,6 +10673,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Electric / Steel"
+        },
         {
           "value": "Route 110",
           "label": "Location"
@@ -10487,6 +10811,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Electric / Steel"
+        },
         {
           "value": "New Mauville",
           "label": "Location"
@@ -10697,6 +11025,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fighting/Flying"
+        },
+        {
           "value": "Route 117",
           "label": "Location"
         },
@@ -10836,6 +11168,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal / Flying"
+        },
+        {
           "value": "Route 116, Route 121",
           "label": "Location"
         }
@@ -10959,6 +11295,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal / Flying"
+        },
         {
           "value": "Route 121",
           "label": "Location"
@@ -11094,6 +11434,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water"
+        },
         {
           "value": "Sea Mauville Outside, Route 125, Shoal Cave",
           "label": "Location"
@@ -11264,6 +11608,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water / Ice"
+        },
+        {
           "value": "Sea Mauville Outside, Route 125, Shoal Cave",
           "label": "Location"
         }
@@ -11409,6 +11757,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Poison"
+        },
+        {
           "value": "Fiery Path",
           "label": "Location"
         }
@@ -11548,6 +11900,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Poison"
+        },
+        {
           "value": "New Mauville",
           "label": "Location"
         }
@@ -11663,6 +12019,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water"
+        },
+        {
           "value": "Dewford Town, Sea Mauville, Route 125, Shoal Cave",
           "label": "Location"
         }
@@ -11756,6 +12116,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water / Ice"
+        },
         {
           "value": "Dewford Town, Route 125, Shoal Cave",
           "label": "Location"
@@ -11866,6 +12230,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ghost / Poison"
+        },
         {
           "value": "Rusturf Tunnel, Mt. Pyre",
           "label": "Location"
@@ -11989,6 +12357,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ghost / Poison"
+        },
         {
           "value": "Mt. Pyre, Victory Road",
           "label": "Location"
@@ -12126,6 +12498,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ghost / Poison"
+        },
         {
           "value": "Evolve Haunter (Happiness / Lv. 36)",
           "label": "Location"
@@ -12310,6 +12686,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Rock / Ground"
+        },
+        {
           "value": "Granite Cave, Scorched Slab",
           "label": "Location"
         },
@@ -12450,6 +12830,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Psychic"
+        },
         {
           "value": "Route 114, Route 121",
           "label": "Location"
@@ -12595,6 +12979,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Psychic"
+        },
+        {
           "value": "Route 121",
           "label": "Location"
         }
@@ -12709,6 +13097,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water"
+        },
         {
           "value": "Route 105, Route 106",
           "label": "Location"
@@ -12848,6 +13240,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water"
+        },
+        {
           "value": "Route 105, Route 106",
           "label": "Location"
         },
@@ -12981,6 +13377,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Electric"
+        },
         {
           "value": "Route 110",
           "label": "Location"
@@ -13121,6 +13521,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Electric"
+        },
+        {
           "value": "New Mauville",
           "label": "Location"
         }
@@ -13241,6 +13645,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Grass / Psychic"
+        },
+        {
           "value": "Route 104 South",
           "label": "Location"
         },
@@ -13328,6 +13736,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass / Psychic"
+        },
         {
           "value": "Route 104 South",
           "label": "Location"
@@ -13457,6 +13869,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ground"
+        },
         {
           "value": "Granite Cave",
           "label": "Location"
@@ -13621,6 +14037,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Ground"
+        },
+        {
           "value": "Granite Cave, Victory Road",
           "label": "Location"
         }
@@ -13770,6 +14190,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fighting"
+        },
+        {
           "value": "Evolve Tyrogue (Lv. 20, Atk > Def)",
           "label": "Location"
         }
@@ -13915,6 +14339,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fighting"
+        },
+        {
           "value": "Evolve Tyrogue (Lv. 20, Def > Atk)",
           "label": "Location"
         }
@@ -14039,6 +14467,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal"
+        },
         {
           "value": "Route 114",
           "label": "Location"
@@ -14176,6 +14608,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Poison"
+        },
+        {
           "value": "Fiery Path",
           "label": "Location"
         },
@@ -14309,6 +14745,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Poison"
+        },
+        {
           "value": "New Mauville",
           "label": "Location"
         },
@@ -14429,6 +14869,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ground / Rock"
+        },
         {
           "value": "Granite Cave, Scorched Slab",
           "label": "Location"
@@ -14569,6 +15013,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Ground / Rock"
+        },
+        {
           "value": "Scorched Slab, Cave of Origin",
           "label": "Location"
         },
@@ -14702,6 +15150,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal"
+        },
+        {
           "value": "Route 117",
           "label": "Location"
         }
@@ -14830,6 +15282,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass"
+        },
         {
           "value": "Route 115",
           "label": "Location"
@@ -14960,6 +15416,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal"
+        },
+        {
           "value": "Granite Cave, Safari Zone",
           "label": "Location"
         }
@@ -15073,6 +15533,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water"
+        },
         {
           "value": "Slateport City, Route 132, Route 133, Route 134",
           "label": "Location"
@@ -15192,6 +15656,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water"
+        },
         {
           "value": "Slateport City, Route 132, Route 133, Route 134",
           "label": "Location"
@@ -15325,6 +15793,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water"
+        },
         {
           "value": "Petalburg City, Safari Zone",
           "label": "Location"
@@ -15496,6 +15968,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water"
+        },
+        {
           "value": "Petalburg City, Safari Zone",
           "label": "Location"
         }
@@ -15638,6 +16114,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water"
+        },
+        {
           "value": "Route 105, Route 106, Lilycove City",
           "label": "Location"
         }
@@ -15701,6 +16181,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water / Psychic"
+        },
         {
           "value": "Route 105, Route 106, Lilycove City, Underwater",
           "label": "Location"
@@ -15852,6 +16336,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Psychic / Fairy"
+        },
+        {
           "value": "Safari Zone",
           "label": "Location"
         }
@@ -15981,6 +16469,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Bug / Flying"
+        },
         {
           "value": "Route 112 South",
           "label": "Location"
@@ -16125,6 +16617,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Ice / Psychic"
+        },
+        {
           "value": "Shoal Cave",
           "label": "Location"
         }
@@ -16239,6 +16735,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Electric"
+        },
         {
           "value": "New Mauville",
           "label": "Location"
@@ -16366,6 +16866,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fire"
+        },
         {
           "value": "Safari Zone",
           "label": "Location"
@@ -16509,6 +17013,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Bug"
+        },
+        {
           "value": "Route 112 North",
           "label": "Location"
         }
@@ -16648,6 +17156,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal"
+        },
+        {
           "value": "Route 112 South",
           "label": "Location"
         }
@@ -16702,6 +17214,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water"
+        },
         {
           "value": "Route 111, Route 115, Sootopolis City",
           "label": "Location"
@@ -16805,6 +17321,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water / Flying"
+        },
         {
           "value": "Route 111, Route 115, Sootopolis City",
           "label": "Location"
@@ -16944,6 +17464,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water / Ice"
+        },
+        {
           "value": "Sea Mauville, Route 125",
           "label": "Location"
         }
@@ -16978,6 +17502,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal"
+        },
         {
           "value": "Route 115, Mirage Island, Mirage Forest, Mirage Cave, Mirage Mountain",
           "label": "Location"
@@ -17104,6 +17632,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal"
+        },
         {
           "value": "Route 116",
           "label": "Location"
@@ -17244,6 +17776,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water"
+        },
+        {
           "value": "Evolve Eevee (Water Stone)",
           "label": "Location"
         },
@@ -17352,6 +17888,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Electric"
+        },
         {
           "value": "Evolve Eevee (Thunder Stone)",
           "label": "Location"
@@ -17475,6 +18015,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fire"
+        },
+        {
           "value": "Evolve Eevee (Fire Stone)",
           "label": "Location"
         },
@@ -17597,6 +18141,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal"
+        },
+        {
           "value": "New Mauville",
           "label": "Location"
         },
@@ -17717,6 +18265,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Rock / Water"
+        },
+        {
           "value": "Seafloor Cavern, Revive Helix Fossil",
           "label": "Location"
         }
@@ -17836,6 +18388,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Rock / Water"
+        },
+        {
           "value": "Seafloor Cavern",
           "label": "Location"
         }
@@ -17947,6 +18503,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Rock / Water"
+        },
         {
           "value": "Seafloor Cavern, Revive Dome Fossil",
           "label": "Location"
@@ -18081,6 +18641,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Rock / Water"
+        },
         {
           "value": "Seafloor Cavern",
           "label": "Location"
@@ -18226,6 +18790,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Rock / Flying"
+        },
         {
           "value": "Seafloor Cavern, Cave of Origin, Revive Amber Fossil",
           "label": "Location"
@@ -18375,6 +18943,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal"
+        },
+        {
           "value": "Route 113",
           "label": "Location"
         }
@@ -18484,6 +19056,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ice / Flying"
+        },
         {
           "value": "Mirage Mountain",
           "label": "Location"
@@ -18599,6 +19175,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Electric / Flying"
+        },
+        {
           "value": "Mirage Mountain",
           "label": "Location"
         },
@@ -18713,6 +19293,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fire / Flying"
+        },
+        {
           "value": "Mirage Mountain",
           "label": "Location"
         },
@@ -18826,6 +19410,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Dragon"
+        },
         {
           "value": "Slateport City, Meteor Falls, Route 132, Route 133, Route 134",
           "label": "Location"
@@ -18944,6 +19532,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Dragon"
+        },
         {
           "value": "Slateport City, Meteor Falls, Route 132, Route 133, Route 134",
           "label": "Location"
@@ -19093,6 +19685,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Dragon / Flying"
+        },
+        {
           "value": "Soaring in the Sky",
           "label": "Location"
         },
@@ -19222,6 +19818,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Psychic"
+        },
+        {
           "value": "Mirage Cave",
           "label": "Location"
         },
@@ -19347,6 +19947,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Psychic"
+        },
+        {
           "value": "Mirage Island",
           "label": "Location"
         }
@@ -19471,6 +20075,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass"
+        },
         {
           "value": "Route 101",
           "label": "Location"
@@ -19604,6 +20212,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass"
+        },
         {
           "value": "Evolve Chikorita (Lv. 16)",
           "label": "Location"
@@ -19748,6 +20360,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Grass"
+        },
+        {
           "value": "Evolve Bayleef (Lv. 32)",
           "label": "Location"
         },
@@ -19871,6 +20487,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fire"
+        },
         {
           "value": "Rusturf Tunnel",
           "label": "Location"
@@ -19999,6 +20619,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fire"
+        },
         {
           "value": "Evolve Cyndaquil (Lv. 14)",
           "label": "Location"
@@ -20143,6 +20767,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fire"
+        },
+        {
           "value": "Evolve Quilava (Lv. 36)",
           "label": "Location"
         },
@@ -20272,6 +20900,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water"
+        },
+        {
           "value": "Route 104 South",
           "label": "Location"
         },
@@ -20400,6 +21032,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water"
+        },
         {
           "value": "Evolve Totodile (Lv. 18)",
           "label": "Evolution"
@@ -20540,6 +21176,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water"
+        },
+        {
           "value": "Evolve Croconaw (Lv. 30)",
           "label": "Location"
         },
@@ -20648,6 +21288,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal"
+        },
         {
           "value": "Route 101",
           "label": "Location"
@@ -20825,6 +21469,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal"
+        },
         {
           "value": "Safari Zone",
           "label": "Location"
@@ -21013,6 +21661,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal / Flying"
+        },
         {
           "value": "Route 103, Mt. Pyre",
           "label": "Location"
@@ -21245,6 +21897,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Psychic/Flying"
+        },
+        {
           "value": "Safari Zone, Mt. Pyre",
           "label": "Location"
         }
@@ -21414,6 +22070,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Bug / Flying"
+        },
         {
           "value": "Route 104 North",
           "label": "Location"
@@ -21587,6 +22247,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Bug / Flying"
+        },
+        {
           "value": "Safari Zone",
           "label": "Location"
         },
@@ -21753,6 +22417,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Bug / Poison"
+        },
         {
           "value": "Rusturf Tunnel",
           "label": "Location"
@@ -21937,6 +22605,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Bug / Poison"
+        },
+        {
           "value": "Safari Zone, Sky Pillar",
           "label": "Location"
         }
@@ -22085,6 +22757,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Poison / Flying"
+        },
+        {
           "value": "Meteor Falls",
           "label": "Location"
         },
@@ -22203,6 +22879,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water / Electric"
+        },
         {
           "value": "Route 108, Route 109, Route 124",
           "label": "Location"
@@ -22353,6 +23033,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water / Electric"
+        },
+        {
           "value": "Route 108, Route 109, Route 124, Underwater",
           "label": "Location"
         }
@@ -22419,6 +23103,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Electric"
+        },
         {
           "value": "Petalburg Woods",
           "label": "Location"
@@ -22500,6 +23188,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fairy"
+        },
+        {
           "value": "Meteor Falls",
           "label": "Location"
         }
@@ -22570,6 +23262,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal / Fairy"
+        },
         {
           "value": "Route 115",
           "label": "Location"
@@ -22706,6 +23402,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fairy"
+        },
         {
           "value": "Route 104 North",
           "label": "Location"
@@ -22846,6 +23546,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fairy / Flying"
+        },
+        {
           "value": "Evolve Togepi (Happiness)",
           "label": "Location"
         }
@@ -22969,6 +23673,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Psychic / Flying"
+        },
         {
           "value": "Route 116, Mt. Pyre",
           "label": "Location"
@@ -23129,6 +23837,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Psychic / Flying"
+        },
+        {
           "value": "Mt. Pyre",
           "label": "Location"
         }
@@ -23243,6 +23955,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Electric"
+        },
         {
           "value": "Route 116",
           "label": "Location"
@@ -23362,6 +24078,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Electric"
+        },
         {
           "value": "Route 121",
           "label": "Location"
@@ -23517,6 +24237,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Electric"
+        },
+        {
           "value": "Evolve Flaaffy (Lv. 30)",
           "label": "Location"
         }
@@ -23615,6 +24339,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass"
+        },
         {
           "value": "Evolve Gloom (Sun Stone)",
           "label": "Location"
@@ -23733,6 +24461,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water / Fairy"
+        },
         {
           "value": "Petalburg City, Route 123",
           "label": "Location"
@@ -23860,6 +24592,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water / Fairy"
+        },
         {
           "value": "Petalburg City, Route 123, Victory Road",
           "label": "Location"
@@ -24028,6 +24764,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Rock"
+        },
+        {
           "value": "Safari Zone",
           "label": "Location"
         }
@@ -24123,6 +24863,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water"
+        },
         {
           "value": "Evolve Poliwhirl (King's Rock)",
           "label": "Location"
@@ -24289,6 +25033,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass / Flying"
+        },
         {
           "value": "Route 104 North, Route 114",
           "label": "Location"
@@ -24475,6 +25223,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Grass / Flying"
+        },
+        {
           "value": "Route 114",
           "label": "Location"
         },
@@ -24650,6 +25402,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Grass / Flying"
+        },
+        {
           "value": "Evolve Skiploom (Lv. 27)",
           "label": "Location"
         },
@@ -24783,6 +25539,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal"
+        },
+        {
           "value": "Jagged Pass",
           "label": "Location"
         }
@@ -24896,6 +25656,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass"
+        },
         {
           "value": "Route 115",
           "label": "Location"
@@ -25073,6 +25837,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Grass"
+        },
+        {
           "value": "Evolve Sunkern (Sun Stone)",
           "label": "Location"
         }
@@ -25209,6 +25977,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Bug / Flying"
+        },
+        {
           "value": "Route 115",
           "label": "Location"
         },
@@ -25340,6 +26112,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water / Ground"
+        },
         {
           "value": "Route 110",
           "label": "Location"
@@ -25478,6 +26254,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water / Ground"
+        },
+        {
           "value": "Route 110, Route 119",
           "label": "Location"
         }
@@ -25597,6 +26377,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Psychic"
+        },
+        {
           "value": "Evolve Eevee (Happiness, Day)",
           "label": "Location"
         },
@@ -25705,6 +26489,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Dark"
+        },
         {
           "value": "Evolve Eevee (Happiness, Night)",
           "label": "Location"
@@ -25824,6 +26612,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Dark / Flying"
+        },
         {
           "value": "Jagged Pass, Mt. Pyre",
           "label": "Location"
@@ -25979,6 +26771,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water / Psychic"
+        },
+        {
           "value": "Route 118",
           "label": "Location"
         },
@@ -26105,6 +26901,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Ghost/Fairy"
+        },
+        {
           "value": "Route 114",
           "label": "Location"
         }
@@ -26216,6 +27016,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Psychic"
+        },
         {
           "value": "Cave of Origin",
           "label": "Location"
@@ -26343,6 +27147,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Psychic"
+        },
         {
           "value": "Safari Zone",
           "label": "Location"
@@ -26489,6 +27297,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal / Psychic"
+        },
+        {
           "value": "Route 112 South",
           "label": "Location"
         }
@@ -26603,6 +27415,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Bug"
+        },
         {
           "value": "Jagged Pass",
           "label": "Location"
@@ -26766,6 +27582,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Bug / Steel"
+        },
         {
           "value": "Route 123",
           "label": "Location"
@@ -26939,6 +27759,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal/Fairy"
+        },
+        {
           "value": "Fiery Path",
           "label": "Location"
         }
@@ -27075,6 +27899,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ground / Flying"
+        },
         {
           "value": "Jagged Pass",
           "label": "Location"
@@ -27243,6 +28071,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Steel / Ground"
+        },
+        {
           "value": "Granite Cave, Scorched Slab, Victory Road",
           "label": "Location"
         }
@@ -27377,6 +28209,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fairy"
+        },
+        {
           "value": "Route 104 North",
           "label": "Location"
         }
@@ -27510,6 +28346,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fairy"
+        },
         {
           "value": "Route 123",
           "label": "Location"
@@ -27660,6 +28500,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water / Poison"
+        },
+        {
           "value": "Route 110, Route 114, Safari Zone",
           "label": "Location"
         }
@@ -27809,6 +28653,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Bug / Steel"
+        },
+        {
           "value": "Route 112 South",
           "label": "Location"
         }
@@ -27953,6 +28801,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Bug / Rock"
+        },
+        {
           "value": "Lilycove City, Seafloor Cavern",
           "label": "Location"
         }
@@ -28082,6 +28934,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Bug / Fighting"
+        },
         {
           "value": "Route 112 North",
           "label": "Location"
@@ -28234,6 +29090,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Dark / Ice"
+        },
+        {
           "value": "Shoal Cave",
           "label": "Location"
         },
@@ -28376,6 +29236,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal"
+        },
         {
           "value": "Rusturf Tunnel",
           "label": "Location"
@@ -28525,6 +29389,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal"
+        },
         {
           "value": "Victory Road",
           "label": "Location"
@@ -28683,6 +29551,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fire"
+        },
         {
           "value": "Fiery Path",
           "label": "Location"
@@ -28865,6 +29737,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fire / Rock"
+        },
+        {
           "value": "Fiery Path",
           "label": "Location"
         }
@@ -29007,6 +29883,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ice / Ground"
+        },
         {
           "value": "Shoal Cave",
           "label": "Location"
@@ -29151,6 +30031,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ice / Ground"
+        },
         {
           "value": "Shoal Cave",
           "label": "Location"
@@ -29319,6 +30203,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water / Rock"
+        },
+        {
           "value": "Route 105, Route 106, Dewford Town, Route 107, Route 108, Route 109, Lilycove City, Ever Grande City, Route 131, Pacifidlog Town, Underwater",
           "label": "Location"
         },
@@ -29438,6 +30326,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water"
+        },
         {
           "value": "Route 110",
           "label": "Location"
@@ -29567,6 +30459,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water"
+        },
         {
           "value": "Route 110",
           "label": "Location"
@@ -29743,6 +30639,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Ice / Flying"
+        },
+        {
           "value": "Shoal Cave",
           "label": "Location"
         }
@@ -29903,6 +30803,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water / Flying"
+        },
+        {
           "value": "Route 108, Route 124, Battle Resort",
           "label": "Location"
         },
@@ -30032,6 +30936,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Steel / Flying"
+        },
+        {
           "value": "Route 113",
           "label": "Location"
         }
@@ -30151,6 +31059,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Dark / Fire"
+        },
         {
           "value": "Route 116, Safari Zone",
           "label": "Location"
@@ -30296,6 +31208,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Dark / Fire"
+        },
+        {
           "value": "Safari Zone",
           "label": "Location"
         }
@@ -30430,6 +31346,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water / Dragon"
+        },
+        {
           "value": "Route 132, Route 133, Route 134",
           "label": "Location"
         }
@@ -30544,6 +31464,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ground"
+        },
         {
           "value": "Route 116",
           "label": "Location"
@@ -30683,6 +31607,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Ground"
+        },
+        {
           "value": "Victory Road",
           "label": "Location"
         },
@@ -30806,6 +31734,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal"
+        },
         {
           "value": "Evolve Porygon (Up-Grade)",
           "label": "Location"
@@ -30941,6 +31873,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal"
+        },
+        {
           "value": "Route 112 South",
           "label": "Location"
         }
@@ -31021,6 +31957,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal"
+        },
+        {
           "value": "Route 117",
           "label": "Location"
         }
@@ -31085,6 +32025,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fighting"
+        },
         {
           "value": "Fiery Path",
           "label": "Location"
@@ -31225,6 +32169,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fighting"
+        },
+        {
           "value": "Evolve Tyrogue (Lv. 20, Atk = Def)",
           "label": "Location"
         }
@@ -31339,6 +32287,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ice / Psychic"
+        },
         {
           "value": "Shoal Cave",
           "label": "Location"
@@ -31458,6 +32410,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Electric"
+        },
         {
           "value": "Route 112 North",
           "label": "Location"
@@ -31582,6 +32538,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fire"
+        },
+        {
           "value": "Route 112 North",
           "label": "Location"
         },
@@ -31694,6 +32654,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal"
+        },
         {
           "value": "Route 112 South",
           "label": "Location"
@@ -31820,6 +32784,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal"
+        },
+        {
           "value": "Evolve Chansey (Happiness)",
           "label": "Location"
         }
@@ -31924,6 +32892,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Electric"
+        },
         {
           "value": "Trackless Forest, Mirage Forest",
           "label": "Location"
@@ -32034,6 +33006,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fire"
+        },
+        {
           "value": "Trackless Forest, Mirage Forest",
           "label": "Location"
         },
@@ -32143,6 +33119,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water"
+        },
+        {
           "value": "Trackless Forest, Mirage Forest",
           "label": "Location"
         },
@@ -32251,6 +33231,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Rock / Ground"
+        },
         {
           "value": "Meteor Falls",
           "label": "Location"
@@ -32369,6 +33353,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Rock / Ground"
+        },
         {
           "value": "Meteor Falls",
           "label": "Location"
@@ -32504,6 +33492,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Rock / Dark"
+        },
+        {
           "value": "Evolve Pupitar (Lv. 55)",
           "label": "Location"
         },
@@ -32632,6 +33624,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Psychic / Flying"
+        },
+        {
           "value": "Sea Mauville, Mirage Mountain",
           "label": "Location"
         },
@@ -32746,6 +33742,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fire / Flying"
+        },
+        {
           "value": "Sea Mauville, Mirage Mountain",
           "label": "Location"
         },
@@ -32854,6 +33854,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Psychic / Grass"
+        },
         {
           "value": "Mirage Forest",
           "label": "Location"
@@ -32979,6 +33983,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass"
+        },
         {
           "value": "Route 101, Breed Grovyle",
           "label": "Location"
@@ -33122,6 +34130,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass"
+        },
         {
           "value": "Route 119",
           "label": "Location"
@@ -33286,6 +34298,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Grass"
+        },
+        {
           "value": "Evolve Grovyle (Lv. 36)",
           "label": "Location"
         },
@@ -33429,6 +34445,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fire"
+        },
+        {
           "value": "Route 101, Breed Combusken",
           "label": "Location"
         },
@@ -33571,6 +34591,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fire / Fighting"
+        },
         {
           "value": "Route 120",
           "label": "Location"
@@ -33735,6 +34759,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fire / Fighting"
+        },
+        {
           "value": "Evolve Combusken (Lv. 36)",
           "label": "Location"
         },
@@ -33878,6 +34906,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water"
+        },
+        {
           "value": "Route 101, Breed Marshtomp",
           "label": "Location"
         },
@@ -34020,6 +35052,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water / Ground"
+        },
         {
           "value": "Route 120",
           "label": "Location"
@@ -34184,6 +35220,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water / Ground"
+        },
+        {
           "value": "Evolve Marshtomp (Lv. 36)",
           "label": "Location"
         },
@@ -34306,6 +35346,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Dark"
+        },
         {
           "value": "Route 101",
           "label": "Location"
@@ -34465,6 +35509,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Dark"
+        },
+        {
           "value": "Route 121",
           "label": "Location"
         }
@@ -34611,6 +35659,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal"
+        },
         {
           "value": "Route 101",
           "label": "Location"
@@ -34808,6 +35860,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal"
+        },
+        {
           "value": "Route 101, Route 118",
           "label": "Location"
         }
@@ -34888,6 +35944,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Bug"
+        },
+        {
           "value": "Route 102",
           "label": "Location"
         },
@@ -34946,6 +36006,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Bug"
+        },
         {
           "value": "Evolve Wurmple (Lv. 7)",
           "label": "Location"
@@ -35113,6 +36177,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Bug / Flying"
+        },
+        {
           "value": "Safari Zone",
           "label": "Location"
         },
@@ -35186,6 +36254,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Bug"
+        },
         {
           "value": "Evolve Wurmple (Lv. 7)",
           "label": "Location"
@@ -35330,6 +36402,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Bug / Poison"
+        },
+        {
           "value": "Safari Zone",
           "label": "Location"
         },
@@ -35441,6 +36517,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water / Grass"
+        },
         {
           "value": "Route 102",
           "label": "Location"
@@ -35556,6 +36636,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water / Grass"
+        },
+        {
           "value": "Safari Zone",
           "label": "Location"
         }
@@ -35645,6 +36729,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water / Grass"
+        },
+        {
           "value": "Evolve Lombre (Water Stone)",
           "label": "Location"
         }
@@ -35719,6 +36807,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass"
+        },
         {
           "value": "Route 102",
           "label": "Location"
@@ -35824,6 +36916,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Grass / Dark"
+        },
+        {
           "value": "Safari Zone",
           "label": "Location"
         }
@@ -35907,6 +37003,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass / Dark"
+        },
         {
           "value": "Evolve Nuzleaf (Leaf Stone)",
           "label": "Location"
@@ -35997,6 +37097,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal / Flying"
+        },
         {
           "value": "Route 104 South",
           "label": "Location"
@@ -36140,6 +37244,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal / Flying"
+        },
+        {
           "value": "Route 115",
           "label": "Location"
         },
@@ -36252,6 +37360,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water / Flying"
+        },
         {
           "value": "Route 104 South, Route 106, Dewford Town, Route 107, Route 109, Route 105, Route 118, Route 126, Route 131",
           "label": "Location"
@@ -36423,6 +37535,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water / Flying"
+        },
+        {
           "value": "Route 106, Dewford Town, Route 107, Route 109, Route 105, Route 118, Route 126, Ever Grande City, Route 131, Battle Resort",
           "label": "Location"
         },
@@ -36569,6 +37685,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Psychic / Fairy"
+        },
         {
           "value": "Route 102, Mt. Pyre",
           "label": "Location"
@@ -36731,6 +37851,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Psychic / Fairy"
+        },
         {
           "value": "Mt. Pyre",
           "label": "Location"
@@ -36896,6 +38020,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Psychic / Fairy"
+        },
+        {
           "value": "Evolve Kirlia (Lv. 30)",
           "label": "Location"
         }
@@ -37038,6 +38166,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Bug / Water"
+        },
         {
           "value": "Route 102",
           "label": "Location"
@@ -37249,6 +38381,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Bug / Water"
+        },
+        {
           "value": "Safari Zone",
           "label": "Location"
         },
@@ -37377,6 +38513,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass"
+        },
         {
           "value": "Petalburg Woods",
           "label": "Location"
@@ -37507,6 +38647,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Grass / Fighting"
+        },
+        {
           "value": "Petalburg Woods, Safari Zone",
           "label": "Location"
         }
@@ -37596,6 +38740,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal"
+        },
         {
           "value": "Petalburg Woods",
           "label": "Location"
@@ -37695,6 +38843,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal"
+        },
         {
           "value": "Safari Zone",
           "label": "Location"
@@ -37840,6 +38992,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal"
+        },
+        {
           "value": "Evolve Vigoroth (Lv. 36)",
           "label": "Location"
         }
@@ -37934,6 +39090,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Bug / Ground"
+        },
         {
           "value": "Rusturf Tunnel",
           "label": "Location"
@@ -38064,6 +39224,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Bug / Flying"
+        },
+        {
           "value": "Evolve Nincada (Lv. 20)",
           "label": "Location"
         },
@@ -38177,6 +39341,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Bug / Ghost"
+        },
+        {
           "value": "Evolve Nincada (Lv. 20)",
           "label": "Location"
         }
@@ -38276,6 +39444,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal"
+        },
         {
           "value": "Rusturf Tunnel",
           "label": "Location"
@@ -38389,6 +39561,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal"
+        },
         {
           "value": "Victory Road",
           "label": "Location"
@@ -38543,6 +39719,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal"
+        },
+        {
           "value": "Evolve Loudred (Lv. 40)",
           "label": "Location"
         },
@@ -38666,6 +39846,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fighting"
+        },
         {
           "value": "Granite Cave",
           "label": "Location"
@@ -38811,6 +39995,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fighting"
+        },
+        {
           "value": "Granite Cave, Victory Road",
           "label": "Location"
         }
@@ -38897,6 +40085,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal / Fairy"
+        },
         {
           "value": "Route 104 South",
           "label": "Location"
@@ -39016,6 +40208,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Rock"
+        },
         {
           "value": "Granite Cave",
           "label": "Location"
@@ -39195,6 +40391,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal"
+        },
+        {
           "value": "Route 116",
           "label": "Location"
         }
@@ -39319,6 +40519,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal"
+        },
         {
           "value": "Route 116",
           "label": "Location"
@@ -39566,6 +40770,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Dark / Ghost"
+        },
         {
           "value": "Granite Cave, Cave of Origin",
           "label": "Location"
@@ -39836,6 +41044,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Steel / Fairy"
+        },
+        {
           "value": "Granite Cave, Cave of Origin",
           "label": "Location"
         }
@@ -39995,6 +41207,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Steel / Rock"
+        },
+        {
           "value": "Granite Cave, Scorched Slab",
           "label": "Location"
         }
@@ -40128,6 +41344,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Steel / Rock"
+        },
         {
           "value": "Granite Cave, Scorched Slab, Cave of Origin, Victory Road",
           "label": "Location"
@@ -40272,6 +41492,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Steel / Rock"
+        },
         {
           "value": "Evolve Lairon (Lv. 42)",
           "label": "Location"
@@ -40418,6 +41642,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fighting / Psychic"
+        },
         {
           "value": "Jagged Pass, Mt. Pyre",
           "label": "Location"
@@ -40568,6 +41796,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fighting / Psychic"
+        },
+        {
           "value": "Mt. Pyre, Victory Road",
           "label": "Location"
         }
@@ -40691,6 +41923,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Electric"
+        },
         {
           "value": "Route 110",
           "label": "Location"
@@ -40835,6 +42071,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Electric"
+        },
         {
           "value": "Route 118",
           "label": "Location"
@@ -41027,6 +42267,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Electric"
+        },
         {
           "value": "Route 110",
           "label": "Location"
@@ -41234,6 +42478,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Electric"
+        },
         {
           "value": "Route 110",
           "label": "Location"
@@ -41458,6 +42706,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Bug/Fairy"
+        },
+        {
           "value": "Route 117",
           "label": "Location"
         },
@@ -41677,6 +42929,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Bug/Fairy"
+        },
+        {
           "value": "Route 117",
           "label": "Location"
         }
@@ -41828,6 +43084,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Grass / Poison"
+        },
+        {
           "value": "Route 117",
           "label": "Location"
         }
@@ -41956,6 +43216,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Poison"
+        },
         {
           "value": "Route 110",
           "label": "Location"
@@ -42101,6 +43365,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Poison"
+        },
+        {
           "value": "Safari Zone",
           "label": "Location"
         }
@@ -42215,6 +43483,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water / Dark"
+        },
         {
           "value": "Route 118, Mossdeep City",
           "label": "Location"
@@ -42368,6 +43640,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water / Dark"
+        },
         {
           "value": "Route 118, Mossdeep City",
           "label": "Location"
@@ -42524,6 +43800,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water"
+        },
+        {
           "value": "Slateport City, Sea Mauville, Magma Hideout, Aqua Hideout, Route 129",
           "label": "Location"
         }
@@ -42668,6 +43948,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water"
+        },
+        {
           "value": "Route 129",
           "label": "Location"
         }
@@ -42772,6 +44056,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fire / Ground"
+        },
         {
           "value": "Fiery Path",
           "label": "Location"
@@ -42906,6 +44194,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fire / Ground"
+        },
         {
           "value": "Safari Zone",
           "label": "Location"
@@ -43056,6 +44348,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fire"
+        },
+        {
           "value": "Fiery Path",
           "label": "Location"
         },
@@ -43164,6 +44460,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Psychic"
+        },
         {
           "value": "Jagged Pass",
           "label": "Location"
@@ -43278,6 +44578,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Psychic"
+        },
         {
           "value": "Jagged Pass, Safari Zone",
           "label": "Location"
@@ -43442,6 +44746,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal"
+        },
+        {
           "value": "Route 113",
           "label": "Location"
         }
@@ -43582,6 +44890,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Ground"
+        },
+        {
           "value": "Route 111",
           "label": "Location"
         },
@@ -43709,6 +45021,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ground / Dragon"
+        },
         {
           "value": "Route 111",
           "label": "Location"
@@ -43869,6 +45185,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Ground / Dragon"
+        },
+        {
           "value": "Evolve Vibrava (Lv. 45)",
           "label": "Location"
         }
@@ -44011,6 +45331,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass"
+        },
         {
           "value": "Route 111",
           "label": "Location"
@@ -44179,6 +45503,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Grass / Dark"
+        },
+        {
           "value": "Evolve Cacnea (Lv. 32)",
           "label": "Location"
         },
@@ -44319,6 +45647,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal / Flying"
+        },
         {
           "value": "Route 114, Mt. Pyre",
           "label": "Location"
@@ -44483,6 +45815,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Dragon / Flying"
+        },
+        {
           "value": "Route 120, Sky Pillar",
           "label": "Location"
         },
@@ -44641,6 +45977,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal"
+        },
+        {
           "value": "Route 114",
           "label": "Location"
         },
@@ -44769,6 +46109,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Poison"
+        },
         {
           "value": "Route 114",
           "label": "Location"
@@ -44944,6 +46288,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Rock / Psychic"
+        },
         {
           "value": "Meteor Falls",
           "label": "Location"
@@ -45133,6 +46481,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Rock / Psychic"
+        },
+        {
           "value": "Meteor Falls",
           "label": "Location"
         }
@@ -45280,6 +46632,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water / Ground"
+        },
+        {
           "value": "Route 111, Route 120, Scorched Slab, Safari Zone",
           "label": "Location"
         }
@@ -45419,6 +46775,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water / Ground"
+        },
+        {
           "value": "Route 111, Route 120, Scorched Slab, Safari Zone",
           "label": "Location"
         }
@@ -45538,6 +46898,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water"
+        },
         {
           "value": "Route 102, Route 123",
           "label": "Location"
@@ -45678,6 +47042,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water / Dark"
+        },
+        {
           "value": "Route 102, Route 123",
           "label": "Location"
         }
@@ -45807,6 +47175,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ground / Psychic"
+        },
         {
           "value": "Route 111",
           "label": "Location"
@@ -45956,6 +47328,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Ground / Psychic"
+        },
+        {
           "value": "Sky Pillar",
           "label": "Location"
         },
@@ -46081,6 +47457,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Rock / Grass"
+        },
         {
           "value": "Seafloor Cavern, Revive Root Fossil",
           "label": "Location"
@@ -46209,6 +47589,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Rock / Grass"
+        },
         {
           "value": "Seafloor Cavern",
           "label": "Location"
@@ -46345,6 +47729,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Rock / Bug"
+        },
         {
           "value": "Seafloor Cavern, Revive Claw Fossil",
           "label": "Location"
@@ -46509,6 +47897,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Rock / Bug"
+        },
+        {
           "value": "Seafloor Cavern",
           "label": "Location"
         },
@@ -46562,6 +47954,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water"
+        },
         {
           "value": "Route 118, Route 119",
           "label": "Location"
@@ -46695,6 +48091,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water"
+        },
         {
           "value": "Route 119",
           "label": "Location"
@@ -46839,6 +48239,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal"
+        },
         {
           "value": "Weather Institute",
           "label": "Location"
@@ -47025,6 +48429,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal"
+        },
+        {
           "value": "Route 123",
           "label": "Location"
         },
@@ -47169,6 +48577,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Ghost"
+        },
+        {
           "value": "Fiery Path, Route 121, Mt. Pyre",
           "label": "Location"
         }
@@ -47297,6 +48709,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ghost"
+        },
         {
           "value": "Route 121, Mt. Pyre",
           "label": "Location"
@@ -47428,6 +48844,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ghost"
+        },
         {
           "value": "Fiery Path, Mt. Pyre",
           "label": "Location"
@@ -47591,6 +49011,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ghost"
+        },
         {
           "value": "Mt. Pyre",
           "label": "Location"
@@ -47786,6 +49210,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass / Flying"
+        },
         {
           "value": "Route 119",
           "label": "Location"
@@ -47990,6 +49418,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Psychic"
+        },
+        {
           "value": "Mt. Pyre",
           "label": "Location"
         }
@@ -48155,6 +49587,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Dark"
+        },
+        {
           "value": "Route 120",
           "label": "Location"
         }
@@ -48233,6 +49669,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Psychic"
+        },
         {
           "value": "Safari Zone",
           "label": "Location"
@@ -48339,6 +49779,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ice"
+        },
         {
           "value": "Shoal Cave",
           "label": "Location"
@@ -48480,6 +49924,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Ice"
+        },
+        {
           "value": "Shoal Cave",
           "label": "Location"
         }
@@ -48599,6 +50047,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Ice / Water"
+        },
+        {
           "value": "Sea Mauville Outside, Shoal Cave",
           "label": "Location"
         }
@@ -48712,6 +50164,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ice / Water"
+        },
         {
           "value": "Shoal Cave",
           "label": "Location"
@@ -48842,6 +50298,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Ice / Water"
+        },
+        {
           "value": "Evolve Sealeo (Lv. 44)",
           "label": "Location"
         }
@@ -48901,6 +50361,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water"
+        },
         {
           "value": "Dewford Town, Lilycove City, Route 126",
           "label": "Location"
@@ -49021,6 +50485,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water"
+        },
+        {
           "value": "Dewford Town, Underwater",
           "label": "Location"
         },
@@ -49129,6 +50597,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water"
+        },
         {
           "value": "Lilycove City, Underwater",
           "label": "Location"
@@ -49258,6 +50730,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water / Rock"
+        },
         {
           "value": "Route 124, Route 126, Route 127, Route 128, Route 129, Route 130, Underwater, Seafloor Cavern Outide",
           "label": "Location"
@@ -49432,6 +50908,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water/Fairy"
+        },
+        {
           "value": "Route 104 South, Route 128, Ever Grande City, Battle Resort",
           "label": "Location"
         },
@@ -49556,6 +51036,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Dragon"
+        },
+        {
           "value": "Meteor Falls",
           "label": "Location"
         },
@@ -49663,6 +51147,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Dragon"
+        },
         {
           "value": "Meteor Falls",
           "label": "Location"
@@ -49811,6 +51299,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Dragon / Flying"
+        },
+        {
           "value": "Meteor Falls",
           "label": "Location"
         },
@@ -49889,6 +51381,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Steel / Psychic"
+        },
         {
           "value": "Meteor Falls",
           "label": "Location"
@@ -50019,6 +51515,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Steel / Psychic"
+        },
         {
           "value": "Meteor Falls, Cave of Origin",
           "label": "Location"
@@ -50165,6 +51665,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Steel / Psychic"
+        },
+        {
           "value": "Evolve Metang (Lv. 45)",
           "label": "Location"
         },
@@ -50302,6 +51806,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Rock"
+        },
+        {
           "value": "Route 111",
           "label": "Location"
         },
@@ -50420,6 +51928,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ice"
+        },
         {
           "value": "Route 105",
           "label": "Location"
@@ -50549,6 +52061,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Steel"
+        },
         {
           "value": "Route 120",
           "label": "Location"
@@ -50683,6 +52199,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Dragon / Psychic"
+        },
         {
           "value": "Southern Island, Mirage Island",
           "label": "Location"
@@ -50832,6 +52352,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Dragon / Psychic"
+        },
+        {
           "value": "Southern Island, Mirage Island",
           "label": "Location"
         },
@@ -50950,6 +52474,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water"
+        },
+        {
           "value": "Cave of Origin, Mirage Cave",
           "label": "Location"
         }
@@ -51064,6 +52592,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Ground"
+        },
+        {
           "value": "Cave of Origin, Mirage Cave",
           "label": "Location"
         }
@@ -51172,6 +52704,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Dragon / Flying"
+        },
         {
           "value": "Sky Pillar",
           "label": "Location"
@@ -51306,6 +52842,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Steel / Psychic"
+        },
         {
           "value": "Mirage Cave",
           "label": "Location"
@@ -51627,6 +53167,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Psychic"
+        },
+        {
           "value": "Sky Pillar",
           "label": "Location"
         }
@@ -51731,6 +53275,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass"
+        },
         {
           "value": "Route 104 North",
           "label": "Location"
@@ -51844,6 +53392,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass"
+        },
         {
           "value": "Evolve Turtwig (Lv. 18)",
           "label": "Location"
@@ -51978,6 +53530,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Grass / Ground"
+        },
+        {
           "value": "Evolve Grotle (Lv. 32)",
           "label": "Location"
         },
@@ -52091,6 +53647,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fire"
+        },
         {
           "value": "Rusturf Tunnel",
           "label": "Location"
@@ -52214,6 +53774,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fire / Fighting"
+        },
         {
           "value": "Evolve Chimchar (Lv. 14)",
           "label": "Location"
@@ -52353,6 +53917,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fire / Fighting"
+        },
+        {
           "value": "Evolve Monferno (Lv. 36)",
           "label": "Location"
         },
@@ -52466,6 +54034,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water"
+        },
         {
           "value": "Route 103",
           "label": "Location"
@@ -52589,6 +54161,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water"
+        },
         {
           "value": "Evolve Piplup (Lv. 16)",
           "label": "Location"
@@ -52733,6 +54309,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water / Steel"
+        },
+        {
           "value": "Evolve Prinplup (Lv. 36)",
           "label": "Location"
         },
@@ -52836,6 +54416,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal / Flying"
+        },
         {
           "value": "Route 101",
           "label": "Location"
@@ -52944,6 +54528,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal / Flying"
+        },
         {
           "value": "Safari Zone",
           "label": "Location"
@@ -53058,6 +54646,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal / Flying"
+        },
+        {
           "value": "Soaring in the Sky",
           "label": "Location"
         },
@@ -53161,6 +54753,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal"
+        },
         {
           "value": "Route 101",
           "label": "Location"
@@ -53312,6 +54908,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal / Water"
+        },
+        {
           "value": "Safari Zone",
           "label": "Location"
         }
@@ -53383,6 +54983,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Bug"
+        },
         {
           "value": "Route 104 North",
           "label": "Location"
@@ -53533,6 +55137,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Bug"
+        },
+        {
           "value": "Safari Zone",
           "label": "Location"
         },
@@ -53669,6 +55277,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Electric"
+        },
+        {
           "value": "Route 116",
           "label": "Location"
         }
@@ -53787,6 +55399,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Electric"
+        },
         {
           "value": "Route 118",
           "label": "Location"
@@ -53949,6 +55565,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Electric/Dark"
+        },
+        {
           "value": "Evolve Luxio (Lv. 30)",
           "label": "Location"
         },
@@ -54019,6 +55639,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass / Poison"
+        },
         {
           "value": "Route 104 North",
           "label": "Location"
@@ -54103,6 +55727,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass / Poison"
+        },
         {
           "value": "Evolve Roselia (Shiny Stone)",
           "label": "Location"
@@ -54208,6 +55836,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Rock"
+        },
         {
           "value": "Seafloor Cavern, Revive Skull Fossil",
           "label": "Location"
@@ -54338,6 +55970,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Rock"
+        },
+        {
           "value": "Seafloor Cavern",
           "label": "Location"
         },
@@ -54446,6 +56082,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Rock / Steel"
+        },
         {
           "value": "Seafloor Cavern, Revive Armor Fossil",
           "label": "Location"
@@ -54570,6 +56210,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Rock / Steel"
+        },
+        {
           "value": "Seafloor Cavern",
           "label": "Location"
         },
@@ -54628,6 +56272,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Bug"
+        },
         {
           "value": "Route 104 North",
           "label": "Location"
@@ -55070,6 +56718,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Bug / Grass"
+        },
+        {
           "value": "Safari Zone",
           "label": "Location"
         },
@@ -55235,6 +56887,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Bug / Flying"
+        },
+        {
           "value": "Safari Zone",
           "label": "Location"
         },
@@ -55314,6 +56970,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Bug / Flying"
+        },
         {
           "value": "Route 104 North",
           "label": "Location"
@@ -55457,6 +57117,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Bug / Flying"
+        },
         {
           "value": "Route 104 North",
           "label": "Location"
@@ -55632,6 +57296,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Electric"
+        },
+        {
           "value": "Route 118",
           "label": "Location"
         },
@@ -55757,6 +57425,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water"
+        },
         {
           "value": "Route 103, Route 120, Scorched Slab",
           "label": "Location"
@@ -55886,6 +57558,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water"
+        },
+        {
           "value": "Route 103, Route 120, Scorched Slab, Victory Road",
           "label": "Location"
         },
@@ -55994,6 +57670,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass"
+        },
         {
           "value": "Route 117",
           "label": "Location"
@@ -56163,6 +57843,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Grass"
+        },
+        {
           "value": "Evolve Cherubi (Lv. 25)",
           "label": "Location"
         }
@@ -56257,6 +57941,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water"
+        },
         {
           "value": "Route 103",
           "label": "Location"
@@ -56361,6 +58049,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water / Ground"
+        },
         {
           "value": "Safari Zone",
           "label": "Location"
@@ -56497,6 +58189,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal"
+        },
+        {
           "value": "Safari Zone",
           "label": "Location"
         }
@@ -56621,6 +58317,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ghost / Flying"
+        },
         {
           "value": "Route 110",
           "label": "Location"
@@ -56781,6 +58481,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Ghost / Flying"
+        },
+        {
           "value": "Route 120",
           "label": "Location"
         }
@@ -56907,6 +58611,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal"
+        },
         {
           "value": "Route 104 North",
           "label": "Location"
@@ -57067,6 +58775,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal"
+        },
+        {
           "value": "Evolve Buneary (Happiness)",
           "label": "Location"
         }
@@ -57173,6 +58885,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Ghost/Fairy"
+        },
+        {
           "value": "Mt. Pyre",
           "label": "Location"
         }
@@ -57272,6 +58988,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Dark / Flying"
+        },
         {
           "value": "Soaring in the Sky",
           "label": "Location"
@@ -57399,6 +59119,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal"
+        },
         {
           "value": "Jagged Pass",
           "label": "Location"
@@ -57529,6 +59253,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal"
+        },
+        {
           "value": "Route 120",
           "label": "Location"
         }
@@ -57605,6 +59333,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Psychic"
+        },
         {
           "value": "Mt. Pyre",
           "label": "Location"
@@ -57729,6 +59461,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Poison / Dark"
+        },
         {
           "value": "Jagged Pass",
           "label": "Location"
@@ -57874,6 +59610,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Poison / Dark"
+        },
+        {
           "value": "Route 120",
           "label": "Location"
         }
@@ -57983,6 +59723,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Steel / Psychic"
+        },
         {
           "value": "Route 113, Mt. Pyre",
           "label": "Location"
@@ -58113,6 +59857,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Steel / Psychic"
+        },
+        {
           "value": "Mt. Pyre",
           "label": "Location"
         },
@@ -58211,6 +59959,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Rock"
+        },
         {
           "value": "Route 117",
           "label": "Location"
@@ -58336,6 +60088,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Psychic / Fairy"
+        },
+        {
           "value": "Route 117",
           "label": "Location"
         }
@@ -58394,6 +60150,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal"
+        },
         {
           "value": "Route 114",
           "label": "Location"
@@ -58592,6 +60352,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal / Flying"
+        },
+        {
           "value": "Route 118",
           "label": "Location"
         },
@@ -58717,6 +60481,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Ghost / Dark"
+        },
+        {
           "value": "Sea Mauville, Sky Pillar",
           "label": "Location"
         },
@@ -58815,6 +60583,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Dragon / Ground"
+        },
         {
           "value": "Route 111",
           "label": "Location"
@@ -58927,6 +60699,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Dragon / Ground"
+        },
         {
           "value": "Victory Road",
           "label": "Location"
@@ -59045,6 +60821,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Dragon / Ground"
+        },
         {
           "value": "Evolve Gabite (Lv. 48)",
           "label": "Location"
@@ -59204,6 +60984,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal"
+        },
+        {
           "value": "Route 113",
           "label": "Location"
         }
@@ -59307,6 +61091,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fighting"
+        },
         {
           "value": "Route 103",
           "label": "Location"
@@ -59457,6 +61245,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fighting / Steel"
+        },
+        {
           "value": "Evolve Riolu (Happiness @ Day)",
           "label": "Location"
         }
@@ -59580,6 +61372,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ground"
+        },
         {
           "value": "Route 111",
           "label": "Location"
@@ -59718,6 +61514,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Ground"
+        },
+        {
           "value": "Evolve Hippopotas (Lv. 34)",
           "label": "Location"
         },
@@ -59853,6 +61653,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Poison / Bug"
+        },
         {
           "value": "Route 114",
           "label": "Location"
@@ -60003,6 +61807,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Poison / Dark"
+        },
+        {
           "value": "Route 119",
           "label": "Location"
         }
@@ -60139,6 +61947,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Poison / Fighting"
+        },
         {
           "value": "Jagged Pass, Safari Zone",
           "label": "Location"
@@ -60289,6 +62101,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Poison / Fighting"
+        },
+        {
           "value": "Safari Zone",
           "label": "Location"
         }
@@ -60409,6 +62225,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Grass"
+        },
+        {
           "value": "Route 119",
           "label": "Location"
         }
@@ -60518,6 +62338,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water"
+        },
         {
           "value": "Route 108, Route 109, Route 122, Safari Zone",
           "label": "Location"
@@ -60701,6 +62525,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water"
+        },
+        {
           "value": "Route 108, Route 109, Route 122, Safari Zone",
           "label": "Location"
         }
@@ -60836,6 +62664,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water / Flying"
+        },
+        {
           "value": "Route 108, Route 124",
           "label": "Location"
         }
@@ -60944,6 +62776,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass / Ice"
+        },
         {
           "value": "Shoal Cave",
           "label": "Location"
@@ -61062,6 +62898,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass / Ice"
+        },
         {
           "value": "Soundproof",
           "label": "Ability 2"
@@ -61227,6 +63067,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Dark / Ice"
+        },
+        {
           "value": "Shoal Cave",
           "label": "Location"
         },
@@ -61375,6 +63219,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Electric / Steel"
+        },
+        {
           "value": "Evolve Magneton (New Mauville)",
           "label": "Location"
         }
@@ -61499,6 +63347,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal"
+        },
         {
           "value": "Route 114",
           "label": "Location"
@@ -61650,6 +63502,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Ground / Rock"
+        },
+        {
           "value": "Evolve Rhydon (Protector)",
           "label": "Location"
         }
@@ -61784,6 +63640,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass"
+        },
         {
           "value": "Evolve Tangela (Level w/Ancient Power)",
           "label": "Location"
@@ -61952,6 +63812,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Electric/Fighting"
+        },
+        {
           "value": "Evolve Electabuzz (Electirizer)",
           "label": "Location"
         },
@@ -62086,6 +63950,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fire"
+        },
+        {
           "value": "Evolve Magmar (Magmarizer)",
           "label": "Location"
         },
@@ -62149,6 +64017,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fairy / Flying"
+        },
         {
           "value": "Soaring in the Sky",
           "label": "Location"
@@ -62295,6 +64167,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Bug / Flying"
+        },
+        {
           "value": "Route 115",
           "label": "Location"
         },
@@ -62409,6 +64285,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Grass"
+        },
+        {
           "value": "Evolve Eevee (Petalburg Woods)",
           "label": "Location"
         },
@@ -62522,6 +64402,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ice"
+        },
         {
           "value": "Evolve Eevee (Shoal Cave)",
           "label": "Location"
@@ -62666,6 +64550,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ground / Flying"
+        },
         {
           "value": "Evolve Gligar (Razor Fang + Level Up @ Night)",
           "label": "Location"
@@ -62816,6 +64704,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Ice / Ground"
+        },
+        {
           "value": "Evolve Piloswine (Level w/Ancient Power)",
           "label": "Location"
         }
@@ -62940,6 +64832,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal"
+        },
         {
           "value": "Evolve Porygon2 (Dubious Disc)",
           "label": "Location"
@@ -63091,6 +64987,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Psychic / Fighting"
+        },
+        {
           "value": "Evolve Kirlia (Dawn Stone ♂)",
           "label": "Location"
         },
@@ -63238,6 +65138,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Rock / Steel"
+        },
         {
           "value": "Granite Cave",
           "label": "Location"
@@ -63394,6 +65298,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Ghost"
+        },
+        {
           "value": "Evolve Dusclops (Reaper Cloth)",
           "label": "Location"
         },
@@ -63512,6 +65420,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ice / Ghost"
+        },
         {
           "value": "Shoal Cave",
           "label": "Location"
@@ -63752,6 +65664,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Electric / Ghost"
+        },
+        {
           "value": "New Mauville",
           "label": "Location"
         }
@@ -63874,6 +65790,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Psychic/Fairy"
+        },
+        {
           "value": "Nameless Cavern, Mirage Cave",
           "label": "Location"
         }
@@ -63991,6 +65911,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Psychic/Fairy"
+        },
+        {
           "value": "Nameless Cavern, Mirage Cave",
           "label": "Location"
         }
@@ -64103,6 +66027,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Psychic/Fairy"
+        },
+        {
           "value": "Nameless Cavern, Mirage Cave",
           "label": "Location"
         }
@@ -64197,6 +66125,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Steel / Dragon"
+        },
         {
           "value": "Soaring in the Sky, Mirage Mountain",
           "label": "Location"
@@ -64296,6 +66228,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water / Dragon"
+        },
         {
           "value": "Soaring in the Sky, Mirage Mountain",
           "label": "Location"
@@ -64405,6 +66341,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fire / Steel"
+        },
+        {
           "value": "Scorched Slab",
           "label": "Location"
         },
@@ -64509,6 +66449,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal"
+        },
+        {
           "value": "Route 105",
           "label": "Location"
         }
@@ -64603,6 +66547,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ghost / Dragon"
+        },
         {
           "value": "Soaring in the Sky",
           "label": "Location"
@@ -64703,6 +66651,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Psychic"
+        },
+        {
           "value": "Crescent Isle, Mirage Island",
           "label": "Location"
         }
@@ -64787,6 +66739,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water"
+        },
         {
           "value": "Slateport City, Route 132, Route 133, Route 134",
           "label": "Location"
@@ -64883,6 +66839,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water"
+        },
+        {
           "value": "Mirage Island",
           "label": "Location"
         }
@@ -64973,6 +66933,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Dark"
+        },
+        {
           "value": "Mirage Island",
           "label": "Location"
         }
@@ -65062,6 +67026,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass"
+        },
         {
           "value": "Mirage Forest",
           "label": "Location"
@@ -65162,6 +67130,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal"
+        },
         {
           "value": "Mirage Mountain",
           "label": "Location"
@@ -65283,6 +67255,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Psychic / Fire"
+        },
+        {
           "value": "Mirage Island",
           "label": "Location"
         }
@@ -65397,6 +67373,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass"
+        },
         {
           "value": "Petalburg Woods",
           "label": "Location"
@@ -65520,6 +67500,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass"
+        },
         {
           "value": "Evolve Snivy (Lv. 17)",
           "label": "Location"
@@ -65689,6 +67673,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Grass/Dragon"
+        },
+        {
           "value": "Evolve Servine (Lv. 36)",
           "label": "Location"
         },
@@ -65831,6 +67819,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fire"
+        },
+        {
           "value": "Granite Cave",
           "label": "Location"
         },
@@ -65968,6 +67960,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fire / Fighting"
+        },
         {
           "value": "Evolve Tepig (Lv. 17)",
           "label": "Location"
@@ -66140,6 +68136,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fire / Fighting"
+        },
+        {
           "value": "Evolve Pignite (Lv. 36)",
           "label": "Location"
         },
@@ -66263,6 +68263,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water"
+        },
         {
           "value": "Route 104 South",
           "label": "Location"
@@ -66393,6 +68397,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water/Fighting"
+        },
         {
           "value": "Evolve Oshawott (Lv. 17)",
           "label": "Location"
@@ -66566,6 +68574,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water/Fighting"
+        },
+        {
           "value": "Shell Armor",
           "label": "Ability 2"
         },
@@ -66689,6 +68701,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal"
+        },
         {
           "value": "Route 103",
           "label": "Location"
@@ -66871,6 +68887,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal"
+        },
+        {
           "value": "Safari Zone",
           "label": "Location"
         }
@@ -67007,6 +69027,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal"
+        },
+        {
           "value": "Route 103",
           "label": "Location"
         }
@@ -67120,6 +69144,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal"
+        },
         {
           "value": "Route 121",
           "label": "Location"
@@ -67249,6 +69277,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal"
+        },
         {
           "value": "Route 121",
           "label": "Location"
@@ -67389,6 +69421,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Dark"
+        },
         {
           "value": "Route 103",
           "label": "Location"
@@ -67580,6 +69616,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Dark"
+        },
+        {
           "value": "Route 123",
           "label": "Location"
         }
@@ -67707,6 +69747,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Grass"
+        },
+        {
           "value": "Petalburg Woods",
           "label": "Location"
         },
@@ -67773,6 +69817,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass"
+        },
         {
           "value": "Evolve Pansage (Leaf Stone)",
           "label": "Location"
@@ -67892,6 +69940,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fire"
+        },
+        {
           "value": "Petalburg Woods",
           "label": "Location"
         },
@@ -67958,6 +70010,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fire"
+        },
         {
           "value": "Evolve Pansear (Fire Stone)",
           "label": "Location"
@@ -68077,6 +70133,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water"
+        },
+        {
           "value": "Petalburg Woods",
           "label": "Location"
         },
@@ -68143,6 +70203,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water"
+        },
         {
           "value": "Evolve Panpour (Water Stone)",
           "label": "Location"
@@ -68267,6 +70331,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Psychic"
+        },
+        {
           "value": "Route 115",
           "label": "Location"
         }
@@ -68330,6 +70398,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Psychic"
+        },
         {
           "value": "Evolve Munna (Moon Stone)",
           "label": "Location"
@@ -68455,6 +70527,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal / Flying"
+        },
         {
           "value": "Route 103",
           "label": "Location"
@@ -68588,6 +70664,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal / Flying"
+        },
         {
           "value": "Safari Zone",
           "label": "Location"
@@ -68737,6 +70817,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal / Flying"
+        },
+        {
           "value": "Soaring in the Sky",
           "label": "Location"
         },
@@ -68845,6 +70929,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Electric"
+        },
         {
           "value": "Route 112 South, Route 121",
           "label": "Location"
@@ -68990,6 +71078,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Electric"
+        },
+        {
           "value": "Route 121",
           "label": "Location"
         }
@@ -69094,6 +71186,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Rock"
+        },
         {
           "value": "Granite Cave",
           "label": "Location"
@@ -69212,6 +71308,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Rock"
+        },
         {
           "value": "Granite Cave, Route 114, Shoal Cave, Victory Road",
           "label": "Location"
@@ -69339,6 +71439,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Rock"
+        },
         {
           "value": "Evolve Boldore (Happiness / Lv. 36)",
           "label": "Location"
@@ -69475,6 +71579,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Psychic / Flying"
+        },
         {
           "value": "Granite Cave, Scorched Slab",
           "label": "Location"
@@ -69663,6 +71771,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Psychic / Flying"
+        },
+        {
           "value": "Scorched Slab, Seafloor Cavern",
           "label": "Location"
         }
@@ -69793,6 +71905,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Ground"
+        },
+        {
           "value": "Rusturf Tunnel, Scorched Slab",
           "label": "Location"
         }
@@ -69921,6 +72037,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ground / Steel"
+        },
         {
           "value": "Scorched Slab",
           "label": "Location"
@@ -70062,6 +72182,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal"
+        },
+        {
           "value": "Route 115",
           "label": "Location"
         }
@@ -70196,6 +72320,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fighting"
+        },
+        {
           "value": "Rusturf Tunnel, Scorched Slab",
           "label": "Location"
         }
@@ -70319,6 +72447,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fighting"
+        },
         {
           "value": "Scorched Slab, Victory Road",
           "label": "Location"
@@ -70459,6 +72591,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fighting"
+        },
+        {
           "value": "Evolve Gurdurr (Happiness / Lv. 36)",
           "label": "Location"
         }
@@ -70568,6 +72704,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water"
+        },
         {
           "value": "Route 102",
           "label": "Location"
@@ -70686,6 +72826,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water / Ground"
+        },
         {
           "value": "Safari Zone",
           "label": "Location"
@@ -70825,6 +72969,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water / Ground"
+        },
+        {
           "value": "Safari Zone",
           "label": "Location"
         },
@@ -70954,6 +73102,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fighting"
+        },
+        {
           "value": "Route 112 North",
           "label": "Location"
         }
@@ -71079,6 +73231,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fighting"
+        },
+        {
           "value": "Route 112 South",
           "label": "Location"
         }
@@ -71161,6 +73317,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Bug / Grass"
+        },
+        {
           "value": "Route 104 South",
           "label": "Location"
         }
@@ -71231,6 +73391,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Bug / Grass"
+        },
         {
           "value": "Safari Zone",
           "label": "Location"
@@ -71361,6 +73525,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Bug / Grass"
+        },
+        {
           "value": "Safari Zone",
           "label": "Location"
         }
@@ -71475,6 +73643,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Bug / Poison"
+        },
         {
           "value": "Petalburg Woods",
           "label": "Location"
@@ -71599,6 +73771,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Bug / Poison"
+        },
         {
           "value": "Safari Zone",
           "label": "Location"
@@ -71744,6 +73920,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Bug / Poison"
+        },
+        {
           "value": "Evolve Whirlipede (Lv. 30)",
           "label": "Location"
         }
@@ -71859,6 +74039,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Grass / Fairy"
+        },
+        {
           "value": "Petalburg Woods",
           "label": "Location"
         }
@@ -71957,6 +74141,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass / Fairy"
+        },
         {
           "value": "Evolve Cottonee (Sun Stone)",
           "label": "Location"
@@ -72068,6 +74256,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Grass"
+        },
+        {
           "value": "Petalburg Woods",
           "label": "Location"
         }
@@ -72141,6 +74333,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass"
+        },
         {
           "value": "Evolve Petilil (Sun Stone)",
           "label": "Location"
@@ -72286,6 +74482,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water"
+        },
+        {
           "value": "Route 104 North, Route 111, Victory Road",
           "label": "Location"
         }
@@ -72400,6 +74600,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ground / Dark"
+        },
         {
           "value": "Route 111",
           "label": "Location"
@@ -72523,6 +74727,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ground / Dark"
+        },
         {
           "value": "Evolve Sandile (Lv. 29)",
           "label": "Location"
@@ -72668,6 +74876,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Ground / Dark"
+        },
+        {
           "value": "Evolve Krokorok (Lv. 40)",
           "label": "Location"
         }
@@ -72777,6 +74989,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fire"
+        },
         {
           "value": "Route 111",
           "label": "Location"
@@ -72919,6 +75135,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fire"
+        },
         {
           "value": "Route 111",
           "label": "Location"
@@ -73074,6 +75294,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Grass"
+        },
+        {
           "value": "Route 111",
           "label": "Location"
         },
@@ -73192,6 +75416,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Bug / Rock"
+        },
         {
           "value": "Rusturf Tunnel",
           "label": "Location"
@@ -73326,6 +75554,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Bug / Rock"
+        },
         {
           "value": "Lilycove City, Seafloor Cavern",
           "label": "Location"
@@ -73463,6 +75695,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Dark / Fighting"
+        },
         {
           "value": "Route 104 South",
           "label": "Location"
@@ -73613,6 +75849,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Dark / Fighting"
+        },
+        {
           "value": "Route 120",
           "label": "Location"
         }
@@ -73753,6 +75993,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Psychic / Flying"
+        },
+        {
           "value": "Route 111, Sky Pillar",
           "label": "Location"
         },
@@ -73866,6 +76110,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ghost"
+        },
         {
           "value": "Mt. Pyre",
           "label": "Location"
@@ -74006,6 +76254,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Ghost"
+        },
+        {
           "value": "Mt. Pyre",
           "label": "Location"
         }
@@ -74125,6 +76377,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water / Rock"
+        },
         {
           "value": "Seafloor Cavern, Revive Cover Fossil",
           "label": "Location"
@@ -74249,6 +76505,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water / Rock"
+        },
         {
           "value": "Seafloor Cavern",
           "label": "Location"
@@ -74384,6 +76644,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Rock / Flying"
+        },
         {
           "value": "Seafloor Cavern, Revive Plume Fossil",
           "label": "Location"
@@ -74524,6 +76788,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Rock / Flying"
+        },
+        {
           "value": "Seafloor Cavern",
           "label": "Location"
         }
@@ -74656,6 +76924,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Poison"
+        },
+        {
           "value": "Route 110",
           "label": "Location"
         }
@@ -74785,6 +77057,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Poison"
+        },
+        {
           "value": "New Mauville",
           "label": "Location"
         }
@@ -74909,6 +77185,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Dark"
+        },
         {
           "value": "Route 103",
           "label": "Location"
@@ -75059,6 +77339,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Dark"
+        },
+        {
           "value": "Route 103",
           "label": "Location"
         }
@@ -75174,6 +77458,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal"
+        },
+        {
           "value": "Route 110",
           "label": "Location"
         }
@@ -75252,6 +77540,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal"
+        },
         {
           "value": "Route 110",
           "label": "Location"
@@ -75379,6 +77671,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Psychic"
+        },
         {
           "value": "Route 102, Mt. Pyre",
           "label": "Location"
@@ -75516,6 +77812,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Psychic"
+        },
+        {
           "value": "Mt. Pyre",
           "label": "Location"
         }
@@ -75650,6 +77950,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Psychic"
+        },
+        {
           "value": "Evolve Gothorita (Lv. 39)",
           "label": "Location"
         }
@@ -75776,6 +78080,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Psychic"
+        },
         {
           "value": "Route 102, Mt. Pyre",
           "label": "Location"
@@ -75913,6 +78221,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Psychic"
+        },
+        {
           "value": "Mt. Pyre",
           "label": "Location"
         }
@@ -76047,6 +78359,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Psychic"
+        },
+        {
           "value": "Evolve Duosion (Lv. 39)",
           "label": "Location"
         }
@@ -76163,6 +78479,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water / Flying"
+        },
         {
           "value": "Route 117",
           "label": "Location"
@@ -76281,6 +78601,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water / Flying"
+        },
         {
           "value": "Route 117, Safari Zone",
           "label": "Location"
@@ -76407,6 +78731,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ice"
+        },
         {
           "value": "Route 114, Shoal Cave",
           "label": "Location"
@@ -76537,6 +78865,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ice"
+        },
         {
           "value": "Shoal Cave",
           "label": "Location"
@@ -76686,6 +79018,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Ice"
+        },
+        {
           "value": "Evolve Vanillish (Lv. 44)",
           "label": "Location"
         },
@@ -76799,6 +79135,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal / Grass"
+        },
         {
           "value": "Route 117",
           "label": "Location"
@@ -76928,6 +79268,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal / Grass"
+        },
         {
           "value": "Route 117",
           "label": "Location"
@@ -77092,6 +79436,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Electric / Flying"
+        },
+        {
           "value": "Route 118",
           "label": "Location"
         },
@@ -77244,6 +79592,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Bug"
+        },
         {
           "value": "Route 114",
           "label": "Location"
@@ -77398,6 +79750,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Bug / Steel"
+        },
+        {
           "value": "Evolve Karrablast (Lvl with Shelmet in Party)",
           "label": "Location"
         }
@@ -77539,6 +79895,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass / Poison"
+        },
         {
           "value": "Route 119",
           "label": "Location"
@@ -77688,6 +80048,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Grass / Poison"
+        },
+        {
           "value": "Route 119",
           "label": "Location"
         },
@@ -77818,6 +80182,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water / Ghost"
+        },
         {
           "value": "Route 105, Route 106, Dewford Town, Route 107, Route 109, Route 122, Route 128",
           "label": "Location"
@@ -77952,6 +80320,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water / Ghost"
+        },
         {
           "value": "Route 108, Route 122, Route 128, Ever Grande City, Underwater, Seafloor Cavern, Battle Resort",
           "label": "Location"
@@ -78098,6 +80470,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water"
+        },
+        {
           "value": "Route 105, Route 106, Route 107, Route 108, Route 109, Route 122, Lilycove City, Route 124, Mossdeep City, Route 125, Route 126, Route 127, Route 128, Route 129, Route 130, Route 131",
           "label": "Location"
         }
@@ -78219,6 +80595,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Bug / Electric"
+        },
         {
           "value": "Rusturf Tunnel",
           "label": "Location"
@@ -78354,6 +80734,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Bug / Electric"
+        },
+        {
           "value": "Victory Road",
           "label": "Location"
         }
@@ -78480,6 +80864,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass / Steel"
+        },
         {
           "value": "Meteor Falls",
           "label": "Location"
@@ -78610,6 +80998,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Grass / Steel"
+        },
+        {
           "value": "Meteor Falls",
           "label": "Location"
         }
@@ -78726,6 +81118,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Steel"
+        },
         {
           "value": "New Mauville",
           "label": "Location"
@@ -78847,6 +81243,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Steel"
+        },
         {
           "value": "New Mauville",
           "label": "Location"
@@ -78981,6 +81381,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Steel"
+        },
+        {
           "value": "Evolve Klang (Lv. 44)",
           "label": "Location"
         },
@@ -79041,6 +81445,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Electric"
+        },
         {
           "value": "New Mauville",
           "label": "Location"
@@ -79161,6 +81569,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Electric"
+        },
+        {
           "value": "New Mauville, Seafloor Cavern",
           "label": "Location"
         }
@@ -79244,6 +81656,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Electric"
+        },
         {
           "value": "Evolve Eelektrik (Thunder Stone)",
           "label": "Location"
@@ -79381,6 +81797,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Psychic"
+        },
         {
           "value": "Mt. Pyre",
           "label": "Location"
@@ -79531,6 +81951,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Psychic"
+        },
+        {
           "value": "Mt. Pyre",
           "label": "Location"
         }
@@ -79663,6 +82087,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Ghost / Fire"
+        },
+        {
           "value": "Fiery Path, Mt. Pyre",
           "label": "Location"
         }
@@ -79792,6 +82220,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Ghost / Fire"
+        },
+        {
           "value": "Mt. Pyre",
           "label": "Location"
         }
@@ -79850,6 +82282,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ghost / Fire"
+        },
         {
           "value": "Evolve Lampent (Dusk Stone)",
           "label": "Location"
@@ -79973,6 +82409,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Dragon"
+        },
+        {
           "value": "Granite Cave",
           "label": "Location"
         }
@@ -80091,6 +82531,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Dragon"
+        },
         {
           "value": "Victory Road",
           "label": "Location"
@@ -80215,6 +82659,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Dragon"
+        },
         {
           "value": "Evolve Fraxure (Lv. 48)",
           "label": "Location"
@@ -80345,6 +82793,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ice"
+        },
         {
           "value": "Shoal Cave",
           "label": "Location"
@@ -80516,6 +82968,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Ice/Fighting"
+        },
+        {
           "value": "Shoal Cave",
           "label": "Location"
         },
@@ -80674,6 +83130,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Ice"
+        },
+        {
           "value": "Sea Mauville, Shoal Cave",
           "label": "Location"
         }
@@ -80788,6 +83248,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Bug"
+        },
         {
           "value": "Route 114",
           "label": "Location"
@@ -80928,6 +83392,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Bug"
+        },
+        {
           "value": "Evolve Shelmet (Lvl with Karrablast in Party)",
           "label": "Location"
         }
@@ -81063,6 +83531,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Ground / Electric"
+        },
+        {
           "value": "Route 119",
           "label": "Location"
         }
@@ -81189,6 +83661,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fighting"
+        },
         {
           "value": "Route 112 North",
           "label": "Location"
@@ -81323,6 +83799,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fighting"
+        },
         {
           "value": "Route 120, Sky Pillar",
           "label": "Location"
@@ -81459,6 +83939,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Dragon"
+        },
+        {
           "value": "Meteor Falls, Sky Pillar",
           "label": "Location"
         }
@@ -81575,6 +84059,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ground / Ghost"
+        },
         {
           "value": "Route 113",
           "label": "Location"
@@ -81725,6 +84213,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Ground / Ghost"
+        },
+        {
           "value": "Sky Pillar",
           "label": "Location"
         }
@@ -81866,6 +84358,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Dark / Steel"
+        },
         {
           "value": "Route 112 North, Route 120",
           "label": "Location"
@@ -82026,6 +84522,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Dark / Steel"
+        },
+        {
           "value": "Route 120",
           "label": "Location"
         }
@@ -82146,6 +84646,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal"
+        },
+        {
           "value": "Route 113",
           "label": "Location"
         }
@@ -82262,6 +84766,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal / Flying"
+        },
         {
           "value": "Route 120",
           "label": "Location"
@@ -82407,6 +84915,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal / Flying"
+        },
+        {
           "value": "Route 120",
           "label": "Location"
         }
@@ -82528,6 +85040,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Dark / Flying"
+        },
         {
           "value": "Route 120",
           "label": "Location"
@@ -82678,6 +85194,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Dark / Flying"
+        },
+        {
           "value": "Route 120",
           "label": "Location"
         }
@@ -82818,6 +85338,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fire"
+        },
+        {
           "value": "Route 112 South, Cave of Origin",
           "label": "Location"
         }
@@ -82947,6 +85471,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Bug / Steel"
+        },
         {
           "value": "Scorched Slab, Cave of Origin",
           "label": "Location"
@@ -83084,6 +85612,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Dark / Dragon"
+        },
         {
           "value": "Meteor Falls",
           "label": "Location"
@@ -83235,6 +85767,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Dark / Dragon"
+        },
         {
           "value": "Meteor Falls",
           "label": "Location"
@@ -83395,6 +85931,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Dark / Dragon"
+        },
+        {
           "value": "Evolve Zweilous (Lv. 59)",
           "label": "Location"
         }
@@ -83501,6 +86041,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Bug / Fire"
+        },
         {
           "value": "Scorched Slab",
           "label": "Location"
@@ -83635,6 +86179,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Bug / Fire"
+        },
+        {
           "value": "Scorched Slab",
           "label": "Location"
         },
@@ -83744,6 +86292,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Steel / Fighting"
+        },
+        {
           "value": "Pathless Plain, Mirage Forest",
           "label": "Location"
         }
@@ -83849,6 +86401,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Rock / Fighting"
+        },
+        {
           "value": "Pathless Plain, Mirage Forest",
           "label": "Location"
         }
@@ -83953,6 +86509,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass / Fighting"
+        },
         {
           "value": "Pathless Plain, Mirage Forest",
           "label": "Location"
@@ -84068,6 +86628,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Flying"
+        },
         {
           "value": "Soaring in the Sky, Mirage Island",
           "label": "Location"
@@ -84188,6 +86752,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Electric / Flying"
+        },
+        {
           "value": "Soaring in the Sky, Mirage Island",
           "label": "Location"
         },
@@ -84302,6 +86870,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Dragon / Fire"
+        },
+        {
           "value": "Soaring in the Sky, Mirage Mountain",
           "label": "Location"
         }
@@ -84411,6 +86983,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Dragon / Electric"
+        },
         {
           "value": "Soaring in the Sky, Mirage Mountain",
           "label": "Location"
@@ -84526,6 +87102,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ground / Flying"
+        },
         {
           "value": "Soaring in the Sky, Mirage Island",
           "label": "Location"
@@ -84786,6 +87366,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Dragon / Ice"
+        },
+        {
           "value": "Gnarled Den",
           "label": "Location"
         }
@@ -84895,6 +87479,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water / Fighting"
+        },
         {
           "value": "Mirage Forest",
           "label": "Location"
@@ -85009,6 +87597,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal / Psychic"
+        },
         {
           "value": "Mirage Forest",
           "label": "Location"
@@ -85140,6 +87732,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Bug / Steel"
+        },
+        {
           "value": "Mirage Cave",
           "label": "Location"
         }
@@ -85254,6 +87850,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass"
+        },
         {
           "value": "Route 102",
           "label": "Location"
@@ -85382,6 +87982,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass"
+        },
         {
           "value": "Evolve Chespin (Lv. 16)",
           "label": "Location"
@@ -85546,6 +88150,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Grass / Fighting"
+        },
+        {
           "value": "Evolve Quilladin (Lv. 36)",
           "label": "Location"
         },
@@ -85664,6 +88272,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fire"
+        },
         {
           "value": "Route 101",
           "label": "Location"
@@ -85792,6 +88404,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fire"
+        },
         {
           "value": "Evolve Fennekin (Lv. 16)",
           "label": "Location"
@@ -85951,6 +88567,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fire / Psychic"
+        },
+        {
           "value": "Evolve Braixen (Lv. 36)",
           "label": "Location"
         },
@@ -86069,6 +88689,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water"
+        },
         {
           "value": "Route 104 North",
           "label": "Location"
@@ -86197,6 +88821,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water"
+        },
         {
           "value": "Evolve Froakie (Lv. 16)",
           "label": "Location"
@@ -86361,6 +88989,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water / Dark"
+        },
+        {
           "value": "Evolve Frogadier (Lv. 36)",
           "label": "Location"
         },
@@ -86484,6 +89116,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Normal"
+        },
         {
           "value": "Route 101",
           "label": "Location"
@@ -86659,6 +89295,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal / Ground"
+        },
+        {
           "value": "Route 121",
           "label": "Location"
         }
@@ -86772,6 +89412,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal / Flying"
+        },
+        {
           "value": "Route 101",
           "label": "Location"
         },
@@ -86884,6 +89528,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fire / Flying"
+        },
         {
           "value": "Safari Zone",
           "label": "Location"
@@ -87013,6 +89661,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fire / Flying"
+        },
+        {
           "value": "Soaring in the Sky",
           "label": "Location"
         },
@@ -87077,6 +89729,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Bug"
+        },
+        {
           "value": "Route 104 North",
           "label": "Location"
         }
@@ -87125,6 +89781,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Bug"
+        },
         {
           "value": "Evolve Scatterbug (Lv. 9)",
           "label": "Location"
@@ -87298,6 +89958,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Bug / Flying"
+        },
+        {
           "value": "Evolve Spewpa (Lv. 12)",
           "label": "Location"
         },
@@ -87440,6 +90104,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fire / Normal"
+        },
+        {
           "value": "Route 116",
           "label": "Location"
         }
@@ -87564,6 +90232,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fire / Normal"
+        },
+        {
           "value": "Safari Zone",
           "label": "Location"
         }
@@ -87678,6 +90350,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fairy"
+        },
         {
           "value": "Route 104 North",
           "label": "Location"
@@ -87892,6 +90568,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fairy"
+        },
+        {
           "value": "Route 115",
           "label": "Location"
         },
@@ -87989,6 +90669,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fairy"
+        },
         {
           "value": "Evolve Floette (Shiny Stone)",
           "label": "Location"
@@ -88108,6 +90792,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Grass"
+        },
         {
           "value": "Route 110",
           "label": "Location"
@@ -88247,6 +90935,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Grass"
+        },
+        {
           "value": "Safari Zone",
           "label": "Location"
         },
@@ -88365,6 +91057,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fighting"
+        },
         {
           "value": "Route 116",
           "label": "Location"
@@ -88525,6 +91221,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fighting / Dark"
+        },
+        {
           "value": "Route 116",
           "label": "Location"
         }
@@ -88640,6 +91340,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Normal"
+        },
+        {
           "value": "Route 116",
           "label": "Location"
         }
@@ -88714,6 +91418,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Psychic"
+        },
         {
           "value": "Route 113",
           "label": "Location"
@@ -88959,6 +91667,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Psychic"
+        },
+        {
           "value": "Safari Zone",
           "label": "Location"
         }
@@ -89068,6 +91780,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Steel / Ghost"
+        },
         {
           "value": "Route 113",
           "label": "Location"
@@ -89183,6 +91899,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Steel / Ghost"
+        },
+        {
           "value": "Safari Zone",
           "label": "Location"
         }
@@ -89286,6 +92006,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Steel / Ghost"
+        },
         {
           "value": "Evolve Doublade (Dusk Stone)",
           "label": "Location"
@@ -89401,6 +92125,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fairy"
+        },
         {
           "value": "Route 104 South",
           "label": "Location"
@@ -89545,6 +92273,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fairy"
+        },
+        {
           "value": "Evolve Spritzee (Sachet)",
           "label": "Location"
         },
@@ -89663,6 +92395,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fairy"
+        },
         {
           "value": "Route 104 South",
           "label": "Location"
@@ -89787,6 +92523,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fairy"
+        },
+        {
           "value": "Evolve Swirlix (Whipped Dream)",
           "label": "Location"
         },
@@ -89910,6 +92650,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Dark / Psychic"
+        },
         {
           "value": "Route 118",
           "label": "Location"
@@ -90045,6 +92789,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Dark / Psychic"
+        },
+        {
           "value": "Route 118",
           "label": "Location"
         }
@@ -90171,6 +92919,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Rock / Water"
+        },
         {
           "value": "Route 111",
           "label": "Location"
@@ -90330,6 +93082,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Rock / Water"
+        },
+        {
           "value": "Lilycove City",
           "label": "Location"
         },
@@ -90455,6 +93211,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Poison / Water"
+        },
         {
           "value": "Route 107, Route 127, Route 131",
           "label": "Location"
@@ -90590,6 +93350,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Poison / Dragon"
+        },
+        {
           "value": "Route 107, Route 127, Route 130, Underwater",
           "label": "Location"
         }
@@ -90696,6 +93460,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Water"
+        },
         {
           "value": "Route 107, Route 131",
           "label": "Location"
@@ -90821,6 +93589,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Water"
+        },
+        {
           "value": "Route 107, Route 131",
           "label": "Location"
         }
@@ -90921,6 +93693,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Electric / Normal"
+        },
+        {
           "value": "Route 111",
           "label": "Location"
         },
@@ -91003,6 +93779,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Electric / Normal"
+        },
         {
           "value": "Evolve Helioptile (Sun Stone)",
           "label": "Location"
@@ -91113,6 +93893,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Rock / Dragon"
+        },
         {
           "value": "Seafloor Cavern, Revive Jaw Fossil",
           "label": "Location"
@@ -91272,6 +94056,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Rock / Dragon"
+        },
+        {
           "value": "Seafloor Cavern",
           "label": "Location"
         },
@@ -91405,6 +94193,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Rock / Ice"
+        },
         {
           "value": "Seafloor Cavern, Revive Sail Fossil",
           "label": "Location"
@@ -91549,6 +94341,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Rock / Ice"
+        },
+        {
           "value": "Seafloor Cavern",
           "label": "Location"
         },
@@ -91662,6 +94458,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fairy"
+        },
         {
           "value": "Evolve Eevee (Fairy Move & Amie Affection)",
           "label": "Location"
@@ -91811,6 +94611,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fighting / Flying"
+        },
         {
           "value": "Route 115",
           "label": "Location"
@@ -91985,6 +94789,10 @@
       ],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Electric / Fairy"
+        },
+        {
           "value": "Route 118",
           "label": "Location"
         },
@@ -92129,6 +94937,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Rock / Fairy"
+        },
+        {
           "value": "Meteor Falls",
           "label": "Location"
         },
@@ -92228,6 +95040,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Dragon"
+        },
+        {
           "value": "Route 119",
           "label": "Location"
         }
@@ -92326,6 +95142,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Dragon"
+        },
         {
           "value": "Route 119",
           "label": "Location"
@@ -92446,6 +95266,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Dragon"
+        },
+        {
           "value": "Evolve Sliggoo (Lv. 50 + Rain)",
           "label": "Location"
         }
@@ -92556,6 +95380,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Steel / Fairy"
+        },
+        {
           "value": "Route 113",
           "label": "Location"
         },
@@ -92664,6 +95492,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ghost / Grass"
+        },
         {
           "value": "Petalburg Woods",
           "label": "Location"
@@ -92778,6 +95610,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Ghost / Grass"
+        },
+        {
           "value": "Evolve Phantump (Happiness / Lv. 23)",
           "label": "Location"
         }
@@ -92877,6 +95713,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ghost / Grass"
+        },
         {
           "value": "Petalburg Woods",
           "label": "Location"
@@ -93011,6 +95851,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Ghost / Grass"
+        },
+        {
           "value": "Evolve Pumpkaboo (Happiness / Lv. 23)",
           "label": "Location"
         }
@@ -93125,6 +95969,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Ice"
+        },
         {
           "value": "Shoal Cave",
           "label": "Location"
@@ -93270,6 +96118,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Ice"
+        },
+        {
           "value": "Shoal Cave",
           "label": "Location"
         }
@@ -93391,6 +96243,10 @@
         }
       ],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Flying / Dragon"
+        },
         {
           "value": "Scorched Slab",
           "label": "Location"
@@ -93536,6 +96392,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Flying / Dragon"
+        },
+        {
           "value": "Scorched Slab, Seafloor Cavern, Cave of Origin, Sky Pillar",
           "label": "Location"
         }
@@ -93656,6 +96516,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Fairy"
+        },
+        {
           "value": "Mirage Forest",
           "label": "Location"
         }
@@ -93775,6 +96639,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Dark / Flying"
+        },
         {
           "value": "Mirage Mountain",
           "label": "Location"
@@ -93906,6 +96774,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Dragon / Ground"
+        },
+        {
           "value": "Mirage Cave",
           "label": "Location"
         }
@@ -94020,6 +96892,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Rock / Fairy"
+        },
         {
           "value": "Mirage Cave",
           "label": "Location"
@@ -94259,6 +97135,10 @@
       "changes": [],
       "attrs": [
         {
+          "label": "Type",
+          "value": "Psychic / Ghost"
+        },
+        {
           "value": "Mirage Island",
           "label": "Location"
         },
@@ -94367,6 +97247,10 @@
       ],
       "changes": [],
       "attrs": [
+        {
+          "label": "Type",
+          "value": "Fire / Water"
+        },
         {
           "value": "Mirage Cave",
           "label": "Location"
